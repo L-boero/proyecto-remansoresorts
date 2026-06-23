@@ -1,0 +1,6040 @@
+
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f6f4ef;
+color:#2c2c2c;
+line-height:1.6;
+}
+
+:root{
+
+--remanso-green:#465B2D;
+--remanso-green-dark:#3E5127;
+
+--remanso-sand:#E6E0D2;
+--remanso-sand-dark:#CFC7B5;
+
+--remanso-text:#232323;
+
+}
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:28px 80px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(0,0,0,.04);
+
+    z-index:1000;
+
+    transition:.3s ease;
+}
+
+/* NAVBAR - LOGO */
+
+.logo{
+    font-size:1.5rem;
+
+    font-weight:600;
+
+    letter-spacing:-0.5px;
+
+    color: var(--remanso-green);
+
+    cursor:pointer;
+}
+
+/* NAVBAR-  MENÚ */
+
+.nav-links{
+    display:flex;
+
+    align-items:center;
+
+    list-style:none;
+
+    gap:45px;
+}
+
+/* LINKS */
+
+.nav-links a{
+    position:relative;
+
+    text-decoration:none;
+
+    color: var(--remanso-green);
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    transition:.3s ease;
+}
+
+/* EFECTO HOVER */
+
+.nav-links a::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+
+    height:1.5px;
+
+  background: var(--remanso-green);
+
+    transition:.3s ease;
+}
+
+.nav-links a:hover{
+    color: var(--remanso-green);
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-contact-btn{
+    padding:14px 24px;
+
+    background:#7a6855;
+
+    color:white !important;
+
+    border-radius:55px;
+
+    transition:.3s ease;
+}
+
+.nav-contact-btn::after{
+    display:none;
+}
+
+.nav-contact-btn:hover{
+background: var(--remanso-green);
+
+    transform:translateY(-2px);
+}
+
+
+
+
+/* =========================
+DROPDOWN
+========================= */
+
+.dropdown{
+
+
+position:relative;
+
+
+}
+
+/* MENÚ DESPLEGABLE */
+
+.dropdown-menu{
+
+
+position:absolute;
+
+top:100%;
+left:0;
+
+min-width:220px;
+
+padding:12px 0;
+
+margin-top:12px;
+
+background:white;
+
+border:1px solid #ece7df;
+
+border-radius:18px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+list-style:none;
+
+opacity:0;
+
+visibility:hidden;
+
+transform:translateY(10px);
+
+transition:.3s ease;
+
+z-index:999;
+
+
+}
+
+/* APERTURA */
+
+.dropdown:hover .dropdown-menu{
+
+
+opacity:1;
+
+visibility:visible;
+
+transform:translateY(0);
+
+
+}
+
+/* LINKS */
+
+.dropdown-menu li{
+
+
+width:100%;
+
+
+}
+
+.dropdown-menu a{
+
+
+display:block;
+
+padding:12px 20px;
+
+text-decoration:none;
+
+color:#555;
+
+font-size:.95rem;
+
+transition:.25s ease;
+
+
+}
+
+/* HOVER */
+
+.dropdown-menu a:hover{
+
+
+background:#f8f5f1;
+
+color:#7a6855;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+       HERO - HOME
+========================= */
+
+.remanso-home-hero{
+position:relative;
+min-height:100vh;
+
+background-image:url("../assets/img/panoramic1.JPG");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+
+}
+.remanso-home-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.70) 0%,
+        rgba(0,0,0,.45) 40%,
+        rgba(0,0,0,.15) 100%
+    );
+}
+
+.remanso-home-container{
+position:relative;
+z-index:2;
+max-width: 780px;
+color: white;
+
+}
+
+.remanso-home-label{
+display:inline-block;
+margin-bottom:32px;
+letter-spacing:6px;
+font-size:.75rem;
+text-transform: uppercase;
+opacity: .85;
+}
+.remanso-home-title{
+    font-size:5rem;
+    line-height:1;
+    margin-bottom:32px;
+    font-weight:700;
+    letter-spacing:-2px;
+    text-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+
+
+.remanso-home-title::before{
+    content:"";
+
+    display:block;
+
+    width:80px;
+    height:2px;
+
+   background: var(--remanso-green);
+
+    margin-bottom:28px;
+
+    opacity:.8;
+}
+
+
+.remanso-home-description{
+    max-width:520px;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    margin-bottom:50px;
+
+    opacity:.95;
+}
+
+.remanso-home-button{
+    display:inline-block;
+
+    padding:18px 40px;
+
+    background: var(--remanso-green);
+
+    color: white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+.remanso-home-button:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   HOME- BLOQUE 1  EXPERIENCIA 
+========================= */
+
+.remanso-experience-section{
+    padding:140px 8%;
+    background:#f8f5f1;
+}
+
+/* HEADER */
+
+.remanso-experience-header{
+    max-width:900px;
+    margin:0 auto 100px auto;
+    text-align:center;
+}
+
+.remanso-experience-label{
+    display:inline-block;
+
+    margin-bottom:24px;
+
+    letter-spacing:6px;
+    font-size:.75rem;
+    text-transform:uppercase;
+
+   color: var(--remanso-green);
+
+    opacity:.9;
+}
+
+.remanso-experience-title{
+    font-size:4rem;
+    line-height:1.15;
+    font-weight:700;
+
+    max-width:850px;
+    margin:0 auto 30px;
+
+    color:#2c2c2c;
+
+    letter-spacing:-2px;
+}
+
+.remanso-experience-title::before{
+    content:"";
+
+    display:block;
+
+    width:80px;
+    height:2px;
+
+    background:#7a6855;
+
+    margin:0 auto 35px;
+}
+
+.remanso-experience-description{
+    max-width:720px;
+
+    margin:0 auto;
+
+    color:#666;
+
+    font-size:1.15rem;
+    line-height:1.9;
+}
+
+/* GRID */
+.remanso-experience-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* CARD */
+
+.remanso-experience-card{
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.06);
+
+    transition:all .4s ease;
+}
+
+.remanso-experience-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.12);
+}
+
+/* IMAGEN */
+
+.remanso-experience-image{
+    height:320px;
+
+    background:#d9d9d9;
+
+    overflow:hidden;
+}
+
+.remanso-experience-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .6s ease;
+}
+
+.remanso-experience-card:hover .remanso-experience-image img{
+    transform:scale(1.05);
+}
+
+/* CONTENIDO */
+
+.remanso-experience-card h3{
+    padding:30px 30px 15px;
+
+    font-size:1.5rem;
+
+    font-weight:600;
+
+    color:#2c2c2c;
+}
+
+.remanso-experience-card p{
+    padding:0 30px 35px;
+
+    color:#5d5d5d;
+
+    line-height:1.9;
+
+    font-size:1rem;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .remanso-experience-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .remanso-experience-section{
+        padding:100px 6%;
+    }
+
+    .remanso-experience-title{
+        font-size:2.8rem;
+    }
+
+    .remanso-experience-grid{
+        grid-template-columns:1fr;
+    }
+
+    .remanso-experience-image{
+        height:280px;
+    }
+
+}
+
+
+
+/* =========================
+   HOME- BLOQUE 2 - CABAÑAS
+========================= */
+
+.remanso-cabins-section{
+    padding:140px 8%;
+}
+
+/* HEADER */
+
+.remanso-cabins-header{
+    max-width:900px;
+
+    margin:0 auto 90px auto;
+
+    text-align:center;
+}
+
+.remanso-cabins-label{
+    display:block;
+
+    margin-bottom:24px;
+
+    letter-spacing:5px;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    color: var(--remanso-green);
+
+    font-weight:500;
+}
+
+.remanso-cabins-line{
+    width:90px;
+    height:2px;
+
+  background: var(--remanso-green);
+
+    margin:0 auto 40px auto;
+
+    opacity:.8;
+}
+
+.remanso-cabins-title{
+    font-size:4rem;
+
+    line-height:1.15;
+
+    letter-spacing:-2px;
+
+    font-weight:600;
+
+   color: var(--remanso-green);
+
+    margin-bottom:30px;
+}
+
+.remanso-cabins-description{
+    max-width:720px;
+
+    margin:0 auto;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color: var(--remanso-green);
+}
+
+/* IMAGEN PRINCIPAL */
+
+.remanso-cabins-gallery{
+    max-width:1200px;
+
+    margin:80px auto 60px auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+.cabin-photo{
+    overflow:hidden;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+}
+
+.cabin-photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .8s ease;
+}
+
+.cabin-photo:hover img{
+    transform:scale(1.05);
+}
+
+.cabin-photo-large{
+    height:420px;
+}
+
+.cabin-photo-large img{
+    height:420px;
+}
+
+.cabin-photo:nth-child(2){
+    height:420px;
+}
+
+.cabin-photo:nth-child(2) img{
+    height:420px;
+}
+
+.cabin-photo:nth-child(3){
+    height:260px;
+}
+
+.cabin-photo:nth-child(3) img{
+    height:260px;
+}
+
+.cabin-photo-wide{
+    height:260px;
+}
+
+.cabin-photo-wide img{
+    height:260px;
+}
+
+
+/* FEATURES - CHECK LIST */
+.remanso-cabins-features{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+    margin:50px auto 60px auto;
+
+    max-width:900px;
+}
+
+.remanso-feature{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 22px;
+
+    background:#fff;
+
+    border-radius:999px;
+
+    border:1px solid rgba(70,91,45,.12);
+
+  color: var(--remanso-green);
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    transition:.3s ease;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.04);
+}
+
+
+.remanso-feature::before{
+    content:"✓";
+
+   color: var(--remanso-green);
+
+    font-weight:700;
+}
+
+
+.remanso-feature:hover{
+    transform:none;
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.04);
+}
+
+
+
+/* CTA - BLOQUE 2 - CABAÑAS  */
+
+.remanso-cabins-cta{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+
+    margin-top:20px;
+}
+
+
+.remanso-cabins-button{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    padding:18px 42px;
+
+   background: var(--remanso-green);
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:500;
+
+    transition:all .35s ease;
+}
+.remanso-cabins-button:hover{
+    transform:translateY(-4px);
+
+  background: var(--remanso-green);
+
+    box-shadow:
+    0 18px 40px rgba(122,104,85,.22);
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .remanso-cabins-section{
+        padding:100px 6%;
+    }
+
+    .remanso-cabins-title{
+        font-size:2.8rem;
+    }
+
+    .remanso-cabins-image{
+        height:350px;
+    }
+
+    .remanso-cabins-features{
+        gap:12px;
+    }
+
+    .remanso-feature{
+        width:100%;
+        text-align:center;
+    }
+}
+
+
+/* =========================
+   HOME - BLOQUE 3
+   EXPERIENCIAS / RETIROS
+========================= */
+.remanso-retreats-section{
+    padding:140px 8%;
+    background:transparent;
+}
+
+
+
+
+
+
+/* HEADER */
+
+.remanso-retreats-header{
+    max-width:900px;
+
+    margin:0 auto 90px auto;
+
+    text-align:center;
+}
+
+.remanso-retreats-label{
+    display:block;
+
+    margin-bottom:24px;
+
+    letter-spacing:5px;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+   color: var(--remanso-green);
+
+    font-weight:500;
+}
+
+.remanso-retreats-line{
+    width:90px;
+    height:2px;
+
+    background: var(--remanso-green);
+
+    margin:0 auto 40px auto;
+
+    opacity:.8;
+}
+
+.remanso-retreats-title{
+    font-size:4rem;
+
+    line-height:1.15;
+
+    letter-spacing:-2px;
+
+    font-weight:600;
+color: var(--remanso-green);
+
+    margin-bottom:30px;
+}
+
+.remanso-retreats-description{
+    max-width:720px;
+
+    margin:0 auto;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:#666;
+}
+
+/* IMAGEN PRINCIPAL */
+
+.remanso-retreats-image{
+    max-width:1200px;
+
+    height:600px;
+
+    margin:0 auto 50px auto;
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+}
+
+.remanso-retreats-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .8s ease;
+}
+
+.remanso-retreats-image:hover img{
+    transform:scale(1.03);
+}
+
+/* FEATURES */
+
+.remanso-retreats-features{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-bottom:45px;
+}
+
+.retreat-feature{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    background:white;
+
+    border-radius:999px;
+
+    border:1px solid rgba(122,104,85,.15);
+
+    color:#4a4a4a;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.04);
+
+    transition:.3s ease;
+}
+
+.retreat-feature:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.08);
+}
+
+/* CTA */
+
+.remanso-retreats-cta{
+    display:flex;
+
+    justify-content:center;
+}
+
+.remanso-retreats-cta a{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 42px;
+
+    background:#7a6855;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:500;
+
+    transition:all .35s ease;
+}
+
+.remanso-retreats-cta a:hover{
+    transform:translateY(-4px);
+
+    background:#695947;
+
+    box-shadow:
+    0 18px 40px rgba(122,104,85,.22);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .remanso-retreats-section{
+        padding:100px 6%;
+    }
+
+    .remanso-retreats-title{
+        font-size:2.8rem;
+    }
+
+    .remanso-retreats-image{
+        height:350px;
+    }
+
+    .remanso-retreats-features{
+        gap:12px;
+    }
+
+    .retreat-feature{
+        width:100%;
+        justify-content:center;
+    }
+}
+
+/* =========================
+   HOME - BLOQUE 4 - GALERÍA
+========================= */
+
+.remanso-gallery-section{
+    padding:140px 8%;
+}
+
+/* HEADER */
+
+.remanso-gallery-header{
+    max-width:900px;
+
+    margin:0 auto 90px auto;
+
+    text-align:center;
+}
+
+.remanso-gallery-label{
+    display:block;
+
+    margin-bottom:24px;
+
+    letter-spacing:5px;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    color:#7a6855;
+}
+
+.remanso-gallery-line{
+    width:90px;
+    height:2px;
+
+    background:#7a6855;
+
+    margin:0 auto 40px auto;
+
+    opacity:.8;
+}
+
+.remanso-gallery-title{
+    font-size:4rem;
+
+    line-height:1.15;
+
+    letter-spacing:-2px;
+
+    color:#232323;
+
+    margin-bottom:30px;
+}
+
+.remanso-gallery-description{
+    max-width:700px;
+
+    margin:0 auto;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:#666;
+}
+
+/* HERO */
+
+.remanso-gallery-hero{
+    max-width:1200px;
+
+    height:650px;
+
+    margin:0 auto 30px auto;
+
+    overflow:hidden;
+
+    border-radius:32px;
+}
+
+.remanso-gallery-hero img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .8s ease;
+}
+
+.remanso-gallery-hero:hover img{
+    transform:scale(1.03);
+}
+
+/* GRID */
+
+.remanso-gallery-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
+
+    max-width:1200px;
+
+    margin:0 auto 60px auto;
+}
+
+.remanso-gallery-item{
+    height:280px;
+
+    overflow:hidden;
+
+    border-radius:24px;
+}
+
+.remanso-gallery-item img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .7s ease;
+}
+
+.remanso-gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+/* CTA */
+
+.remanso-gallery-cta{
+    text-align:center;
+}
+
+.remanso-gallery-button{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 42px;
+
+    background:#435c2c;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    transition:.3s ease;
+}
+
+.remanso-gallery-button:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+HOME - BLOQUE 5 - TESTIMONIOS
+========================= */
+
+.remanso-testimonials-section{
+    padding:140px 8%;
+
+    background:#f8f5f1;
+
+    border-radius:40px;
+
+    max-width:1400px;
+
+    margin:0 auto;
+}
+
+/* HEADER */
+
+.remanso-testimonials-header{
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 90px;
+}
+
+.remanso-testimonials-label{
+    display:block;
+
+    letter-spacing:5px;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    color:#7a6855;
+
+    margin-bottom:20px;
+}
+
+.remanso-testimonials-line{
+    width:90px;
+    height:2px;
+
+    background:#7a6855;
+
+    margin:0 auto 40px;
+}
+
+.remanso-testimonials-title{
+    font-size:4rem;
+
+    line-height:1.15;
+
+    letter-spacing:-2px;
+
+    color:#232323;
+
+    margin-bottom:25px;
+}
+
+.remanso-testimonials-description{
+    max-width:700px;
+
+    margin:0 auto;
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:1.05rem;
+}
+
+/* MÉTRICAS */
+
+.remanso-ratings{
+    display:flex;
+
+    justify-content:center;
+
+    gap:120px;
+
+    margin-bottom:90px;
+}
+
+.remanso-rating{
+    text-align:center;
+}
+
+.rating-number{
+    display:block;
+
+    font-size:4rem;
+
+    font-weight:600;
+
+    color:#46643a;
+}
+
+.rating-platform{
+    color:#666;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+}
+
+/* TESTIMONIOS */
+
+.remanso-testimonials-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+}
+
+.remanso-testimonial-card{
+    background:white;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.04);
+
+      transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+*/ EFECTO HOVER EN CARD DE TESTIMONIOS */
+
+.remanso-testimonial-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,.08);
+}
+
+
+.remanso-testimonial-card p{
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+  color: var(--remanso-green);
+
+    margin-bottom:25px;
+}
+
+.remanso-testimonial-card span{
+   color: var(--remanso-green);
+
+    font-weight:500;
+}
+
+
+.remanso-testimonial-card{
+    position:relative;
+
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(70,100,58,.08),
+        transparent 50%
+    ),
+    white;
+}
+
+/* DEGRADADO EN CARDS*/
+
+.remanso-testimonial-card{
+    position:relative;
+
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(70,100,58,.08),
+        transparent 45%
+    ),
+    white;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.04);
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+/* =========================
+HOME - BLOQUE 6 - UBICACIÓN
+========================= */
+
+.remanso-location-section{
+    padding:140px 8%;
+}
+
+/* HEADER */
+
+.remanso-location-header{
+    max-width:1000px;
+
+    margin:0 auto 90px;
+
+    text-align:center;
+}
+
+.remanso-location-label{
+    display:block;
+
+    margin-bottom:22px;
+
+    letter-spacing:5px;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+   color: var(--remanso-green);
+}
+
+.remanso-location-line{
+    width:90px;
+    height:2px;
+
+   background: var(--remanso-green);
+
+    margin:0 auto 40px;
+}
+
+.remanso-location-title{
+    font-size:4rem;
+
+    line-height:1.15;
+
+    letter-spacing:-2px;
+
+    color:#232323;
+
+    margin-bottom:30px;
+}
+
+.remanso-location-description{
+    max-width:720px;
+
+    margin:0 auto;
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:1.1rem;
+}
+
+/* MAPA */
+
+.remanso-location-map{
+    height:600px;
+
+    border-radius:36px;
+
+    overflow:hidden;
+
+    margin-bottom:60px;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+
+    background:#d9d9d9;
+}
+
+.remanso-location-map iframe{
+    width:100%;
+    height:100%;
+
+    border:none;
+}
+
+/* FEATURES */
+
+.remanso-location-features{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-bottom:60px;
+}
+
+.location-feature{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 24px;
+
+    background:white;
+
+    border-radius:999px;
+
+    border:1px solid rgba(122,104,85,.15);
+
+    color:#4a4a4a;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.04);
+
+    transition:.3s ease;
+}
+
+.location-feature:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.08);
+}
+
+/* CTA */
+
+.remanso-location-cta{
+    text-align:center;
+}
+
+.remanso-location-button{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 42px;
+
+    background:#46643a;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:500;
+
+    transition:.35s ease;
+}
+
+.remanso-location-button:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 40px rgba(70,100,58,.25);
+}
+
+.remanso-location-button span{
+    transition:.35s ease;
+}
+
+.remanso-location-button:hover span{
+    transform:translateX(4px);
+}
+
+
+
+
+/* =========================
+HOME - BLOQUE 7 PREGUNTAS FRECUENTES
+========================= */
+
+.remanso-faq-section{
+
+    padding:140px 8%;
+
+    max-width:1100px;
+
+    margin:auto;
+}
+
+/* HEADER */
+
+.remanso-faq-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+}
+
+.remanso-faq-label{
+
+    display:block;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    color: var(--remanso-green);
+
+    margin-bottom:24px;
+}
+
+.remanso-faq-line{
+
+    width:90px;
+    height:2px;
+
+   background: var(--remanso-green);
+
+    margin:0 auto 35px auto;
+
+    opacity:.8;
+}
+
+.remanso-faq-title{
+
+    font-size:3rem;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+}
+
+.remanso-faq-description{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+/* FAQ */
+
+.remanso-faq-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.remanso-faq-item{
+
+    background:white;
+
+    border-radius:24px;
+
+    border:1px solid rgba(122,104,85,.12);
+
+    overflow:hidden;
+
+    transition:.3s ease;
+}
+
+.remanso-faq-item:hover{
+
+    border-color:rgba(122,104,85,.25);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.05);
+}
+
+.remanso-faq-item summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    padding:28px 32px;
+
+    font-size:1.05rem;
+
+    font-weight:500;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.remanso-faq-item summary::after{
+
+    content:"+";
+
+    font-size:1.5rem;
+
+    color:#7a6855;
+
+    transition:.3s ease;
+}
+
+.remanso-faq-item[open] summary::after{
+
+    transform:rotate(45deg);
+}
+
+.remanso-faq-item p{
+
+    padding:0 32px 28px 32px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    max-width:800px;
+}
+
+
+
+
+
+
+/* =========================
+ HOME - BLOQUE 8 CTA FINAL
+========================= */
+
+.remanso-final-cta{
+
+    margin:140px auto 0;
+
+    width:84%;
+
+    border-radius:40px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+    url("./assets/img/final-cta.webp");
+
+    background-size:cover;
+    background-position:center;
+
+    min-height:650px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.remanso-final-cta-overlay{
+
+    text-align:center;
+
+    max-width:900px;
+
+    padding:120px 60px;
+
+    color:white;
+}
+
+.remanso-final-cta-label{
+
+    display:block;
+
+    margin-bottom:24px;
+
+    letter-spacing:5px;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    opacity:.9;
+}
+
+.remanso-final-cta-title{
+
+    font-size:4.5rem;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:30px;
+
+    font-weight:600;
+}
+
+.remanso-final-cta-description{
+
+    max-width:720px;
+
+    margin:0 auto 50px;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    opacity:.95;
+}
+
+.remanso-final-cta-button{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 42px;
+
+    background:white;
+
+    color: var(--remanso-green);
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:all .35s ease;
+}
+
+.remanso-final-cta-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.18);
+}
+
+
+
+
+/* =========================
+FOOTER
+========================= */
+
+.remanso-footer{
+
+    padding:90px 8% 40px;
+
+    background:#f6f2ed;
+
+    margin-top:120px;
+
+    border-top:1px solid rgba(0,0,0,.06);
+}
+
+.remanso-footer-content{
+
+    display:grid;
+
+    grid-template-columns:
+    1.5fr
+    1fr
+    1fr;
+
+    gap:80px;
+
+    margin-bottom:60px;
+}
+
+/* BRAND */
+
+.remanso-footer-brand h3{
+
+    font-size:1.8rem;
+
+    margin-bottom:18px;
+
+    color:#2b2b2b;
+}
+
+.remanso-footer-brand p{
+
+    max-width:340px;
+
+    line-height:1.8;
+
+    color:#666;
+}
+
+/* LINKS */
+
+.remanso-footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+}
+
+.remanso-footer-links a{
+
+    text-decoration:none;
+
+    color:#555;
+
+    transition:.3s ease;
+}
+
+.remanso-footer-links a:hover{
+
+    color:#4b5f38;
+}
+
+/* CONTACT */
+
+.remanso-footer-contact{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+}
+
+.remanso-footer-contact a{
+
+    text-decoration:none;
+
+    color:#555;
+
+    transition:.3s ease;
+}
+
+.remanso-footer-contact a:hover{
+
+    color:#4b5f38;
+}
+
+.remanso-footer-contact p{
+
+    margin-top:12px;
+
+    color:#777;
+}
+
+/* BOTTOM */
+
+.remanso-footer-bottom{
+
+    padding-top:35px;
+
+    border-top:1px solid rgba(0,0,0,.08);
+
+    text-align:center;
+
+    color:#888;
+
+    font-size:.9rem;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .remanso-footer-content{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+        text-align:center;
+    }
+
+    .remanso-footer-brand p{
+
+        margin:auto;
+    }
+}
+
+
+
+
+/* =========================
+WHATSAPP FLOATING BUTTON
+========================= */
+
+.remanso-whatsapp{
+
+    position:fixed;
+
+    right:30px;
+    bottom:30px;
+
+    width:64px;
+    height:64px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    font-size:2rem;
+
+    text-decoration:none;
+
+    z-index:999;
+
+    box-shadow:
+    0 15px 35px rgba(37,211,102,.35);
+
+    transition:.3s ease;
+}
+
+.remanso-whatsapp:hover{
+
+    transform:
+    translateY(-4px)
+    scale(1.05);
+
+    box-shadow:
+    0 20px 45px rgba(37,211,102,.45);
+}
+
+
+
+
+
+
+
+/* SECCION PRINCIPAL 1 - CABAÑAS */
+
+
+
+/* =========================
+CABAÑAS - HERO
+========================= */
+
+.remanso-cabins-hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:0 8%;
+
+    background-image:url("../assets/img/claro.jpg");
+    background-size:cover;
+    background-position:center;
+
+    overflow:hidden;
+}
+
+.remanso-cabins-hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.45)
+    );
+}
+
+.remanso-cabins-hero-content{
+
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+
+    color:white;
+}
+
+.remanso-cabins-label{
+
+    display:inline-block;
+
+    letter-spacing:4px;
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+    opacity:.9;
+    color: white;
+}
+
+.remanso-cabins-hero-title{
+
+    font-size:5rem;
+
+    line-height:1.1;
+
+    margin-bottom:30px;
+
+    font-weight:700;
+}
+
+.remanso-cabins-hero-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+    opacity:.95;
+}
+
+.remanso-cabins-hero-buttons{
+
+    margin-top:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+}
+
+.remanso-cabins-primary-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 38px;
+
+    background:white;
+
+    color:#7a6855;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+}
+
+.remanso-cabins-primary-button:hover{
+
+    transform:translateY(-4px);
+}
+
+.remanso-cabins-secondary-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 38px;
+
+    border:1px solid rgba(255,255,255,.4);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s ease;
+}
+
+.remanso-cabins-secondary-button:hover{
+
+    background:rgba(255,255,255,.12);
+}
+
+
+
+
+
+/* =========================
+CABAÑAS - CATÁLOGO
+========================= */
+
+.remanso-cabins-catalog{
+
+    padding:140px 8%;
+}
+
+.remanso-cabins-catalog-header{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+    margin-bottom:90px;
+}
+
+.remanso-cabins-catalog-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+}
+
+.remanso-cabins-catalog-line{
+
+    width:70px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px auto;
+}
+
+.remanso-cabins-catalog-title{
+
+    font-size:4rem;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+}
+
+.remanso-cabins-catalog-description{
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+/* =========================
+GRID DE CABAÑAS
+========================= */
+
+.remanso-cabins-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+}
+
+/* =========================
+CARD DE CABAÑA
+========================= */
+
+.remanso-cabin-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid #ece7df;
+
+    transition:.4s ease;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.05);
+}
+
+.remanso-cabin-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.10);
+}
+
+.remanso-cabin-image{
+
+    height:320px;
+
+    overflow:hidden;
+}
+
+.remanso-cabin-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s ease;
+}
+
+.remanso-cabin-card:hover img{
+
+    transform:scale(1.05);
+}
+
+/* =========================
+CONTENIDO
+========================= */
+
+.remanso-cabin-content{
+
+    padding:35px;
+}
+
+.remanso-cabin-number{
+
+    color:#7a6855;
+
+    font-size:.85rem;
+
+    letter-spacing:2px;
+
+    font-weight:600;
+}
+
+.remanso-cabin-title{
+
+    font-size:1.8rem;
+
+    margin-top:12px;
+    margin-bottom:25px;
+}
+
+.remanso-cabin-features{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 30px;
+}
+
+.remanso-cabin-features li{
+
+    margin-bottom:12px;
+
+    color:#555;
+}
+
+/* =========================
+BOTÓN
+========================= */
+.remanso-cabin-button{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-top:10px;
+
+    padding:12px 20px;
+
+    border-radius:999px;
+
+    background:#f6f1eb;
+
+    color:#7a6855;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+.remanso-cabin-button:hover{
+
+    background:#ede4d8;
+
+    gap:16px;
+
+}
+
+
+/* =========================
+META INFORMACIÓN CABAÑA
+========================= */
+
+.remanso-cabin-meta{
+
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:12px;
+margin-bottom:24px;
+font-size:.9rem;
+color:#7a6855;
+font-weight:500;
+
+}
+
+/* =========================
+NOTA ACLARATORIA
+========================= */
+
+.remanso-cabins-note-label{
+
+    display:block;
+
+    margin-bottom:18px;
+
+    color:#7a6855;
+
+    font-size:.8rem;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+
+.remanso-cabins-note{
+
+    max-width:950px;
+
+    margin:80px auto 0 auto;
+
+    padding:30px 40px;
+
+    background:#f8f5f1;
+
+    border:1px solid #ece7df;
+
+    border-radius:24px;
+
+    text-align:center;
+
+}
+
+.remanso-cabins-note p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+    margin:0;
+
+}
+
+
+
+
+/* SECTION DE CABAÑAS INDIVIDUALES*/
+
+
+/* =========================
+CABAÑA 1 - HERO
+========================= */
+
+.remanso-cabin-hero{
+
+position:relative;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 8%;
+background-image:url("../assets/img/cabana1img.JPG");
+background-size:cover;
+background-position:center;
+overflow:hidden;
+
+}
+
+/* OVERLAY */
+.remanso-cabin-hero-overlay{
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.65)
+);
+
+}
+
+/* CONTENIDO */
+
+.remanso-cabin-hero-content{
+
+position:relative;
+z-index:2;
+
+max-width:950px;
+
+color:white;
+
+padding:0;
+
+background:none;
+backdrop-filter:none;
+border:none;
+
+}
+
+
+/* LABEL */
+
+.remanso-cabin-hero-label{
+
+display:inline-block;
+margin-bottom:24px;
+letter-spacing:5px;
+text-transform:uppercase;
+font-size:.85rem;
+opacity:.9;
+
+}
+
+/* TITULO */
+
+.remanso-cabin-hero-title{
+
+font-size:5.5rem;
+line-height:1.05;
+letter-spacing:-3px;
+margin-bottom:30px;
+font-weight:600;
+text-shadow:0 10px 30px rgba(0,0,0,.40);
+}
+
+/* DESCRIPCIÓN */
+.remanso-cabin-hero-description{
+
+max-width:760px;
+margin:0 auto;
+font-size:1.15rem;
+line-height:1.9;
+opacity:.95;
+
+text-shadow:
+0 4px 18px rgba(0,0,0,.35);
+
+}
+
+.remanso-cabin-hero-line{
+
+width:90px;
+height:2px;
+
+background:
+rgba(255,255,255,.45);
+
+margin:0 auto 35px auto;
+
+}
+
+
+/* META */
+
+.remanso-cabin-hero-meta{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:14px;
+margin-top:40px;
+margin-bottom:50px;
+color:rgba(255,255,255,.85);
+font-size:.95rem;
+
+}
+
+/* BOTONES */
+
+.remanso-cabin-hero-buttons{
+
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+
+}
+
+.remanso-cabin-primary-button{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 38px;
+background:white;
+color:#7a6855;
+text-decoration:none;
+border-radius:999px;
+font-weight:600;
+transition:.35s ease;
+
+}
+
+.remanso-cabin-primary-button:hover{
+
+transform:translateY(-4px);
+
+}
+
+.remanso-cabin-secondary-button{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 38px;
+border:1px solid rgba(255,255,255,.35);
+color:white;
+text-decoration:none;
+border-radius:999px;
+backdrop-filter:blur(10px);
+transition:.35s ease;
+
+}
+
+.remanso-cabin-secondary-button:hover{
+
+background:rgba(255,255,255,.10);
+
+}
+
+
+
+/* =========================
+CABAÑA 1 - GALERÍA
+========================= */
+
+.remanso-cabin-gallery{
+
+padding:140px 8%;
+
+}
+
+.remanso-cabin-gallery-main,
+.remanso-cabin-gallery-item{
+
+    position:relative;
+
+}
+
+
+/* HEADER */
+
+.remanso-cabin-gallery-header{
+
+text-align:center;
+max-width:800px;
+margin:auto;
+margin-bottom:80px;
+
+}
+
+.remanso-cabin-gallery-label{
+
+display:block;
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:.85rem;
+color:#7a6855;
+
+}
+
+.remanso-cabin-gallery-line{
+
+width:80px;
+height:2px;
+background:#cdb9a2;
+margin:22px auto;
+
+}
+
+.remanso-cabin-gallery-title{
+
+font-size:4rem;
+line-height:1.1;
+letter-spacing:-2px;
+
+}
+
+/* GRID */
+
+.remanso-cabin-gallery-grid{
+
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+grid-template-rows:260px 260px;
+gap:20px;
+
+}
+
+/* IMAGEN PRINCIPAL */
+
+.remanso-cabin-gallery-main{
+
+grid-row:1 / 3;
+border-radius:28px;
+overflow:hidden;
+
+}
+
+/* IMÁGENES PEQUEÑAS */
+
+.remanso-cabin-gallery-item{
+
+border-radius:28px;
+overflow:hidden;
+
+}
+
+/* IMÁGENES */
+
+.remanso-cabin-gallery-main img,
+.remanso-cabin-gallery-item img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:transform .8s ease;
+
+}
+
+.remanso-cabin-gallery-main:hover img,
+.remanso-cabin-gallery-item:hover img{
+
+transform:scale(1.05);
+
+}
+
+/* =========================
+ETIQUETAS DE AMBIENTE
+========================= */
+
+.remanso-cabin-gallery-main,
+.remanso-cabin-gallery-item{
+
+    position:relative;
+    height:100%;
+
+}
+
+.remanso-cabin-gallery-tag{
+
+    position:absolute;
+
+    left:16px;
+    bottom:16px;
+
+    padding:8px 14px;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(8px);
+
+    color:white;
+
+    font-size:.75rem;
+
+    font-weight:500;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    border-radius:999px;
+
+    z-index:2;
+
+}
+
+.remanso-cabin-gallery-tag-main{
+
+    background:#7a6855;
+
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.remanso-cabin-gallery-grid{
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+}
+.remanso-cabin-gallery-main{
+    grid-row:auto;
+    height:400px;
+}
+.remanso-cabin-gallery-item{
+    height:250px;
+}
+.remanso-cabin-gallery-title{
+    font-size:2.8rem;
+}
+
+}
+
+
+
+
+
+
+
+/* =========================
+CABAÑA 1 - EXPERIENCIA
+========================= */
+
+.remanso-cabin-experience{
+
+padding:140px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+
+}
+
+/* CONTENIDO */
+
+.remanso-cabin-experience-content{
+
+max-width:580px;
+
+}
+
+.remanso-cabin-experience-label{
+
+display:block;
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:.85rem;
+color: var(--remanso-green);
+
+}
+
+.remanso-cabin-experience-line{
+
+width:80px;
+height:2px;
+background:#cdb9a2;
+margin:22px 0 40px;
+
+}
+
+.remanso-cabin-experience-title{
+
+font-size:4rem;
+line-height:1.1;
+letter-spacing:-2px;
+margin-bottom:30px;
+color:#232323;
+
+}
+
+.remanso-cabin-experience-description{
+
+font-size:1.08rem;
+line-height:1.9;
+color:#666;
+margin-bottom:24px;
+
+}
+
+/* IMAGEN */
+
+.remanso-cabin-experience-image{
+
+height:650px;
+border-radius:32px;
+overflow:hidden;
+box-shadow:
+0 30px 80px rgba(0,0,0,.08);
+
+}
+
+.remanso-cabin-experience-image img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:transform .8s ease;
+
+}
+
+.remanso-cabin-experience-image:hover img{
+
+transform:scale(1.04);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.remanso-cabin-experience{
+    grid-template-columns:1fr;
+    gap:50px;
+}
+.remanso-cabin-experience-title{
+    font-size:2.8rem;
+}
+.remanso-cabin-experience-image{
+    height:450px;
+}
+
+}
+
+
+
+/* =========================
+CABAÑA 1 - SERVICIOS
+========================= */
+
+.remanso-cabin-services{
+
+padding:140px 8%;
+background:#faf8f5;
+
+}
+
+/* HEADER */
+
+.remanso-cabin-services-header{
+
+text-align:center;
+max-width:850px;
+margin:auto;
+margin-bottom:80px;
+
+}
+
+.remanso-cabin-services-label{
+
+display:block;
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:.85rem;
+color:#7a6855;
+
+}
+
+.remanso-cabin-services-line{
+
+width:80px;
+height:2px;
+background:#cdb9a2;
+margin:22px auto;
+
+}
+
+.remanso-cabin-services-title{
+
+font-size:4rem;
+line-height:1.1;
+letter-spacing:-2px;
+margin-bottom:25px;
+
+}
+
+.remanso-cabin-services-description{
+
+color:#666;
+line-height:1.8;
+max-width:700px;
+margin:auto;
+
+}
+
+/* GRID */
+
+.remanso-cabin-services-grid{
+
+margin-top:70px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
+
+}
+
+/* CARD */
+
+.remanso-service-card{
+
+background:white;
+border-radius:24px;
+padding:35px 25px;
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+gap:18px;
+font-size:1rem;
+color:#444;
+border:1px solid rgba(122,104,85,.08);
+box-shadow:
+0 15px 35px rgba(0,0,0,.04);
+transition:.35s ease;
+
+}
+
+.remanso-service-card:hover{
+
+transform:translateY(-6px);
+box-shadow:
+0 20px 40px rgba(0,0,0,.08);
+
+}
+
+.remanso-service-card span{
+
+line-height:1.6;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.remanso-cabin-services-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.remanso-cabin-services-grid{
+    grid-template-columns:1fr;
+}
+.remanso-cabin-services-title{
+    font-size:2.8rem;
+}
+
+}
+
+
+
+
+
+/* =========================
+CABAÑA 1 - TESTIMONIOS
+========================= */
+
+.remanso-cabin-testimonials{
+
+padding:140px 8%;
+
+}
+
+/* HEADER */
+
+.remanso-cabin-testimonials-header{
+
+text-align:center;
+max-width:850px;
+margin:auto;
+margin-bottom:80px;
+
+}
+
+.remanso-cabin-testimonials-label{
+
+display:block;
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:.85rem;
+color:#7a6855;
+
+}
+
+.remanso-cabin-testimonials-line{
+
+width:80px;
+height:2px;
+background:#cdb9a2;
+margin:22px auto;
+
+}
+
+.remanso-cabin-testimonials-title{
+
+font-size:4rem;
+line-height:1.1;
+letter-spacing:-2px;
+margin-bottom:25px;
+
+}
+
+.remanso-cabin-testimonials-description{
+
+max-width:700px;
+margin:auto;
+color:#666;
+line-height:1.8;
+
+}
+
+/* GRID */
+
+.remanso-cabin-testimonials-grid{
+
+margin-top:70px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+
+}
+
+/* CARD */
+
+.remanso-cabin-testimonial-card{
+
+background:white;
+border-radius:28px;
+padding:40px;
+border:1px solid rgba(122,104,85,.08);
+box-shadow:
+0 15px 40px rgba(0,0,0,.05);
+transition:.35s ease;
+
+}
+
+.remanso-cabin-testimonial-card:hover{
+
+transform:translateY(-6px);
+box-shadow:
+0 25px 50px rgba(0,0,0,.08);
+
+}
+
+.remanso-cabin-feature-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:4px;
+
+background:#7a6855;
+
+}
+
+
+.remanso-cabin-stars{
+
+color:#b9975b;
+font-size:1.1rem;
+margin-bottom:20px;
+
+}
+
+.remanso-cabin-testimonial-card p{
+
+color:#555;
+line-height:1.9;
+margin-bottom:30px;
+
+}
+
+/* FOOTER */
+
+.remanso-cabin-testimonial-footer{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:.9rem;
+
+}
+
+.testimonial-name{
+
+color:#232323;
+font-weight:600;
+
+}
+
+.testimonial-date{
+
+color: var(--remanso-green);
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.remanso-cabin-testimonials-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+
+
+/* =========================
+CABAÑA 1 - INFORMACIÓN IMPORTANTE
+========================= */
+
+.remanso-cabin-info{
+
+    padding:140px 8%;
+
+}
+
+/* HEADER */
+
+.remanso-cabin-info-header{
+
+    max-width:850px;
+
+    margin:auto;
+    margin-bottom:90px;
+
+    text-align:center;
+
+}
+
+.remanso-cabin-info-label{
+
+    display:block;
+
+  color: var(--remanso-green);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.remanso-cabin-info-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px auto;
+
+}
+
+.remanso-cabin-info-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:25px;
+
+}
+
+.remanso-cabin-info-description{
+
+    color:#666;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/* LISTA */
+
+.remanso-cabin-info-list{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* ITEM */
+
+.remanso-cabin-info-item{
+
+    display:flex;
+
+    gap:30px;
+
+    padding:35px 0;
+
+    border-bottom:1px solid #ece7df;
+
+}
+
+.remanso-cabin-info-item:first-child{
+
+    border-top:1px solid #ece7df;
+
+}
+
+/* ICONO */
+
+.remanso-cabin-info-icon{
+
+    width:52px;
+
+    flex-shrink:0;
+
+    font-size:1.5rem;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+}
+
+/* CONTENIDO */
+
+.remanso-cabin-info-content h3{
+
+    font-size:1.35rem;
+
+    margin-bottom:10px;
+
+    color:#232323;
+
+}
+
+.remanso-cabin-info-content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    max-width:650px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+CABAÑA 1 - CTA FINAL
+========================= */
+
+.remanso-cabin-final-cta{
+
+    padding:140px 8%;
+
+   background:
+linear-gradient(
+rgba(122,104,85,.88),
+rgba(122,104,85,.88)
+),
+url(../assets/img/cabana1img.JPG)
+center/cover;
+    color:white;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* CONTENIDO */
+
+.remanso-cabin-final-cta-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/* LABEL */
+
+.remanso-cabin-final-cta-label{
+
+    display:block;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    opacity:.9;
+}
+
+/* LINEA */
+
+.remanso-cabin-final-cta-line{
+
+    width:90px;
+
+    height:2px;
+
+    background:rgba(255,255,255,.4);
+
+    margin:24px auto 40px auto;
+}
+
+/* TITULO */
+
+.remanso-cabin-final-cta-title{
+
+    font-size:4.5rem;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:30px;
+}
+
+/* TEXTO */
+
+.remanso-cabin-final-cta-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    font-size:1.1rem;
+
+    opacity:.95;
+
+    margin-bottom:50px;
+}
+
+/* BOTONES */
+
+.remanso-cabin-final-cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+}
+
+/* BOTON PRINCIPAL */
+
+.remanso-cabin-final-primary-button{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 38px;
+
+    background:white;
+
+    color:#7a6855;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+}
+
+.remanso-cabin-final-primary-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.15);
+}
+
+/* BOTON SECUNDARIO */
+
+.remanso-cabin-final-secondary-button{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 38px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s ease;
+}
+
+.remanso-cabin-final-secondary-button:hover{
+
+    background:rgba(255,255,255,.10);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .remanso-cabin-final-cta{
+
+        padding:100px 6%;
+    }
+
+    .remanso-cabin-final-cta-title{
+
+        font-size:2.8rem;
+    }
+}
+
+
+
+
+
+
+
+/* =========================
+SECTION PRINCIPAL - EXPERIENCIA - HERO
+========================= */
+
+.remanso-experiences-hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:0 8%;
+
+    background-image:url("../assets/img/comunidad1.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    overflow:hidden;
+
+}
+
+/* OVERLAY */
+
+.remanso-experiences-hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.55)
+    );
+
+}
+
+/* CONTENIDO */
+
+.remanso-experiences-hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1100px;
+
+    color:white;
+
+}
+
+/* LABEL */
+
+.remanso-experiences-label{
+
+    display:inline-block;
+
+    margin-bottom:24px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    opacity:.95;
+
+}
+
+/* LINEA */
+
+.remanso-experiences-line{
+
+    width:90px;
+    height:2px;
+
+    background:rgba(255,255,255,.45);
+
+    margin:0 auto 35px auto;
+
+}
+
+/* TITULO */
+
+.remanso-experiences-title{
+
+    font-size:5.5rem;
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+    font-weight:600;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* DESCRIPCIÓN */
+
+.remanso-experiences-description{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    opacity:.95;
+
+    text-shadow:
+    0 5px 15px rgba(0,0,0,.35);
+
+}
+
+/* BOTONES */
+
+.remanso-experiences-buttons{
+
+    margin-top:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* BOTÓN PRINCIPAL */
+
+.remanso-experiences-primary-button{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 38px;
+
+    background:white;
+
+    color:#7a6855;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.remanso-experiences-primary-button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* BOTÓN SECUNDARIO */
+
+.remanso-experiences-secondary-button{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 38px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s ease;
+
+}
+
+.remanso-experiences-secondary-button:hover{
+
+    background:rgba(255,255,255,.10);
+
+}
+
+
+/* =========================
+SECTION  PRINCIPAL- EXPERIENCIA - EL ESPACIO
+========================= */
+
+.remanso-experience-space{
+
+    padding:140px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/* CONTENIDO */
+
+.remanso-experience-space-content{
+
+    max-width:600px;
+
+}
+
+.remanso-experience-space-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.remanso-experience-space-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px 0 40px;
+
+}
+
+.remanso-experience-space-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:30px;
+
+}
+
+.remanso-experience-space-description{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:24px;
+
+    font-size:1.05rem;
+
+}
+
+/* IMAGEN */
+
+.remanso-experience-space-image{
+
+    height:650px;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+
+}
+
+.remanso-experience-space-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.8s ease;
+
+}
+
+.remanso-experience-space-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+
+/* =========================
+EXPERIENCIAS - TIPOS
+========================= */
+
+.remanso-experiences-types{
+
+    padding:140px 8%;
+
+}
+
+/* HEADER */
+
+.remanso-experiences-types-header{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:120px;
+
+}
+
+.remanso-experiences-types-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.remanso-experiences-types-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px auto;
+
+}
+
+.remanso-experiences-types-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.remanso-experiences-types-description{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* ITEM */
+
+.remanso-experience-item{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+    margin-bottom:140px;
+
+}
+
+.remanso-experience-item.reverse{
+
+    direction:rtl;
+
+}
+
+.remanso-experience-item.reverse > *{
+
+    direction:ltr;
+
+}
+
+/* IMAGEN */
+
+.remanso-experience-item-image{
+
+    height:500px;
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+}
+
+.remanso-experience-item-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.8s ease;
+
+}
+
+.remanso-experience-item-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* CONTENIDO */
+
+.remanso-experience-item-number{
+
+    color:#7a6855;
+
+    font-size:.9rem;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+}
+
+.remanso-experience-item-content h3{
+
+    font-size:3rem;
+
+    margin:18px 0 24px;
+
+}
+
+.remanso-experience-item-content p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    max-width:550px;
+
+}
+
+
+
+/* =========================
+EXPERIENCIAS - BOTON DE CARD E INFO UTIL
+========================= */
+
+.remanso-experience-button{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+margin-top:28px;
+
+padding:14px 28px;
+
+background:#7a6855;
+color:white;
+
+text-decoration:none;
+
+border-radius:999px;
+
+font-weight:600;
+font-size:.95rem;
+
+transition:.35s ease;
+
+}
+
+.remanso-experience-button:hover{
+
+transform:translateY(-3px);
+
+background:#6d5c4c;
+
+}
+
+.remanso-experience-meta{
+
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+
+margin-top:24px;
+
+}
+
+.remanso-experience-pill{
+
+padding:10px 16px;
+
+border:1px solid rgba(122,104,85,.15);
+
+background:white;
+
+border-radius:999px;
+
+font-size:.85rem;
+
+font-weight:500;
+
+color:#7a6855;
+
+}
+
+
+
+
+/* =========================
+EXPERIENCIAS - GALERÍA
+========================= */
+
+.remanso-experience-gallery{
+
+    padding:140px 8%;
+
+}
+
+/* HEADER */
+
+.remanso-experience-gallery-header{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:90px;
+
+}
+
+.remanso-experience-gallery-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.remanso-experience-gallery-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px auto;
+
+}
+
+.remanso-experience-gallery-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.remanso-experience-gallery-description{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* GRID */
+
+.remanso-experience-gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    grid-template-rows:280px 280px;
+
+    gap:20px;
+
+}
+
+/* FOTO PRINCIPAL */
+
+.remanso-experience-gallery-main{
+
+    position:relative;
+
+    grid-row:1 / 3;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+}
+
+/* FOTOS SECUNDARIAS */
+
+.remanso-experience-gallery-item{
+
+    position:relative;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+}
+
+/* IMÁGENES */
+
+.remanso-experience-gallery-main img,
+.remanso-experience-gallery-item img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.8s ease;
+
+}
+
+.remanso-experience-gallery-main:hover img,
+.remanso-experience-gallery-item:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* ETIQUETAS */
+
+.remanso-experience-gallery-tag{
+
+    position:absolute;
+
+    left:18px;
+    bottom:18px;
+
+    padding:10px 16px;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:.75rem;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    border-radius:999px;
+
+}
+
+
+
+
+/* =========================
+EXPERIENCIAS - ORGANIZADORES
+========================= */
+
+.remanso-host-section{
+
+    padding:140px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/* CONTENIDO */
+
+.remanso-host-content{
+
+    max-width:600px;
+
+}
+
+.remanso-host-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.remanso-host-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px 0 40px;
+
+}
+
+.remanso-host-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.remanso-host-description{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+/* BENEFICIOS */
+
+.remanso-host-benefits{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-bottom:40px;
+
+}
+
+.remanso-host-benefit{
+
+    color:#444;
+
+    font-size:1rem;
+
+}
+
+/* BOTÓN */
+
+.remanso-host-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 34px;
+
+    background:#7a6855;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.remanso-host-button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* IMAGEN */
+
+.remanso-host-image{
+
+    height:650px;
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+
+}
+
+.remanso-host-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.8s ease;
+
+}
+
+.remanso-host-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+
+
+
+/* =========================
+EXPERIENCIAS - CTA FINAL
+========================= */
+
+.remanso-experience-cta{
+
+    padding:160px 8%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8e7a65,
+        #7a6855
+    );
+
+    color:white;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* CONTENIDO */
+
+.remanso-experience-cta-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* LABEL */
+
+.remanso-experience-cta-label{
+
+    display:block;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    opacity:.85;
+
+    margin-bottom:24px;
+
+}
+
+/* TITULO */
+
+.remanso-experience-cta-title{
+
+    font-size:5rem;
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+    margin-bottom:30px;
+
+    font-weight:600;
+
+}
+
+/* DESCRIPCIÓN */
+
+.remanso-experience-cta-description{
+
+    max-width:700px;
+
+    margin:0 auto 50px auto;
+
+    line-height:1.9;
+
+    font-size:1.1rem;
+
+    opacity:.92;
+
+}
+
+/* BOTONES */
+
+.remanso-experience-cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* BOTÓN PRINCIPAL */
+
+.remanso-experience-cta-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 38px;
+
+    background:white;
+
+    color:#7a6855;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.remanso-experience-cta-primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* BOTÓN SECUNDARIO */
+
+.remanso-experience-cta-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 38px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s ease;
+
+}
+
+.remanso-experience-cta-secondary:hover{
+
+    background:rgba(255,255,255,.10);
+
+}
+
+
+
+
+
+/* =========================
+EXPERIENCIAS - RETIROS - EL AMAANECER LA CONSCIENCIA- PAG INTERNA
+
+========================= */
+
+
+/* =========================
+AMANECER DE LA CONSCIENCIA - HERO
+========================= */
+
+.remanso-consciousness-hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:0 8%;
+
+    background-image:url("../assets/img/retirosholistic.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    overflow:hidden;
+
+}
+
+/* OVERLAY */
+
+.remanso-consciousness-hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.60)
+    );
+
+}
+
+/* CONTENIDO */
+
+.remanso-consciousness-hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1000px;
+
+    color:white;
+
+}
+
+/* LABEL */
+
+.remanso-consciousness-hero-label{
+
+    display:inline-block;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    margin-bottom:24px;
+
+    opacity:.9;
+
+}
+
+/* LÍNEA */
+
+.remanso-consciousness-hero-line{
+
+    width:90px;
+    height:2px;
+
+    background:rgba(255,255,255,.35);
+
+    margin:0 auto 35px auto;
+
+}
+
+/* TÍTULO */
+
+.remanso-consciousness-hero-title{
+
+    font-size:5.5rem;
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+    margin-bottom:30px;
+
+    font-weight:600;
+
+}
+
+/* DESCRIPCIÓN */
+
+.remanso-consciousness-hero-description{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    opacity:.95;
+
+}
+
+/* META */
+
+.remanso-consciousness-hero-meta{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:40px;
+
+    margin-bottom:50px;
+
+    font-size:.95rem;
+
+    color:rgba(255,255,255,.85);
+
+}
+
+/* BOTONES */
+
+.remanso-consciousness-hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* BOTÓN PRINCIPAL */
+
+.remanso-consciousness-primary-button{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 38px;
+
+    background:white;
+
+    color:#7a6855;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.remanso-consciousness-primary-button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* BOTÓN SECUNDARIO */
+
+.remanso-consciousness-secondary-button{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 38px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s ease;
+
+}
+
+.remanso-consciousness-secondary-button:hover{
+
+    background:rgba(255,255,255,.10);
+
+}
+
+
+
+
+
+
+
+/* =========================
+AMANECER DE LA CONSCIENCIA
+¿DE QUÉ SE TRATA?
+========================= */
+
+.remanso-consciousness-about{
+
+    padding:140px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/* CONTENIDO */
+
+.remanso-consciousness-about-content{
+
+    max-width:600px;
+
+}
+
+/* LABEL */
+
+.remanso-consciousness-about-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+/* LÍNEA */
+
+.remanso-consciousness-about-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px 0 40px;
+
+}
+
+/* TÍTULO */
+
+.remanso-consciousness-about-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:30px;
+
+}
+
+/* DESCRIPCIÓN */
+
+.remanso-consciousness-about-description{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:24px;
+
+    font-size:1.05rem;
+
+}
+
+/* IMAGEN */
+
+.remanso-consciousness-about-image{
+
+    height:650px;
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+
+}
+
+.remanso-consciousness-about-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.8s ease;
+
+}
+
+.remanso-consciousness-about-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+
+
+
+
+/* =========================
+AMANECER DE LA CONSCIENCIA
+¿QUÉ VAS A VIVIR?
+========================= */
+
+.remanso-consciousness-experience{
+
+    padding:140px 8%;
+
+}
+
+/* HEADER */
+
+.remanso-consciousness-experience-header{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:90px;
+
+}
+
+.remanso-consciousness-experience-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.remanso-consciousness-experience-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px auto;
+
+}
+
+.remanso-consciousness-experience-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.remanso-consciousness-experience-description{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* GRID */
+
+.remanso-consciousness-experience-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* CARD */
+
+.remanso-consciousness-experience-card{
+
+    padding:40px;
+
+    background:white;
+
+    border:1px solid #ece7df;
+
+    border-radius:28px;
+
+    transition:.35s ease;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.04);
+
+}
+
+.remanso-consciousness-experience-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+
+}
+
+/* ICONO */
+
+.remanso-consciousness-experience-icon{
+
+    display:block;
+
+    font-size:2rem;
+
+    margin-bottom:24px;
+
+}
+
+/* TITULO */
+
+.remanso-consciousness-experience-card h3{
+
+    font-size:1.5rem;
+
+    margin-bottom:16px;
+
+    line-height:1.2;
+
+}
+
+/* TEXTO */
+
+.remanso-consciousness-experience-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+
+/* =========================
+AMANECER DE LA CONSCIENCIA
+INFORMACIÓN PRÁCTICA
+========================= */
+
+.remanso-consciousness-info{
+
+    padding:140px 8%;
+
+    background:#faf8f5;
+
+}
+
+/* HEADER */
+
+.remanso-consciousness-info-header{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:90px;
+
+}
+
+.remanso-consciousness-info-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.remanso-consciousness-info-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px auto;
+
+}
+
+.remanso-consciousness-info-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.remanso-consciousness-info-description{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* GRID */
+
+.remanso-consciousness-info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+/* CARD */
+
+.remanso-consciousness-info-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    border:1px solid #ece7df;
+
+    transition:.35s ease;
+
+}
+
+.remanso-consciousness-info-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.06);
+
+}
+
+/* TITULO */
+
+.remanso-consciousness-info-card h3{
+
+    font-size:1.3rem;
+
+    margin-bottom:18px;
+
+    color:#232323;
+
+}
+
+/* TEXTO */
+
+.remanso-consciousness-info-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+
+/* =========================
+AMANECER DE LA CONSCIENCIA
+EL LUGAR
+========================= */
+
+.remanso-consciousness-location{
+
+    padding:140px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/* IMAGEN */
+
+.remanso-consciousness-location-image{
+
+    height:700px;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+
+}
+
+.remanso-consciousness-location-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.8s ease;
+
+}
+
+.remanso-consciousness-location-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+/* CONTENIDO */
+
+.remanso-consciousness-location-content{
+
+    max-width:600px;
+
+}
+
+/* LABEL */
+
+.remanso-consciousness-location-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+/* LINEA */
+
+.remanso-consciousness-location-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px 0 40px;
+
+}
+
+/* TITULO */
+
+.remanso-consciousness-location-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:30px;
+
+}
+
+/* TEXTO */
+
+.remanso-consciousness-location-description{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:24px;
+
+    font-size:1.05rem;
+
+}
+
+
+
+
+
+/* =========================
+AMANECER DE LA CONSCIENCIA
+ORGANIZADORES
+========================= */
+
+.remanso-consciousness-organizers{
+
+    padding:140px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/* IMAGEN */
+
+.remanso-consciousness-organizers-image{
+
+    height:650px;
+
+    overflow:hidden;
+
+    border-radius:32px;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+
+}
+
+.remanso-consciousness-organizers-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.8s ease;
+
+}
+
+.remanso-consciousness-organizers-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+/* CONTENIDO */
+
+.remanso-consciousness-organizers-content{
+
+    max-width:600px;
+
+}
+
+/* LABEL */
+
+.remanso-consciousness-organizers-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+/* LINEA */
+
+.remanso-consciousness-organizers-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px 0 40px;
+
+}
+
+/* TITULO */
+
+.remanso-consciousness-organizers-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:30px;
+
+}
+
+/* DESCRIPCIÓN */
+
+.remanso-consciousness-organizers-description{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin-bottom:24px;
+
+    font-size:1.05rem;
+
+}
+
+/* BOTONES */
+
+.remanso-consciousness-organizers-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+/* BOTÓN PRINCIPAL */
+
+.remanso-consciousness-organizers-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 34px;
+
+    background:#7a6855;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.remanso-consciousness-organizers-primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* BOTÓN SECUNDARIO */
+
+.remanso-consciousness-organizers-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 34px;
+
+    border:1px solid #d8cec3;
+
+    color:#7a6855;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.remanso-consciousness-organizers-secondary:hover{
+
+    background:#faf8f5;
+
+}
+
+
+
+
+
+
+
+/* =========================
+AMANECER DE LA CONSCIENCIA
+GALERÍA
+========================= */
+
+.remanso-consciousness-gallery{
+
+    padding:140px 8%;
+
+}
+
+/* HEADER */
+
+.remanso-consciousness-gallery-header{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:90px;
+
+}
+
+.remanso-consciousness-gallery-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.remanso-consciousness-gallery-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px auto;
+
+}
+
+.remanso-consciousness-gallery-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.remanso-consciousness-gallery-description{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* GRID */
+
+.remanso-consciousness-gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    grid-template-rows:280px 280px;
+
+    gap:20px;
+
+}
+
+/* IMAGEN PRINCIPAL */
+
+.remanso-consciousness-gallery-main{
+
+    position:relative;
+
+    grid-row:1 / 3;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+}
+
+/* IMÁGENES SECUNDARIAS */
+
+.remanso-consciousness-gallery-item{
+
+    position:relative;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+}
+
+/* IMÁGENES */
+
+.remanso-consciousness-gallery-main img,
+.remanso-consciousness-gallery-item img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.8s ease;
+
+}
+
+.remanso-consciousness-gallery-main:hover img,
+.remanso-consciousness-gallery-item:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* ETIQUETAS */
+
+.remanso-consciousness-gallery-tag{
+
+    position:absolute;
+
+    left:18px;
+    bottom:18px;
+
+    padding:10px 16px;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:.75rem;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    border-radius:999px;
+
+}
+
+
+
+
+
+
+/* =========================
+AMANECER DE LA CONSCIENCIA
+PREGUNTAS FRECUENTES
+========================= */
+
+.remanso-consciousness-faq{
+
+    padding:140px 8%;
+
+    background:#faf8f5;
+
+}
+
+/* HEADER */
+
+.remanso-consciousness-faq-header{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:80px;
+
+}
+
+.remanso-consciousness-faq-label{
+
+    display:block;
+
+    color:#7a6855;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+}
+
+.remanso-consciousness-faq-line{
+
+    width:80px;
+    height:2px;
+
+    background:#cdb9a2;
+
+    margin:22px auto;
+
+}
+
+.remanso-consciousness-faq-title{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.remanso-consciousness-faq-description{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* CONTENEDOR */
+
+.remanso-consciousness-faq-container{
+
+    max-width:950px;
+
+    margin:auto;
+
+}
+
+/* ITEM */
+
+.remanso-consciousness-faq-item{
+
+    background:white;
+
+    border:1px solid #ece7df;
+
+    border-radius:20px;
+
+    margin-bottom:18px;
+
+    overflow:hidden;
+
+}
+
+/* PREGUNTA */
+
+.remanso-consciousness-faq-item summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    padding:28px 32px;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    color:#232323;
+
+    position:relative;
+
+}
+
+.remanso-consciousness-faq-item summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+/* RESPUESTA */
+
+.remanso-consciousness-faq-item p{
+
+    padding:0 32px 28px 32px;
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+
+
+/* =========================
+AMANECER DE LA CONSCIENCIA
+CTA FINAL
+========================= */
+
+.remanso-consciousness-cta{
+
+    padding:160px 8%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8e7a65,
+        #7a6855
+    );
+
+    color:white;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* CONTENIDO */
+
+.remanso-consciousness-cta-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+/* LABEL */
+
+.remanso-consciousness-cta-label{
+
+    display:block;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.85rem;
+
+    opacity:.85;
+
+    margin-bottom:24px;
+
+}
+
+/* TÍTULO */
+
+.remanso-consciousness-cta-title{
+
+    font-size:5rem;
+
+    line-height:1.05;
+
+    letter-spacing:-3px;
+
+    margin-bottom:30px;
+
+    font-weight:600;
+
+}
+
+/* DESCRIPCIÓN */
+
+.remanso-consciousness-cta-description{
+
+    max-width:700px;
+
+    margin:0 auto 50px auto;
+
+    line-height:1.9;
+
+    font-size:1.1rem;
+
+    opacity:.92;
+
+}
+
+/* BOTONES */
+
+.remanso-consciousness-cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+/* BOTÓN PRINCIPAL */
+
+.remanso-consciousness-cta-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 38px;
+
+    background:white;
+
+    color:#7a6855;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.remanso-consciousness-cta-primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* BOTÓN SECUNDARIO */
+
+.remanso-consciousness-cta-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 38px;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s ease;
+
+}
+
+.remanso-consciousness-cta-secondary:hover{
+
+    background:rgba(255,255,255,.10);
+
+}
