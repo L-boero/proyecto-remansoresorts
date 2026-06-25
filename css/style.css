@@ -475,6 +475,33 @@ opacity: .85;
 }
 
 
+.remanso-home-secondary-link{
+
+    margin-top:18px;
+
+    text-align:center;
+
+}
+
+.remanso-home-secondary-link a{
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-size:.95rem;
+
+    opacity:.9;
+
+}
+
+.remanso-home-secondary-link a:hover{
+
+    opacity:1;
+
+}
+
+
 /* =========================
 SCROLL INDICATOR
 ========================= */
@@ -561,7 +588,94 @@ SCROLL INDICATOR
 
     }
 
+
 }
+
+
+/* =========================
+HERO - HOME- RESPONSIVE MOBILE
+========================= */
+
+@media (max-width:768px){
+
+.remanso-home-hero{
+
+    min-height:72vh;
+
+    padding:110px 24px 90px;
+
+    align-items:flex-start;
+
+}
+
+
+.remanso-home-container{
+
+    max-width:100%;
+
+}
+
+.remanso-home-label{
+
+    letter-spacing:4px;
+
+    font-size:.70rem;
+
+    margin-bottom:18px;
+
+}
+.remanso-home-title{
+
+    font-size:2.8rem;
+
+    line-height:1.05;
+
+    margin-bottom:22px;
+
+    letter-spacing:-1px;
+
+}
+.remanso-home-title::before{
+
+    width:55px;
+
+    margin-bottom:18px;
+
+}
+.remanso-home-description{
+
+    max-width:100%;
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+    margin-bottom:32px;
+
+}
+.remanso-home-button{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px;
+
+}
+
+
+.remanso-scroll-indicator{
+
+    bottom:95px;
+
+}
+
+}
+
 
 
 
