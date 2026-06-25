@@ -258,11 +258,105 @@ color:#7a6855;
 }
 
 
+/* ==========================================
+BOTTOM NAVIGATION MOBILE
+========================================== */
+
+.remanso-mobile-nav{
+
+    position:fixed;
+
+    bottom:16px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:92%;
+
+    max-width:420px;
+
+    padding:14px 8px;
+
+    display:none;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:28px;
+
+    box-shadow:0 12px 40px rgba(0,0,0,.12);
+
+    z-index:9999;
+
+}
+
+.remanso-mobile-nav a{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:6px;
+
+    text-decoration:none;
+
+    color:#6f6f6f;
+
+    font-size:.72rem;
+
+    transition:.3s;
+
+}
+
+.remanso-mobile-nav i{
+
+    font-size:1.2rem;
+
+}
+
+.remanso-mobile-nav a.active{
+
+    color:var(--remanso-green);
+
+}
+
+.remanso-mobile-nav a:hover{
+
+    color:var(--remanso-green);
+
+}
 
 
 
+/* RESPONSIVE MOBILE- NADBAR*/
 
+@media(max-width:768px){
 
+    .navbar{
+
+        display:none;
+
+    }
+
+    .remanso-mobile-nav{
+
+        display:flex;
+
+    }
+
+}
 
 
 
@@ -276,7 +370,7 @@ color:#7a6855;
 
 .remanso-home-hero{
 position:relative;
-min-height:100vh;
+min-height:90vh;
 
 background-image:url("../assets/img/panoramic1.JPG");
 background-size:cover;
@@ -379,6 +473,96 @@ opacity: .85;
     box-shadow:
     0 20px 40px rgba(0,0,0,.25);
 }
+
+
+/* =========================
+SCROLL INDICATOR
+========================= */
+
+.remanso-scroll-indicator{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:20;
+
+}
+
+.remanso-scroll-indicator span{
+
+    width:18px;
+
+    height:30px;
+
+    border:2px solid rgba(255,255,255,.8);
+
+    border-radius:30px;
+
+    position:relative;
+
+}
+
+.remanso-scroll-indicator span::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:6px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:4px;
+
+    height:4px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    animation:scrollIndicator 2s infinite;
+
+}
+
+@keyframes scrollIndicator{
+
+    0%{
+
+        opacity:0;
+
+        transform:translate(-50%,0);
+
+    }
+
+    30%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translate(-50%,12px);
+
+    }
+
+}
+
 
 
 /* =========================
@@ -2061,7 +2245,7 @@ CABAÑAS - HERO
 
     position:relative;
 
-    min-height:100vh;
+    min-height:90vh;
 
     display:flex;
     align-items:center;
