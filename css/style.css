@@ -825,35 +825,18 @@ HERO - HOME- RESPONSIVE MOBILE
     font-size:1rem;
 }
 
-/* RESPONSIVE */
-
-@media(max-width:1200px){
-
-    .remanso-experience-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
+/* RESPONSIVE  LO OCULTAMOS DE MOBILE  */
 
 @media(max-width:768px){
 
     .remanso-experience-section{
-        padding:100px 6%;
-    }
 
-    .remanso-experience-title{
-        font-size:2.8rem;
-    }
+        display:none;
 
-    .remanso-experience-grid{
-        grid-template-columns:1fr;
-    }
-
-    .remanso-experience-image{
-        height:280px;
     }
 
 }
+
 
 
 
@@ -1096,30 +1079,137 @@ HERO - HOME- RESPONSIVE MOBILE
 }
 
 
-/* RESPONSIVE */
+.remanso-cabins-features{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    margin:0 0 40px;
+
+}
+
+
+/* =========================
+HOME
+CABAÑAS RESPONSIVE  MOBILE
+========================= */
 
 @media(max-width:768px){
 
-    .remanso-cabins-section{
-        padding:100px 6%;
-    }
+.remanso-cabins-section{
 
-    .remanso-cabins-title{
-        font-size:2.8rem;
-    }
+    padding:90px 24px;
 
-    .remanso-cabins-image{
-        height:350px;
-    }
+}
+.remanso-cabins-header{
 
-    .remanso-cabins-features{
-        gap:12px;
-    }
+    margin-bottom:50px;
 
-    .remanso-feature{
-        width:100%;
-        text-align:center;
-    }
+}
+
+.remanso-cabins-label{
+
+    font-size:.72rem;
+
+    letter-spacing:4px;
+
+    margin-bottom:18px;
+
+}
+
+.remanso-cabins-line{
+
+    width:55px;
+
+    margin-bottom:24px;
+
+}
+
+.remanso-cabins-title{
+
+    font-size:2.4rem;
+
+    letter-spacing:-1px;
+
+    margin-bottom:20px;
+
+}
+
+.remanso-cabins-description{
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+}
+.remanso-cabins-gallery{
+
+    display:block;
+
+    margin:50px 0 25px;
+
+}
+
+.cabin-photo{
+
+    display:none;
+
+}
+.cabin-photo-large{
+
+    display:block;
+
+    height:280px;
+
+    border-radius:22px;
+
+}
+
+.cabin-photo-large img{
+
+    height:100%;
+
+}
+.remanso-cabins-gallery-indicator{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-bottom:35px;
+
+}
+
+.remanso-cabins-gallery-indicator span{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#d6d6d6;
+
+}
+
+.remanso-cabins-gallery-indicator span.active{
+
+    width:24px;
+
+    border-radius:20px;
+
+    background:var(--remanso-green);
+
+}
 }
 
 
