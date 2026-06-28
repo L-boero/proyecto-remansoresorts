@@ -1862,7 +1862,7 @@ HOME - BLOQUE 5 - TESTIMONIOS
     transform .35s ease,
     box-shadow .35s ease;
 }
-*/ EFECTO HOVER EN CARD DE TESTIMONIOS */
+/* EFECTO HOVER EN CARD DE TESTIMONIOS */
 
 .remanso-testimonial-card:hover{
     transform:translateY(-6px);
