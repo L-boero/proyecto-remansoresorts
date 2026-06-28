@@ -257,7 +257,6 @@ color:#7a6855;
 
 }
 
-
 /* ==========================================
 BOTTOM NAVIGATION MOBILE
 ========================================== */
@@ -266,65 +265,79 @@ BOTTOM NAVIGATION MOBILE
 
     position:fixed;
 
-    bottom:16px;
+    bottom:18px;
 
     left:50%;
 
     transform:translateX(-50%);
 
-    width:92%;
+    width:94%;
 
-    max-width:420px;
+    max-width:440px;
 
-    padding:14px 8px;
+    padding:14px 16px;
 
     display:none;
 
-    justify-content:space-around;
+    justify-content:space-evenly;
 
     align-items:center;
 
-    background:rgba(255,255,255,.92);
+    background:rgba(255,255,255,.94);
 
     backdrop-filter:blur(18px);
-
     -webkit-backdrop-filter:blur(18px);
 
-    border:1px solid rgba(0,0,0,.06);
+    border:1px solid rgba(0,0,0,.05);
 
-    border-radius:28px;
+    border-radius:30px;
 
-    box-shadow:0 12px 40px rgba(0,0,0,.12);
+    box-shadow:
+        0 16px 45px rgba(0,0,0,.10);
 
     z-index:9999;
 
 }
 
+/* BOTONES */
+
 .remanso-mobile-nav a{
+
+    flex:1;
 
     display:flex;
 
     flex-direction:column;
 
+    justify-content:center;
+
     align-items:center;
 
-    gap:6px;
+    gap:7px;
 
     text-decoration:none;
 
-    color:#6f6f6f;
+    color:#7b7b7b;
 
-    font-size:.72rem;
+    font-size:.78rem;
 
-    transition:.3s;
+    font-weight:500;
+
+    transition:.3s ease;
 
 }
+
+/* ICONOS */
 
 .remanso-mobile-nav i{
 
-    font-size:1.2rem;
+    font-size:1.45rem;
+
+    transition:.3s ease;
 
 }
+
+/* ACTIVO */
 
 .remanso-mobile-nav a.active{
 
@@ -332,15 +345,21 @@ BOTTOM NAVIGATION MOBILE
 
 }
 
+.remanso-mobile-nav a.active i{
+
+    transform:translateY(-2px);
+
+}
+
+/* HOVER */
+
 .remanso-mobile-nav a:hover{
 
     color:var(--remanso-green);
 
 }
 
-
-
-/* RESPONSIVE MOBILE- NADBAR*/
+/* RESPONSIVE */
 
 @media(max-width:768px){
 
@@ -357,8 +376,6 @@ BOTTOM NAVIGATION MOBILE
     }
 
 }
-
-
 
 
 
@@ -607,11 +624,13 @@ HERO - HOME- RESPONSIVE MOBILE
     align-items:flex-start;
 
 }
-
-
 .remanso-home-container{
 
     max-width:100%;
+
+    display:flex;
+
+    flex-direction:column;
 
 }
 
@@ -666,11 +685,30 @@ HERO - HOME- RESPONSIVE MOBILE
     padding:18px;
 
 }
+.remanso-scroll-indicator span{
 
+    width:16px;
 
+    height:26px;
+
+}
 .remanso-scroll-indicator{
 
-    bottom:95px;
+    margin-top:32px;
+
+}
+
+.remanso-scroll-indicator span::before{
+
+    width:3px;
+
+    height:3px;
+
+}
+
+.remanso-home-secondary-link{
+
+    margin-top:24px;
 
 }
 
@@ -1079,24 +1117,9 @@ HERO - HOME- RESPONSIVE MOBILE
 }
 
 
-.remanso-cabins-features{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:16px;
-
-    margin:0 0 40px;
-
-}
-
-
 /* =========================
 HOME
-CABAÑAS RESPONSIVE  MOBILE
+CABAÑAS RESPONSIVE MOBILE
 ========================= */
 
 @media(max-width:768px){
@@ -1106,6 +1129,9 @@ CABAÑAS RESPONSIVE  MOBILE
     padding:90px 24px;
 
 }
+
+/* HEADER */
+
 .remanso-cabins-header{
 
     margin-bottom:50px;
@@ -1147,34 +1173,82 @@ CABAÑAS RESPONSIVE  MOBILE
     line-height:1.7;
 
 }
+
+
+/* =========================
+GALERÍA MOBILE
+========================= */
+
 .remanso-cabins-gallery{
 
-    display:block;
+    display:flex;
+
+    overflow-x:auto;
+
+    gap:16px;
 
     margin:50px 0 25px;
 
+    scroll-snap-type:x mandatory;
+
+    scroll-behavior:smooth;
+
+    -webkit-overflow-scrolling:touch;
+
+    scrollbar-width:none;
+
 }
 
-.cabin-photo{
+.remanso-cabins-gallery::-webkit-scrollbar{
 
     display:none;
 
 }
-.cabin-photo-large{
+
+
+/* TODAS LAS FOTOS */
+
+.cabin-photo{
 
     display:block;
+
+    flex:0 0 88%;
 
     height:280px;
 
     border-radius:22px;
 
+    overflow:hidden;
+
+    scroll-snap-align:center;
+
 }
 
-.cabin-photo-large img{
+.cabin-photo img{
+
+    width:100%;
 
     height:100%;
 
+    object-fit:cover;
+
 }
+
+
+/* ELIMINAMOS ALTURAS DISTINTAS */
+
+.cabin-photo-large,
+.cabin-photo-wide{
+
+    height:280px;
+
+}
+
+
+/* =========================
+INDICADOR
+========================= */
+
 .remanso-cabins-gallery-indicator{
 
     display:flex;
@@ -1199,18 +1273,57 @@ CABAÑAS RESPONSIVE  MOBILE
 
     background:#d6d6d6;
 
+    transition:.3s;
+
 }
 
 .remanso-cabins-gallery-indicator span.active{
 
     width:24px;
 
-    border-radius:20px;
+    border-radius:999px;
 
     background:var(--remanso-green);
 
 }
+
+
+/* =========================
+CHECKLIST
+========================= */
+
+.remanso-cabins-features{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    margin-bottom:40px;
+
 }
+
+
+/* CTA */
+
+.remanso-cabins-button{
+
+    width:100%;
+
+    justify-content:center;
+
+    padding:18px;
+
+}
+
+}
+
+
+
+
 
 
 /* =========================
@@ -1407,8 +1520,6 @@ color: var(--remanso-green);
     box-shadow:
     0 18px 40px rgba(122,104,85,.22);
 }
-
-
 /* =========================
 HOME
 RETIROS MOBILE RESPONSIVE
@@ -1421,9 +1532,12 @@ RETIROS MOBILE RESPONSIVE
     padding:90px 24px;
 
 }
+
+/* HEADER */
+
 .remanso-retreats-header{
 
-    margin-bottom:45px;
+    margin-bottom:50px;
 
 }
 
@@ -1464,44 +1578,71 @@ RETIROS MOBILE RESPONSIVE
     line-height:1.7;
 
 }
-.remanso-retreats-features{
+
+
+/* =========================
+GALERÍA MOBILE
+========================= */
+
+.remanso-retreats-gallery{
 
     display:flex;
 
-    flex-direction:column;
-
-    align-items:flex-start;
+    overflow-x:auto;
 
     gap:16px;
 
-    margin-bottom:35px;
+    margin:50px 0 25px;
+
+    scroll-snap-type:x mandatory;
+
+    scroll-behavior:smooth;
+
+    -webkit-overflow-scrolling:touch;
+
+    scrollbar-width:none;
 
 }
 
-.retreat-feature{
+.remanso-retreats-gallery::-webkit-scrollbar{
 
-    padding:0;
-
-    border:none;
-
-    background:none;
-
-    box-shadow:none;
-
-    font-size:1rem;
-
-    color:var(--remanso-green);
+    display:none;
 
 }
+
+
+/* TODAS LAS IMÁGENES */
+
 .remanso-retreats-image{
+
+    flex:0 0 88%;
 
     height:280px;
 
-    margin-bottom:20px;
-
     border-radius:22px;
 
+    overflow:hidden;
+
+    scroll-snap-align:center;
+
+    margin:0;
+
 }
+
+.remanso-retreats-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+/* =========================
+INDICADOR
+========================= */
 
 .remanso-retreats-gallery-indicator{
 
@@ -1533,11 +1674,50 @@ RETIROS MOBILE RESPONSIVE
 
     width:24px;
 
-    border-radius:20px;
+    border-radius:999px;
 
     background:var(--remanso-green);
 
 }
+
+
+/* =========================
+FEATURES
+========================= */
+
+.remanso-retreats-features{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    margin-bottom:40px;
+
+}
+
+.retreat-feature{
+
+    padding:0;
+
+    border:none;
+
+    background:none;
+
+    box-shadow:none;
+
+    color:var(--remanso-green);
+
+    font-size:1rem;
+
+}
+
+
+/* CTA */
+
 .remanso-retreats-cta a{
 
     width:100%;
@@ -1547,9 +1727,8 @@ RETIROS MOBILE RESPONSIVE
     padding:18px;
 
 }
+
 }
-
-
 
 
 
@@ -1925,6 +2104,62 @@ HOME - BLOQUE 5 - TESTIMONIOS
     box-shadow .35s ease;
 }
 
+.remanso-testimonials-cta{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:40px;
+
+}
+
+.remanso-testimonials-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:18px 42px;
+
+    background:var(--remanso-green);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:500;
+
+    transition:.35s ease;
+
+}
+
+.remanso-testimonials-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(70,91,45,.22);
+
+}
+
+.remanso-testimonials-button span{
+
+    transition:.35s ease;
+
+}
+
+.remanso-testimonials-button:hover span{
+
+    transform:translateX(4px);
+
+}
+
 /* =========================
 HOME - BLOQUE 5
 TESTIMONIOS MOBILE RESPONSIVE
@@ -2103,6 +2338,32 @@ TESTIMONIOS MOBILE RESPONSIVE
     background:var(--remanso-green);
 
 }
+
+.remanso-testimonials-cta{
+
+    margin-top:35px;
+
+}
+
+.remanso-testimonials-button{
+
+    width:100%;
+
+    padding:18px;
+
+}
+
+
+
+.remanso-testimonials-button{
+
+    width:100%;
+
+    padding:18px;
+
+}
+
+
 }
 
 
@@ -2286,11 +2547,9 @@ HOME - BLOQUE 6 - UBICACIÓN
     transform:translateX(4px);
 }
 
-
-
 /* =========================
-HOME - UBICACIÓN
-RESPONSIVE MOBILE
+HOME
+UBICACIÓN RESPONSIVE MOBILE
 ========================= */
 
 @media(max-width:768px){
@@ -2301,23 +2560,47 @@ RESPONSIVE MOBILE
 
 }
 
+/* HEADER */
+
 .remanso-location-header{
 
-    margin-bottom:40px;
+    margin-bottom:35px;
+
+}
+
+.remanso-location-label{
+
+    font-size:.72rem;
+
+    letter-spacing:4px;
+
+    margin-bottom:18px;
+
+}
+
+.remanso-location-line{
+
+    width:55px;
+
+    margin-bottom:24px;
 
 }
 
 .remanso-location-title{
 
-    font-size:2.3rem;
+    font-size:2.35rem;
 
     line-height:1.15;
 
     letter-spacing:-1px;
 
+    margin-bottom:18px;
+
 }
 
 .remanso-location-description{
+
+    max-width:100%;
 
     font-size:1rem;
 
@@ -2325,67 +2608,32 @@ RESPONSIVE MOBILE
 
 }
 
-/* IMAGEN */
+/* MAPA */
 
-.remanso-location-image{
+.remanso-location-map{
 
     display:block;
+
+    width:100%;
+
+    height:260px;
 
     overflow:hidden;
 
     border-radius:22px;
 
-    margin-bottom:18px;
+    margin-bottom:35px;
 
-    box-shadow:0 18px 40px rgba(0,0,0,.08);
+    box-shadow:
+    0 18px 40px rgba(0,0,0,.08);
 
 }
 
-.remanso-location-image img{
+.remanso-location-map iframe{
 
     width:100%;
 
-    height:280px;
-
-    object-fit:cover;
-
-    display:block;
-
-}
-
-/* INDICADOR */
-
-.remanso-location-gallery-indicator{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:8px;
-
-    margin-bottom:35px;
-
-}
-
-.remanso-location-gallery-indicator span{
-
-    width:8px;
-
-    height:8px;
-
-    border-radius:50%;
-
-    background:#d9d9d9;
-
-}
-
-.remanso-location-gallery-indicator span.active{
-
-    width:24px;
-
-    border-radius:30px;
-
-    background:var(--remanso-green);
+    height:100%;
 
 }
 
@@ -2393,7 +2641,11 @@ RESPONSIVE MOBILE
 
 .remanso-location-features{
 
-    gap:12px;
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
 
     margin-bottom:35px;
 
@@ -2424,7 +2676,6 @@ RESPONSIVE MOBILE
 }
 
 }
-
 
 
 
