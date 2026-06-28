@@ -2288,6 +2288,145 @@ HOME - BLOQUE 6 - UBICACIÓN
 
 
 
+/* =========================
+HOME - UBICACIÓN
+RESPONSIVE MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.remanso-location-section{
+
+    padding:90px 24px;
+
+}
+
+.remanso-location-header{
+
+    margin-bottom:40px;
+
+}
+
+.remanso-location-title{
+
+    font-size:2.3rem;
+
+    line-height:1.15;
+
+    letter-spacing:-1px;
+
+}
+
+.remanso-location-description{
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+}
+
+/* IMAGEN */
+
+.remanso-location-image{
+
+    display:block;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    margin-bottom:18px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+}
+
+.remanso-location-image img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* INDICADOR */
+
+.remanso-location-gallery-indicator{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-bottom:35px;
+
+}
+
+.remanso-location-gallery-indicator span{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#d9d9d9;
+
+}
+
+.remanso-location-gallery-indicator span.active{
+
+    width:24px;
+
+    border-radius:30px;
+
+    background:var(--remanso-green);
+
+}
+
+/* FEATURES */
+
+.remanso-location-features{
+
+    gap:12px;
+
+    margin-bottom:35px;
+
+}
+
+.location-feature{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+/* CTA */
+
+.remanso-location-button{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px;
+
+}
+
+}
+
+
+
 
 /* =========================
 HOME - BLOQUE 7 PREGUNTAS FRECUENTES
@@ -2436,108 +2575,53 @@ HOME - BLOQUE 7 PREGUNTAS FRECUENTES
     max-width:800px;
 }
 
-
-
-
-
-
 /* =========================
- HOME - BLOQUE 8 CTA FINAL
+CTA FINAL FAQ
 ========================= */
 
-.remanso-final-cta{
+.remanso-faq-contact{
 
-    margin:140px auto 0;
-
-    width:84%;
-
-    border-radius:40px;
-
-    overflow:hidden;
-
-    position:relative;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.45)
-    ),
-    url("./assets/img/final-cta.webp");
-
-    background-size:cover;
-    background-position:center;
-
-    min-height:650px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.remanso-final-cta-overlay{
+    margin-top:60px;
 
     text-align:center;
 
-    max-width:900px;
-
-    padding:120px 60px;
-
-    color:white;
 }
 
-.remanso-final-cta-label{
+.remanso-faq-contact h3{
 
-    display:block;
+    font-size:2rem;
 
-    margin-bottom:24px;
+    color:var(--remanso-green);
 
-    letter-spacing:5px;
+    margin-bottom:14px;
 
-    font-size:.85rem;
-
-    text-transform:uppercase;
-
-    opacity:.9;
 }
 
-.remanso-final-cta-title{
+.remanso-faq-contact p{
 
-    font-size:4.5rem;
+    color:#666;
 
-    line-height:1.1;
-
-    letter-spacing:-2px;
+    font-size:1.05rem;
 
     margin-bottom:30px;
 
-    font-weight:600;
 }
 
-.remanso-final-cta-description{
-
-    max-width:720px;
-
-    margin:0 auto 50px;
-
-    font-size:1.15rem;
-
-    line-height:1.9;
-
-    opacity:.95;
-}
-
-.remanso-final-cta-button{
+.remanso-faq-button{
 
     display:inline-flex;
 
     align-items:center;
+
     justify-content:center;
+
+    gap:10px;
 
     padding:18px 42px;
 
-    background:white;
+    background:var(--remanso-green);
 
-    color: var(--remanso-green);
+    color:#fff;
 
     text-decoration:none;
 
@@ -2545,19 +2629,140 @@ HOME - BLOQUE 7 PREGUNTAS FRECUENTES
 
     font-weight:600;
 
-    transition:all .35s ease;
-}
-
-.remanso-final-cta-button:hover{
-
-    transform:translateY(-4px);
+    transition:.35s ease;
 
     box-shadow:
-    0 20px 40px rgba(0,0,0,.18);
+    0 18px 40px rgba(70,91,45,.18);
+
 }
 
+.remanso-faq-button:hover{
 
+    transform:translateY(-3px);
 
+    box-shadow:
+    0 22px 50px rgba(70,91,45,.25);
+
+}
+
+/* =========================
+FAQ
+RESPONSIVE MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.remanso-faq-section{
+
+    padding:90px 24px;
+
+}
+
+.remanso-faq-header{
+
+    margin-bottom:40px;
+
+}
+
+.remanso-faq-title{
+
+    font-size:2.3rem;
+
+    line-height:1.15;
+
+    letter-spacing:-1px;
+
+}
+
+.remanso-faq-description{
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+}
+
+.remanso-faq-container{
+
+    gap:14px;
+
+}
+
+.remanso-faq-item{
+
+    border-radius:20px;
+
+}
+
+.remanso-faq-item summary{
+
+    padding:22px 24px;
+
+    font-size:1rem;
+
+}
+
+.remanso-faq-item p{
+
+    padding:0 24px 22px;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+}
+
+/* CTA */
+
+.remanso-faq-contact{
+
+    margin-top:45px;
+
+    text-align:center;
+
+}
+
+.remanso-faq-contact h3{
+
+    font-size:1.5rem;
+
+    margin-bottom:10px;
+
+}
+
+.remanso-faq-contact p{
+
+    color:#666;
+
+    margin-bottom:24px;
+
+}
+
+.remanso-faq-button{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    padding:18px;
+
+    border-radius:999px;
+
+    background:var(--remanso-green);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+}
 
 /* =========================
 FOOTER
@@ -2680,7 +2885,7 @@ FOOTER
     font-size:.9rem;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE FOOTER MOBILE*/
 
 @media(max-width:768px){
 
@@ -2699,6 +2904,72 @@ FOOTER
     }
 }
 
+
+@media(max-width:768px){
+
+.remanso-footer{
+
+    padding:70px 24px 120px;
+
+}
+
+/* OCULTAR MENÚ */
+
+.remanso-footer-links{
+
+    display:none;
+
+}
+
+/* CONTENIDO */
+
+.remanso-footer-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+
+    text-align:center;
+
+}
+
+/* BOTONES */
+
+.remanso-footer-contact{
+
+    align-items:center;
+
+}
+
+.remanso-footer-contact a{
+
+    width:100%;
+
+    max-width:320px;
+
+    padding:16px;
+
+    border-radius:999px;
+
+    background:var(--remanso-green);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.remanso-footer-contact p{
+
+    margin-top:8px;
+
+}
+
+}
 
 
 
