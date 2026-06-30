@@ -27,6 +27,21 @@ line-height:1.6;
 }
 
 
+/* =========================
+OCULTAR SECCIONES DE DESKTOP EN MOBILE
+========================= */
+@media(max-width:768px){
+    
+
+.remanso-desktop-only{
+
+    display:none;
+
+}
+}
+
+
+
 
 /* =========================
    NAVBAR
@@ -4184,6 +4199,597 @@ background:rgba(255,255,255,.10);
 
 
 /* =========================
+NIDO 1 - HERO DESKTOP-  RESPONSIVE MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.remanso-cabin-hero{
+
+    min-height:72vh;
+
+    padding:110px 24px 90px;
+
+    align-items:flex-start;
+
+}
+
+.remanso-cabin-hero-content{
+
+    max-width:100%;
+
+}
+
+/* LABEL */
+
+.remanso-cabin-hero-label{
+
+    letter-spacing:4px;
+
+    font-size:.70rem;
+
+    margin-bottom:18px;
+
+}
+
+/* LÍNEA */
+
+.remanso-cabin-hero-line{
+
+    width:55px;
+
+    margin:0 auto 18px;
+
+}
+
+/* TÍTULO */
+
+.remanso-cabin-hero-title{
+
+    font-size:2.8rem;
+
+    line-height:1.05;
+
+    letter-spacing:-1px;
+
+    margin-bottom:22px;
+
+}
+
+/* DESCRIPCIÓN */
+
+.remanso-cabin-hero-description{
+
+    max-width:100%;
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+}
+
+/* META */
+
+.remanso-cabin-hero-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    margin:0 0 35px;
+
+    font-size:1rem;
+
+}
+
+/* BOTONES */
+
+.remanso-cabin-hero-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.remanso-cabin-primary-button,
+
+.remanso-cabin-secondary-button{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px;
+
+}
+
+/* INDICADOR */
+
+.remanso-scroll-indicator{
+
+    bottom:95px;
+
+}
+
+}
+
+
+/* =========================
+NIDO 1 - HERO MOBILE- RESPONSIVE 
+========================= */
+
+.remanso-cabin-mobile-hero{
+
+    display:none;
+
+}
+
+@media(max-width:768px){
+
+/* Ocultamos el Hero Desktop */
+
+.remanso-cabin-hero{
+
+    display:none;
+
+}
+
+/* Hero Mobile */
+
+.remanso-cabin-mobile-hero{
+
+    display:flex;
+
+    position:relative;
+
+    min-height:72vh;
+
+    padding:110px 24px 90px;
+
+    align-items:flex-start;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background-image:url("../assets/img/cabana1img.JPG");
+
+    background-size:cover;
+
+    background-position:center;
+
+    overflow:hidden;
+
+}
+
+/* Overlay */
+
+.remanso-cabin-mobile-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        rgba(0,0,0,.40),
+
+        rgba(0,0,0,.55)
+
+    );
+
+}
+
+/* Contenido */
+
+.remanso-cabin-mobile-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    color:white;
+
+}
+
+/* Label */
+
+.remanso-cabin-mobile-label{
+
+    display:block;
+
+    font-size:.70rem;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+/* Título */
+
+.remanso-cabin-mobile-title{
+
+    font-size:2.8rem;
+
+    line-height:1.05;
+
+    letter-spacing:-1px;
+
+    margin-bottom:34px;
+
+}
+
+/* Meta */
+
+.remanso-cabin-mobile-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    margin-bottom:38px;
+
+    font-size:1rem;
+
+}
+
+/* Botones */
+
+.remanso-cabin-mobile-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.remanso-cabin-mobile-primary,
+
+.remanso-cabin-mobile-secondary{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+}
+
+.remanso-cabin-mobile-primary{
+
+    background:white;
+
+    color:var(--remanso-green);
+
+}
+
+.remanso-cabin-mobile-secondary{
+
+    border:1px solid rgba(255,255,255,.35);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+}
+
+/* Indicador */
+
+.remanso-scroll-indicator{
+
+    bottom:95px;
+
+}
+
+}
+
+/* =========================
+NIDO 1 - INFO MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.remanso-cabin-mobile-info{
+
+    padding:0 24px 70px;
+
+    margin-top:-30px;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.remanso-cabin-mobile-card{
+
+    background:white;
+
+    border-radius:32px;
+
+    padding:34px 28px;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.08);
+
+}
+
+/* TÍTULO */
+
+.remanso-cabin-mobile-name{
+
+    font-size:2.2rem;
+
+    text-align:center;
+
+    margin-bottom:14px;
+
+}
+
+/* UBICACIÓN */
+
+.remanso-cabin-mobile-location{
+
+    text-align:center;
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:28px;
+
+}
+
+/* META */
+
+.remanso-cabin-mobile-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    font-size:1rem;
+
+    color:#444;
+
+}
+
+/* SEPARADOR */
+
+.remanso-cabin-mobile-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:#ece7df;
+
+    margin:32px 0;
+
+}
+
+/* DESTACADO */
+
+.highlight-label{
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    font-size:.72rem;
+
+    letter-spacing:3px;
+
+    color:#7a6855;
+
+    font-weight:600;
+
+}
+
+.remanso-cabin-mobile-highlight h3{
+
+    font-size:1.5rem;
+
+    margin-bottom:16px;
+
+}
+
+.remanso-cabin-mobile-highlight p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* DESCRIPCIÓN */
+
+.remanso-cabin-mobile-description p{
+
+    color:#555;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+}
+
+/* =========================
+SERVICIOS
+========================= */
+
+.remanso-cabin-mobile-services h3{
+
+    font-size:1.4rem;
+
+    margin-bottom:24px;
+
+}
+
+.remanso-cabin-mobile-services-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.remanso-cabin-mobile-services-list span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+.remanso-cabin-mobile-services-list i{
+
+    color:var(--remanso-green);
+
+    width:22px;
+
+    text-align:center;
+
+}
+
+
+/* =========================
+INFORMACIÓN IMPORTANTE
+========================= */
+
+.remanso-cabin-mobile-info-box h3{
+
+    font-size:1.4rem;
+
+    margin-bottom:24px;
+
+}
+
+.remanso-cabin-mobile-rules{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.remanso-cabin-mobile-rules span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#555;
+
+}
+
+.remanso-cabin-mobile-rules i{
+
+    width:22px;
+
+    color:var(--remanso-green);
+
+}
+
+
+/* =========================
+SEGURIDAD
+========================= */
+
+.remanso-cabin-mobile-security h3{
+
+    font-size:1.4rem;
+
+    margin-bottom:24px;
+
+}
+
+.remanso-cabin-mobile-security-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.remanso-cabin-mobile-security-list span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#555;
+
+}
+
+.remanso-cabin-mobile-security-list i{
+
+    width:22px;
+
+    color:var(--remanso-green);
+
+}
+
+}
+
+
+
+/* =========================
 CABAÑA 1 - GALERÍA
 ========================= */
 
@@ -4335,32 +4941,6 @@ ETIQUETAS DE AMBIENTE
     background:#7a6855;
 
 }
-
-
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-.remanso-cabin-gallery-grid{
-    grid-template-columns:1fr;
-    grid-template-rows:auto;
-}
-.remanso-cabin-gallery-main{
-    grid-row:auto;
-    height:400px;
-}
-.remanso-cabin-gallery-item{
-    height:250px;
-}
-.remanso-cabin-gallery-title{
-    font-size:2.8rem;
-}
-
-}
-
-
-
 
 
 
