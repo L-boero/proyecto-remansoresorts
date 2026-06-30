@@ -114,64 +114,13 @@ NAVBAR
 
 
 
-<!-- =========================
-BOTTOM NAVIGATION - MOBILE
-========================= -->
-
-<nav class="remanso-mobile-nav">
-
-    <a href="../index.html" class="active">
-
-      <i class="fa-solid fa-house"></i>
-
-        <span>Inicio</span>
-
-    </a>
-
-    <a href="./cabañas.html">
-
-       <i class="fa-solid fa-tree"></i>
-
-        <span>Cabañas</span>
-
-    </a>
-
-    <a href="./experiencia.html">
-
-        <i class="fa-solid fa-mountain-sun"></i>
-
-        <span>Retiros</span>
-
-    </a>
-
-    <a href="./ubicacion.html">
-
-        <i class="fa-solid fa-map-location-dot"></i>
-
-        <span>Mapa</span>
-
-    </a>
-
-    <a href="https://wa.me/5493546476564?text=Hola,%20escribo%20desde%20la%20web%20de%20El%20Remanso%20Resort%20y%20me%20gustar%C3%ADa%20consultar%20por%20una%20reserva."
-       target="_blank">
-
-      <i class="fa-brands fa-whatsapp"></i>
-
-        <span>Reservar</span>
-
-    </a>
-
-</nav>
-
-
-
 
 
 
 <!-- =========================
 CABAÑA 1 - HERO - DESKTOP
 ========================= -->
-<section class="remanso-cabin-hero">
+<section class="remanso-cabin-hero remanso-desktop-only">
 <div class="remanso-cabin-hero-overlay"></div>
 <div class="remanso-cabin-hero-content">
     <span class="remanso-cabin-hero-label">
@@ -212,7 +161,6 @@ CABAÑA 1 - HERO - DESKTOP
 
 </section>
 
-
 <!-- =========================
 NIDO 1 - HERO MOBILE
 ========================= -->
@@ -221,49 +169,42 @@ NIDO 1 - HERO MOBILE
 
     <div class="remanso-cabin-mobile-overlay"></div>
 
-    <div class="remanso-cabin-mobile-content">
+    <!-- Botón volver -->
 
-        <span class="remanso-cabin-mobile-label">
-            NIDO 1
-        </span>
+    <a href="../cabañas.html"
+       class="remanso-cabin-mobile-back">
 
-        <h1 class="remanso-cabin-mobile-title">
-            La Panorámica
-        </h1>
+        <i class="fa-solid fa-arrow-left"></i>
 
-        <div class="remanso-cabin-mobile-meta">
+    </a>
 
-            <span>👥 Hasta 8 huéspedes</span>
+    <!-- Carrusel de imágenes -->
 
-            <span>🌄 Vista panorámica</span>
+    <div class="remanso-cabin-mobile-slider">
 
-            <span>🛁 Jacuzzi climatizado</span>
+        <img src="../assets/img/cabana1img.JPG" alt="La Panorámica">
 
-        </div>
+        <img src="../assets/img/living-cabana1.jpg" alt="Living">
 
-        <div class="remanso-cabin-mobile-buttons">
+        <img src="../assets/img/jacuzzi-cana1.jpg" alt="Jacuzzi">
 
-            <a
-            href="https://wa.me/5493546476564?text=Hola,%20quisiera%20consultar%20disponibilidad%20para%20el%20Nido%201%20-%20La%20Panorámica."
-            class="remanso-cabin-mobile-primary">
+        <img src="../assets/img/habitacion.jpg" alt="Habitación">
 
-                Consultar disponibilidad
-
-            </a>
-
-            <a
-            href="#gallery-mobile"
-            class="remanso-cabin-mobile-secondary">
-
-                Ver fotografías
-
-            </a>
-
-        </div>
+        <img src="../assets/img/exterior.jpg" alt="Exterior">
 
     </div>
 
-    <div class="remanso-scroll-indicator">
+    <!-- Indicador -->
+
+    <div class="remanso-gallery-indicator">
+
+        <span class="active"></span>
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
 
         <span></span>
 
@@ -275,19 +216,26 @@ NIDO 1 - HERO MOBILE
 <!-- =========================
 NIDO 1 - INFO MOBILE
 ========================= -->
-
-<section class="remanso-cabin-mobile-info">
+<section class="remanso-cabin-mobile-info remanso-desktop-only">
 
     <div class="remanso-cabin-mobile-card">
 
-        <h2 class="remanso-cabin-mobile-name">
-            La Panorámica
-        </h2>
+        <!-- HEADER -->
 
-        <p class="remanso-cabin-mobile-location">
-            Nido en El Remanso Resort <br>
-            La Cumbrecita, Córdoba
-        </p>
+        <div class="remanso-cabin-mobile-header">
+
+            <h2 class="remanso-cabin-mobile-name">
+                La Panorámica
+            </h2>
+
+            <p class="remanso-cabin-mobile-location">
+                Nido en El Remanso Resort <br>
+                La Cumbrecita, Córdoba
+            </p>
+
+        </div>
+
+        <!-- META -->
 
         <div class="remanso-cabin-mobile-meta">
 
@@ -301,41 +249,67 @@ NIDO 1 - INFO MOBILE
 
         <div class="remanso-cabin-mobile-divider"></div>
 
+        <!-- DESTACADO -->
+
         <div class="remanso-cabin-mobile-highlight">
 
+            <div class="highlight-icon">
+
+                ★
+
+            </div>
+
             <span class="highlight-label">
-                ✦ DESTACADO
+
+                FAVORITO ENTRE HUÉSPEDES
+
             </span>
 
-            <h3>
-                Favorito entre huéspedes
-            </h3>
-
             <p>
-                Uno de los nidos más elegidos por quienes buscan amplitud, tranquilidad y las mejores vistas del complejo.
+
+                Uno de los nidos más elegidos por quienes buscan amplitud,
+                tranquilidad y las mejores vistas del complejo.
+
             </p>
 
         </div>
 
         <div class="remanso-cabin-mobile-divider"></div>
 
+        <!-- DESCRIPCIÓN -->
+
         <div class="remanso-cabin-mobile-description">
+
+            <h3>
+
+                Sobre este nido
+
+            </h3>
 
             <p>
 
-                Ubicado en el punto más alto de El Remanso, este nido combina privacidad, luz natural y vistas abiertas a las sierras para una experiencia de descanso única.
+                Ubicado en el punto más alto de El Remanso,
+                este nido ofrece vistas abiertas a las sierras,
+                privacidad y una experiencia de descanso
+                rodeada de naturaleza.
 
             </p>
 
         </div>
-        </div> <!-- remanso-cabin-mobile-card -->
-        <!-- SEPARADOR -->
+
+    </div>
+
+</section>
+        
+ <!-- remanso-cabin-mobile-card -->
+       
+ <!-- SEPARADOR -->
 
 <div class="remanso-cabin-mobile-divider"></div>
 
 <!-- SERVICIOS -->
 
-<div class="remanso-cabin-mobile-services">
+<div class="remanso-cabin-mobile-services remanso-desktop-only ">
 
     <h3>
         ¿Qué ofrece este nido?
@@ -866,20 +840,20 @@ CABAÑA 1 - CTA FINAL
 
 
 
-
 <!-- =========================
-HOME- BOTON WATSHAP - FLOTANTE
+STICKY CTA MOBILE
 ========================= -->
 
-<a
-href="https://wa.me/549XXXXXXXXXX"
-class="remanso-whatsapp"
-target="_blank">
+<div class="remanso-mobile-sticky-cta">
 
-<i class="fa-brands fa-whatsapp"></i>
+    <a href="https://wa.me/5493546476564?text=Hola,%20quisiera%20consultar%20disponibilidad%20para%20el%20Nido%201%20-%20La%20Panorámica."
+       class="remanso-mobile-sticky-button">
 
-</a>
+        Consultar disponibilidad
 
+    </a>
+
+</div>
 
 
 
