@@ -4582,7 +4582,14 @@ NIDO 1 - INFO MOBILE
 
     0 20px 60px rgba(0,0,0,.10);
 
+
+    transition:
+    border-radius .45s ease,
+    box-shadow .45s ease;
+
+
 }
+
 
 
 .remanso-cabin-mobile-card.expanded{
