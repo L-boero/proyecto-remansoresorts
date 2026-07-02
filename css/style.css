@@ -4039,7 +4039,7 @@ CARDS DE CABAÑAS RESPONSIVE MOBILE
 
 
 /* =========================
-CABAÑA 1 - HERO
+NIDO 1 - HERO
 ========================= */
 
 .remanso-cabin-hero{
@@ -4341,6 +4341,7 @@ NIDO 1 - HERO DESKTOP-  RESPONSIVE MOBILE
 }
 
 }
+
 /* =========================
 NIDO 1 - HERO MOBILE
 ========================= */
@@ -4375,7 +4376,7 @@ HERO MOBILE
 
     overflow:hidden;
 
-    min-height:78vh;
+    min-height:90vh;
 
 }
 
@@ -4389,7 +4390,7 @@ SLIDER DE IMÁGENES
 
     width:100%;
 
-    height:78vh;
+    height:90vh;
 
     overflow-x:auto;
 
@@ -4454,9 +4455,9 @@ BOTÓN BACK
 
     left:16px;
 
-    width:46px;
+    width:44px;
 
-    height:46px;
+    height:44px;
 
     display:flex;
 
@@ -4511,7 +4512,7 @@ INDICADOR DE IMÁGENES
 
     left:50%;
 
-    bottom:22px;
+    bottom:36px;
 
     transform:translateX(-50%);
 
@@ -4560,9 +4561,9 @@ NIDO 1 - INFO MOBILE
 
     z-index:20;
 
-    margin-top:-38px;
+    margin-top:-64px;
 
-    padding:0 20px 80px;
+    padding:0 18px 90px;
 
 }
 
@@ -4579,10 +4580,20 @@ NIDO 1 - INFO MOBILE
 
     box-shadow:
 
-    0 -10px 45px rgba(0,0,0,.08);
+    0 20px 60px rgba(0,0,0,.10);
 
 }
 
+
+.remanso-cabin-mobile-card.expanded{
+
+    border-radius:0;
+
+    box-shadow:none;
+
+   
+
+}
 
 
 /* TÍTULO */
@@ -4743,11 +4754,12 @@ TÍTULOS DE SECCIÓN
 .remanso-cabin-mobile-info-box h3,
 .remanso-cabin-mobile-security h3{
 
-    font-size:1.45rem;
+    font-size:1.3rem;
 
     letter-spacing:-.5px;
 
     margin-bottom:28px;
+    padding-left: 20px;
 
 }
 
@@ -4990,7 +5002,7 @@ BOTÓN
 
 
 /* =========================
-CABAÑA 1 - GALERÍA
+NIDO 1 - GALERÍA
 ========================= */
 
 .remanso-cabin-gallery{
@@ -5146,7 +5158,7 @@ ETIQUETAS DE AMBIENTE
 
 
 /* =========================
-CABAÑA 1 - EXPERIENCIA
+NIDO 1 - EXPERIENCIA
 ========================= */
 
 .remanso-cabin-experience{
@@ -5253,7 +5265,7 @@ transform:scale(1.04);
 
 
 /* =========================
-CABAÑA 1 - SERVICIOS
+NIDO 1 - SERVICIOS
 ========================= */
 
 .remanso-cabin-services{
@@ -5367,23 +5379,15 @@ line-height:1.6;
 
 }
 
-@media(max-width:768px){
 
-.remanso-cabin-services-grid{
-    grid-template-columns:1fr;
-}
-.remanso-cabin-services-title{
-    font-size:2.8rem;
-}
 
-}
 
 
 
 
 
 /* =========================
-CABAÑA 1 - TESTIMONIOS
+NIDO  1 - TESTIMONIOS
 ========================= */
 
 .remanso-cabin-testimonials{
@@ -5544,7 +5548,7 @@ color: var(--remanso-green);
 
 
 /* =========================
-CABAÑA 1 - INFORMACIÓN IMPORTANTE
+NIDO 1 - INFORMACIÓN IMPORTANTE
 ========================= */
 
 .remanso-cabin-info{
@@ -5698,7 +5702,7 @@ CABAÑA 1 - INFORMACIÓN IMPORTANTE
 
 
 /* =========================
-CABAÑA 1 - CTA FINAL
+NIDO 1 - CTA FINAL
 ========================= */
 
 .remanso-cabin-final-cta{
@@ -5866,20 +5870,6 @@ center/cover;
     background:rgba(255,255,255,.10);
 }
 
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .remanso-cabin-final-cta{
-
-        padding:100px 6%;
-    }
-
-    .remanso-cabin-final-cta-title{
-
-        font-size:2.8rem;
-    }
-}
 
 
 
@@ -8332,5 +8322,19 @@ CTA FINAL
 .remanso-consciousness-cta-secondary:hover{
 
     background:rgba(255,255,255,.10);
+
+}
+
+
+
+
+
+@media (max-width:768px){
+
+.remanso-cabin-experience{
+
+    display:none !important;
+
+}
 
 }
