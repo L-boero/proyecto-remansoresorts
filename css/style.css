@@ -6927,9 +6927,9 @@ HERO EXPERIENCIAS MOBILE
 
     position:relative;
 
-    min-height:85vh;
+    min-height:70vh;
 
-    padding:120px 24px 90px;
+    padding:110px 24px 120px;
 
     justify-content:center;
 
@@ -6993,6 +6993,8 @@ HERO EXPERIENCIAS MOBILE
 
     gap:16px;
 
+    margin-bottom: 30px;
+
 }
 
 .remanso-experiences-mobile-primary,
@@ -7036,7 +7038,7 @@ HERO EXPERIENCIAS MOBILE
 
 .remanso-scroll-indicator{
 
-    bottom:95px;
+    bottom:44px;
 
 }
 
@@ -7053,13 +7055,31 @@ COMPONENTE REUTILIZABLE
 
 @media(max-width:768px){
 
+
 /* ==========================================
-SECCIÓN
+CONTENEDOR DE EXPERIENCIAS
+========================================== */
+
+.remanso-mobile-experiences{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:36px;
+
+    padding:36px 20px 0;
+
+        position:relative;
+
+}
+
+
+/* ==========================================
+TARJETA
 ========================================== */
 
 .remanso-mobile-experience-card{
-
-    margin:40px 18px;
 
     background:#fff;
 
@@ -7073,6 +7093,7 @@ SECCIÓN
 }
 
 
+
 /* ==========================================
 IMAGEN
 ========================================== */
@@ -7081,7 +7102,7 @@ IMAGEN
 
     width:100%;
 
-    aspect-ratio:16/10;
+    aspect-ratio:16/9;
 
     overflow:hidden;
 
@@ -7136,7 +7157,9 @@ NÚMERO
 
     font-weight:300;
 
-    color:rgba(122,104,85,.20);
+    color: var(--remanso-green);
+
+    opacity: .18;
 
     line-height:1;
 
@@ -7295,7 +7318,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
 .remanso-mobile-host{
 
-    margin:90px 18px 110px;
+    margin:80px 20px 110px;
 
 }
 
@@ -8938,14 +8961,14 @@ CTA FINAL
 
 
 
-
-
 @media (max-width:768px){
 
-.remanso-cabin-experience{
+    .remanso-host-section,
+    .remanso-experience-space,
+    .remanso-cabin-experience{
 
-    display:none !important;
+        display:none !important;
 
-}
+    }
 
 }
