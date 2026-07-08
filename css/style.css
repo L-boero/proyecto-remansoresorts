@@ -9247,11 +9247,43 @@ INDICADOR
 }
 
 /* ==========================================
+CONTENEDOR PRINCIPAL DE TODAS LAS EXPERIENCIAS DEL RETIRO
+========================================== */
+
+@media(max-width:768px){
+
+
+.remanso-retreat-mobile-sheet{
+
+    position:relative;
+
+    margin-top:-42px;
+
+    background:#f6f4ef;
+
+    border-radius:38px 38px 0 0;
+
+    z-index:5;
+
+}
+.remanso-retreat-mobile-container{
+
+    padding:42px 22px 110px;
+
+}
+
+
+
+
+/* ==========================================
 RETIRO MOBILE
 ¿QUÉ VAS A VIVIR?
 ========================================== */
 
-@media(max-width:768px){
+
+
+
+
 
 /* ==========================================
 SECCIÓN
@@ -9950,6 +9982,9 @@ OCULTAMOS SECCIONES FORZANDOLAS -DEJAR ESTE IMPORTANT- NO PERTENECE A NINGUNA SE
 @media (max-width:768px){
 
     .remanso-host-section,
+    .remanso-consciousness-about-content,
+    .remanso-consciousness-location,
+    .remanso-consciousness-organizers,
     .remanso-experience-space,
     .remanso-cabin-experience{
 
