@@ -9091,9 +9091,9 @@ BOTÓN BACK
 
     z-index:10;
 
-    width:60px;
+    width:43px;
 
-    height:60px;
+    height:43px;
 
     display:flex;
 
@@ -9864,6 +9864,7 @@ OCULTAMOS SECCIONES FORZANDOLAS -DEJAR ESTE IMPORTANT- NO PERTENECE A NINGUNA SE
 @media (max-width:768px){
 
 .remanso-consciousness-hero,
+.remanso-whatsapp,
 .remanso-consciousness-about,
 .remanso-consciousness-experience,
 .remanso-consciousness-info,
