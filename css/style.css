@@ -4371,7 +4371,7 @@ HERO MOBILE
 
     overflow:hidden;
 
-    min-height:90vh;
+    min-height:68vh;
 
 }
 
@@ -6927,7 +6927,7 @@ HERO EXPERIENCIAS MOBILE
 
     position:relative;
 
-    min-height:70vh;
+    min-height:68vh;
 
     padding:110px 24px 120px;
 
@@ -8963,10 +8963,8 @@ CTA FINAL
 }
 
 
-
-
 /* ==========================================
-RETIRO - HERO MOBILE PAG INTERNA AMANECER DE LA COSCIENCIA
+RETIRO - HERO MOBILE
 ========================================== */
 
 .remanso-retreat-mobile-hero{
@@ -8989,32 +8987,72 @@ OCULTAR HERO DESKTOP
 
 
 /* ==========================================
-HERO- 
+HERO
 ========================================== */
 
 .remanso-retreat-mobile-hero{
 
-    display:flex;
+    display:block;
 
     position:relative;
 
-    min-height:70vh;
+    width:100%;
 
-    padding:110px 24px 110px;
-
-    justify-content:center;
-
-    align-items:flex-start;
-
-    text-align:center;
-
-    background-image:url("../assets/img/amanecer-mobile.jpg");
-
-    background-size:cover;
-
-    background-position:center;
+    height:68vh;
 
     overflow:hidden;
+
+    background:#000;
+
+}
+
+
+/* ==========================================
+SLIDER
+========================================== */
+
+.remanso-retreat-mobile-slider{
+
+    display:flex;
+
+    width:100%;
+
+    height:100%;
+
+    overflow-x:auto;
+
+    scroll-snap-type:x mandatory;
+
+    scroll-behavior:smooth;
+
+    -webkit-overflow-scrolling:touch;
+
+    scrollbar-width:none;
+
+}
+
+.remanso-retreat-mobile-slider::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+/* ==========================================
+IMÁGENES
+========================================== */
+
+.remanso-retreat-mobile-slider img{
+
+    width:100%;
+
+    height:100%;
+
+    flex-shrink:0;
+
+    object-fit:cover;
+
+    scroll-snap-align:center;
 
 }
 
@@ -9029,162 +9067,33 @@ OVERLAY
 
     inset:0;
 
-    background:
-    linear-gradient(
-        rgba(0,0,0,.28),
-        rgba(0,0,0,.46)
+    background:linear-gradient(
+        rgba(0,0,0,.18),
+        rgba(0,0,0,.28)
     );
 
-}
-
-
-/* ==========================================
-CONTENIDO
-========================================== */
-
-.remanso-retreat-mobile-content{
-
-    position:relative;
-
-    z-index:2;
-
-    width:100%;
+    pointer-events:none;
 
 }
 
 
 /* ==========================================
-LABEL
+BOTÓN BACK
 ========================================== */
 
-.remanso-retreat-mobile-label{
+.remanso-retreat-mobile-back{
 
-    display:block;
+    position:absolute;
 
-    color:white;
+    top:26px;
 
-    letter-spacing:3px;
+    left:20px;
 
-    text-transform:uppercase;
+    z-index:10;
 
-    font-size:.72rem;
+    width:60px;
 
-    font-weight:600;
-
-    margin-bottom:22px;
-
-}
-
-
-/* ==========================================
-TÍTULO
-========================================== */
-
-.remanso-retreat-mobile-title{
-
-    color:white;
-
-    font-size:3rem;
-
-    line-height:1.05;
-
-    letter-spacing:-1px;
-
-    margin-bottom:28px;
-
-}
-
-
-/* ==========================================
-DESCRIPCIÓN
-========================================== */
-
-.remanso-retreat-mobile-description{
-
-    color:rgba(255,255,255,.90);
-
-    line-height:1.75;
-
-    font-size:1rem;
-
-    max-width:320px;
-
-    margin:0 auto 34px;
-
-}
-
-
-/* ==========================================
-PILLS
-========================================== */
-
-.remanso-retreat-mobile-meta{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:12px;
-
-    margin-bottom:42px;
-
-}
-
-.remanso-retreat-mobile-meta span{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    padding:10px 16px;
-
-    border-radius:999px;
-
-    background:rgba(255,255,255,.16);
-
-    border:1px solid rgba(255,255,255,.18);
-
-    backdrop-filter:blur(10px);
-
-    color:white;
-
-    font-size:.88rem;
-
-}
-
-.remanso-retreat-mobile-meta i{
-
-    font-size:.9rem;
-
-}
-
-
-/* ==========================================
-BOTONES
-========================================== */
-
-.remanso-retreat-mobile-buttons{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:16px;
-
-    margin-bottom:60px;
-
-}
-
-
-/* CTA PRINCIPAL */
-
-.remanso-retreat-mobile-primary{
-
-    width:100%;
+    height:60px;
 
     display:flex;
 
@@ -9192,44 +9101,24 @@ BOTONES
 
     align-items:center;
 
-    padding:18px;
+    border-radius:50%;
 
-    border-radius:999px;
+    background:rgba(255,255,255,.92);
 
-    background:white;
-
-    color:var(--remanso-green);
+    color:#222;
 
     text-decoration:none;
 
-    font-weight:600;
+    backdrop-filter:blur(14px);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.12);
 
 }
 
+.remanso-retreat-mobile-back i{
 
-/* CTA SECUNDARIO */
-
-.remanso-retreat-mobile-secondary{
-
-    width:100%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:18px;
-
-    border-radius:999px;
-
-    text-decoration:none;
-
-    color:white;
-
-    border:1px solid rgba(255,255,255,.30);
-
-    backdrop-filter:blur(10px);
+    font-size:1.3rem;
 
 }
 
@@ -9238,52 +9127,50 @@ BOTONES
 INDICADOR
 ========================================== */
 
-.remanso-scroll-indicator{
+.remanso-gallery-indicator{
 
-    bottom:42px;
+    position:absolute;
+
+    left:50%;
+
+    bottom:28px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:8px;
+
+    z-index:10;
+
+}
+
+.remanso-gallery-indicator span{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+}
+
+.remanso-gallery-indicator span.active{
+
+    background:white;
 
 }
 
 }
-
-/* ==========================================
-CONTENEDOR PRINCIPAL DE TODAS LAS EXPERIENCIAS DEL RETIRO
-========================================== */
-
-@media(max-width:768px){
-
-
-.remanso-retreat-mobile-sheet{
-
-    position:relative;
-
-    margin-top:-42px;
-
-    background:#f6f4ef;
-
-    border-radius:38px 38px 0 0;
-
-    z-index:5;
-
-}
-.remanso-retreat-mobile-container{
-
-    padding:42px 22px 110px;
-
-}
-
-
-
 
 /* ==========================================
 RETIRO MOBILE
 ¿QUÉ VAS A VIVIR?
 ========================================== */
 
-
-
-
-
+@media(max-width:768px){
 
 /* ==========================================
 SECCIÓN
@@ -9291,7 +9178,7 @@ SECCIÓN
 
 .remanso-retreat-mobile-experience{
 
-    padding:70px 20px 0;
+    padding-top:70px;
 
 }
 
@@ -9304,12 +9191,9 @@ HEADER
 
     text-align:center;
 
-    margin-bottom:42px;
+    margin-bottom:52px;
 
 }
-
-
-/* LABEL */
 
 .remanso-retreat-mobile-label{
 
@@ -9317,43 +9201,43 @@ HEADER
 
     margin-bottom:18px;
 
-    font-size:.75rem;
+    font-size:.74rem;
 
     font-weight:700;
 
-    letter-spacing:3px;
+    letter-spacing:4px;
 
-    color:#7a6855;
+    text-transform:uppercase;
+
+    color:#8b7761;
 
 }
-
-
-/* TÍTULO */
 
 .remanso-retreat-mobile-title{
 
-    font-size:2.2rem;
+    font-size:2.35rem;
 
-    line-height:1.15;
+    line-height:1.08;
 
-    letter-spacing:-1px;
+    letter-spacing:-1.2px;
 
-    margin-bottom:20px;
+    color:#232323;
+
+    margin-bottom:22px;
 
 }
 
-
-/* DESCRIPCIÓN */
-
 .remanso-retreat-mobile-text{
 
-    max-width:330px;
+    max-width:340px;
 
     margin:auto;
 
     color:#666;
 
-    line-height:1.9;
+    line-height:1.85;
+
+    font-size:1rem;
 
 }
 
@@ -9368,7 +9252,7 @@ GRID
 
     flex-direction:column;
 
-    gap:18px;
+    gap:22px;
 
 }
 
@@ -9383,42 +9267,49 @@ CARD
 
     align-items:flex-start;
 
-    gap:18px;
+    gap:22px;
 
-    padding:24px;
+    padding:28px;
 
-    background:#faf8f5;
+    background:white;
 
-    border:1px solid #ece7df;
+    border:1px solid #ece6de;
 
-    border-radius:24px;
+    border-radius:28px;
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.045);
 
     transition:
-    transform .30s ease,
-    box-shadow .30s ease;
+
+        transform .28s ease,
+
+        box-shadow .28s ease;
 
 }
 
 
-/* ACTIVE MOBILE */
+/* ACTIVE */
 
 .remanso-retreat-mobile-card:active{
 
-    transform:scale(.98);
+    transform:scale(.985);
 
 }
 
 
-/* HOVER DESKTOP */
+/* HOVER */
 
 @media(hover:hover){
 
 .remanso-retreat-mobile-card:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 
     box-shadow:
-    0 12px 30px rgba(0,0,0,.06);
+
+        0 22px 50px rgba(0,0,0,.07);
 
 }
 
@@ -9431,9 +9322,9 @@ ICONO
 
 .remanso-retreat-mobile-icon{
 
-    width:56px;
+    width:64px;
 
-    height:56px;
+    height:64px;
 
     flex-shrink:0;
 
@@ -9443,14 +9334,17 @@ ICONO
 
     align-items:center;
 
-    border-radius:18px;
+    border-radius:22px;
 
-    background:white;
+    background:#f8f5f1;
 
-    font-size:1.4rem;
+    color:var(--remanso-green);
+
+    font-size:1.35rem;
 
     box-shadow:
-    0 8px 18px rgba(0,0,0,.05);
+
+        inset 0 0 0 1px #ece6de;
 
 }
 
@@ -9465,36 +9359,62 @@ CONTENIDO
 
 }
 
+.remanso-retreat-mobile-card-content h3{
 
-/* TÍTULO */
+    font-size:1.28rem;
 
-.remanso-retreat-mobile-card h3{
+    line-height:1.3;
 
-    font-size:1.1rem;
+    color:#232323;
 
-    margin-bottom:8px;
-
-    color:#2f2f2f;
+    margin-bottom:10px;
 
 }
 
-
-/* DESCRIPCIÓN */
-
-.remanso-retreat-mobile-card p{
+.remanso-retreat-mobile-card-content p{
 
     margin:0;
 
     color:#666;
 
-    line-height:1.75;
+    font-size:.98rem;
 
-    font-size:.96rem;
+    line-height:1.8;
+
+}
+
+
+/* ==========================================
+PEQUEÑO DETALLE VISUAL
+========================================== */
+
+.remanso-retreat-mobile-card::after{
+
+    content:"";
+
+    width:36px;
+
+    height:2px;
+
+    background:rgba(70,97,48,.12);
+
+    border-radius:50px;
+
+    position:absolute;
+
+    bottom:22px;
+
+    right:28px;
+
+}
+
+.remanso-retreat-mobile-card{
+
+    position:relative;
 
 }
 
 }
-
 
 
 /* ==========================================
@@ -9665,42 +9585,6 @@ BOTONES
 
 
 /* ==========================================
-CTA PRINCIPAL
-========================================== */
-
-.remanso-retreat-mobile-host-primary{
-
-    width:100%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:18px;
-
-    border-radius:999px;
-
-    background:var(--remanso-green);
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:
-    transform .30s ease,
-    box-shadow .30s ease;
-
-    box-shadow:
-    0 10px 22px rgba(0,0,0,.12);
-
-}
-
-
-/* ==========================================
 CTA SECUNDARIO
 ========================================== */
 
@@ -9739,7 +9623,7 @@ CTA SECUNDARIO
 ACTIVE
 ========================================== */
 
-.remanso-retreat-mobile-host-primary:active,
+
 .remanso-retreat-mobile-host-secondary:active{
 
     transform:scale(.98);
@@ -9977,19 +9861,21 @@ CTA FINAL
 OCULTAMOS SECCIONES FORZANDOLAS -DEJAR ESTE IMPORTANT- NO PERTENECE A NINGUNA SECCION
 ========================================== */
 
-
-
 @media (max-width:768px){
 
-    .remanso-host-section,
-    .remanso-consciousness-about-content,
-    .remanso-consciousness-location,
-    .remanso-consciousness-organizers,
-    .remanso-experience-space,
-    .remanso-cabin-experience{
+.remanso-consciousness-hero,
+.remanso-consciousness-about,
+.remanso-consciousness-experience,
+.remanso-consciousness-info,
+.remanso-consciousness-location,
+.remanso-consciousness-organizers,
+.remanso-consciousness-cta,
+.remanso-host-section,
+.remanso-experience-space,
+.remanso-cabin-experience{
 
-        display:none !important;
+    display:none !important;
 
-    }
+}
 
 }
