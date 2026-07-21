@@ -3596,17 +3596,20 @@ RESPONSIVE MOBILE
 
 }
 
+
 /* LABEL */
 
 .remanso-cabins-label{
 
     display:block;
 
-    font-size:.78rem;
+    font-size:.60rem;
 
-    letter-spacing:5px;
+    letter-spacing:3px;
 
-    margin-bottom:22px;
+    margin-bottom:14px;
+
+    opacity:.9;
 
 }
 
@@ -3614,16 +3617,17 @@ RESPONSIVE MOBILE
 
 .remanso-cabins-hero-description{
 
-    font-size:1rem;
+    max-width:300px;
 
-    line-height:1.7;
+    margin:0 auto 28px;
 
-    color:rgba(255,255,255,.92);
+    font-size:.90rem;
 
-    margin-bottom:34px;
+    line-height:1.55;
+
+    color:rgba(255,255,255,.88);
 
 }
-
 /* BOTONES */
 
 .remanso-cabins-hero-buttons{
@@ -3632,7 +3636,7 @@ RESPONSIVE MOBILE
 
     flex-direction:column;
 
-    gap:14px;
+    gap:12px;
 
     width:100%;
 
@@ -3649,17 +3653,11 @@ RESPONSIVE MOBILE
 
     align-items:center;
 
-    padding:18px;
+    padding:14px 20px;
 
-}
+    font-size:.90rem;
 
-/* SCROLL */
-
-.remanso-scroll-indicator{
-
-    bottom:25px;
-
-}
+    border-radius:16px;
 
 }
 
