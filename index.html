@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="./css/style.css">
    <link
 rel="stylesheet"
@@ -128,7 +128,7 @@ BOTTOM NAVIGATION - MOBILE
 
        <i class="fa-solid fa-tree"></i>
 
-        <span>Nidos</span>
+        <span>Cabañas</span>
 
     </a>
 
@@ -178,7 +178,7 @@ EL REMANSO - HOME - HERO
   a detener el tiempo.
 </h1>
 
-    <p class="remanso-home-description">
+    <p class="remanso-home-description remanso-desktop-only">
         
      Cabañas de montaña, "vistas panoramicas", espacios pensados para disfrutar el descanso y el bienestar
     </p>
@@ -187,9 +187,10 @@ EL REMANSO - HOME - HERO
     <a href="https://wa.me/5493546476564?text=Hola,%20escribo%20desde%20la%20Home%20de%20la%20web%20de%20El%20Remanso%20Resort%20y%20me%20gustar%C3%ADa%20consultar%20disponibilidad." class="remanso-home-button">
         Consultar disponibilidad
     </a>
-    <div class="remanso-home-secondary-link">
+    
+    <div class="remanso-home-secondary-link remanso-mobile-only">
 
-    <a href="#experience">
+    <a href="#cabins">
 
         Conocer el complejo →
 
@@ -303,7 +304,7 @@ HOME - BLOQUE 1 EXPERIENCIA
 ========================= -->
 
 
-<section class="remanso-cabins-section">
+<section class="remanso-cabins-section" id="cabins">
 
     <div class="remanso-cabins-header">
 
@@ -325,7 +326,7 @@ HOME - BLOQUE 1 EXPERIENCIA
 <div class="remanso-cabins-gallery">
 
     <div class="cabin-photo cabin-photo-large">
-        <img src="./assets/home/home-card1-estadia.jpg" alt="cabaña">
+        <img src="./assets/home/home-galery6.jpg" alt="cabaña">
     </div>
 
     <div class="cabin-photo">
@@ -491,7 +492,7 @@ HOME - BLOQUE 1 EXPERIENCIA
 
     <div class="remanso-gallery-hero">
 
-        <img src="./assets/img/panoramic1.JPG"
+        <img src="./assets/home/home-card2-estadia.jpg"
              alt="Vista panorámica de El Remanso Resort">
 
     </div>
@@ -500,13 +501,13 @@ HOME - BLOQUE 1 EXPERIENCIA
 
     <div class="remanso-gallery-grid">
 
-        <div class="remanso-gallery-item">
+        <div class="remanso-gallery-item child1">
             <img src="./assets/home/home-galery-1.jpg"
                  alt="Interior de cabaña">
         </div>
 
-        <div class="remanso-gallery-item">
-            <img src="./assets/home/home-galery-3.jpg"
+        <div class="remanso-gallery-item child2">
+            <img  src="./assets/home/home-galery6.jpg"
                  alt="Jacuzzi climatizado">
         </div>
 
@@ -709,12 +710,13 @@ HOME - BLOQUE 5 - TESTIMONIOS
 
 </section>
 
-
 <!-- =========================
 HOME - BLOQUE 6 - UBICACIÓN
 ========================= -->
 
 <section class="remanso-location-section">
+
+    <!-- HEADER -->
 
     <div class="remanso-location-header">
 
@@ -734,8 +736,21 @@ HOME - BLOQUE 6 - UBICACIÓN
 
     </div>
 
-  <div class="remanso-location-map"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.7323804626467!2d-64.76472962437339!3d-31.892874674045576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2cb6096b7bccf%3A0x3215216fc7344465!2sEl%20Remanso%20Resorts!5e1!3m2!1ses-419!2sar!4v1780542067434!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div> <div class="remanso-location-features"> <div class="location-feature"> 📍 La Cumbrecita </div> <div class="location-feature"> 🚗 A 15 minutos del centro </div> <div class="location-feature"> 🥾 Paque Peñon del Aguila </div> <div class="location-feature"> 🌄 Vistas panorámicas </div> </div> <div class="remanso-location-cta"> <a href="https://www.google.com/maps/dir/-32.033656,-61.216506/El+Remanso+Resorts,+Calle+el+Remanso+Negro,+5194,+X5194+La+Cumbrecita,+C%C3%B3rdoba/@-31.6493123,-65.6301931,935946m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x95d2cb6096b7bccf:0x3215216fc7344465!2m2!1d-64.7621533!2d-31.8928879?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" class="remanso-location-button"> Abrir en Google Maps <span>→</span> </a> </div> </section>
+    <!-- MAPA -->
 
+    <div class="remanso-location-map">
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.7323804626467!2d-64.76472962437339!3d-31.892874674045576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2cb6096b7bccf%3A0x3215216fc7344465!2sEl%20Remanso%20Resorts!5e1!3m2!1ses-419!2sar!4v1780542067434!5m2!1ses-419!2sar"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade">
+
+        </iframe>
+
+    </div>
+
+    <!-- CARACTERÍSTICAS -->
 
     <div class="remanso-location-features">
 
@@ -747,9 +762,8 @@ HOME - BLOQUE 6 - UBICACIÓN
             🚗 A 15 minutos del centro
         </div>
 
-
         <div class="location-feature">
-            🥾 Paque Peñon del Aguila
+            🥾 Parque Peñón del Águila
         </div>
 
         <div class="location-feature">
@@ -758,17 +772,24 @@ HOME - BLOQUE 6 - UBICACIÓN
 
     </div>
 
+    <!-- BOTÓN -->
+
     <div class="remanso-location-cta">
 
-        <a href="https://www.google.com/maps/dir/-32.033656,-61.216506/El+Remanso+Resorts,+Calle+el+Remanso+Negro,+5194,+X5194+La+Cumbrecita,+C%C3%B3rdoba/@-31.6493123,-65.6301931,935946m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x95d2cb6096b7bccf:0x3215216fc7344465!2m2!1d-64.7621533!2d-31.8928879?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D" class="remanso-location-button">
+        <a
+            href="https://www.google.com/maps/dir/-32.033656,-61.216506/El+Remanso+Resorts,+Calle+el+Remanso+Negro,+5194,+X5194+La+Cumbrecita,+C%C3%B3rdoba/@-31.6493123,-65.6301931,935946m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x95d2cb6096b7bccf:0x3215216fc7344465!2m2!1d-64.7621533!2d-31.8928879?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener"
+            class="remanso-location-button">
+
             Abrir en Google Maps
             <span>→</span>
+
         </a>
 
     </div>
 
 </section>
-
 
 <!-- =========================
 HOME - BLOQUE 7 - FAQ
