@@ -3425,7 +3425,7 @@ WHATSAPP FLOATING BUTTON
 CABAÑAS - HERO DESKTOP
 ========================= */
 
-.remanso-cabins-hero{
+.remanso-cabins-heroo{
 
     position:relative;
 
@@ -3445,7 +3445,7 @@ CABAÑAS - HERO DESKTOP
 
     overflow:hidden;
 }
-.remanso-cabins-hero-overlay{
+.remanso-cabins-heroo-overlay{
 
     position:absolute;
 
@@ -3458,7 +3458,7 @@ CABAÑAS - HERO DESKTOP
     );
 
 }
-.remanso-cabins-hero-content{
+.remanso-cabins-heroo-content{
 
     position:relative;
     z-index:2;
@@ -3468,7 +3468,7 @@ CABAÑAS - HERO DESKTOP
     color:white;
 }
 
-.remanso-cabins-hero-title{
+.remanso-cabins-heroo-title{
 
     font-size:4.4rem;
 
@@ -3481,7 +3481,7 @@ CABAÑAS - HERO DESKTOP
     text-transform:none;
 
 }
-.remanso-cabins-hero-description{
+.remanso-cabins-heroo-description{
 
     max-width:560px;
 
@@ -3494,7 +3494,7 @@ CABAÑAS - HERO DESKTOP
     opacity:.92;
 
 }
-.remanso-cabins-hero-buttons{
+.remanso-cabins-heroo-buttons{
 
     margin-top:50px;
 
@@ -3890,7 +3890,7 @@ HERO
 
     text-align:center;
 
-    background-image:url("../assets/nidos/interior-living1.jpg");
+    background-image:url("../assets/nidos/nido2/hero.jpg");
     
     background-size:cover;
     
@@ -4108,7 +4108,9 @@ CARD
 
 .remanso-mobile-cabin-card{
 
+   display:flex;
    
+   flex-direction:column;
 
     width:80%;
 
@@ -4150,7 +4152,7 @@ CARD
 }
 .remanso-mobile-cabin-image{
 
-    height:190px;
+    height:160px;
 
     overflow:hidden;
 
@@ -4202,9 +4204,15 @@ CONTENIDO
 
 .remanso-mobile-cabin-content{
 
-    padding:22px;
+    padding:20px;
 
     min-width:0;
+
+     display:flex;
+
+    flex-direction:column;
+
+    flex:1;
 
 }
 
@@ -4228,7 +4236,7 @@ CONTENIDO
 
     font-size:1.55rem;
 
-    margin-bottom:18px;
+    margin-bottom:14px;
 
     overflow-wrap:anywhere;
 
@@ -4244,7 +4252,7 @@ CONTENIDO
 
     color:#7a6855;
 
-    margin-bottom:22px;
+    margin-bottom:18px;
 
 }
 
@@ -4254,7 +4262,7 @@ CONTENIDO
 
     line-height:1.6;
 
-    margin-bottom:24px;
+    margin-bottom:18px;
 
 }
 
@@ -4286,6 +4294,8 @@ BOTÓN
     font-weight:600;
 
      box-sizing:border-box;
+
+        margin-top:auto;
 
 }
 
