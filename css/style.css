@@ -3439,7 +3439,7 @@ CABAÑAS - HERO DESKTOP
 
     padding:0 8%;
 
-    background-image:url("../assets/nidos/nido2/hero.webp");
+    background-image:url("../assets/nidos/balcon.jpg");
     background-size:cover;
     background-position:center;
 
@@ -3890,7 +3890,7 @@ HERO
 
     text-align:center;
 
-    background-image:url("../assets/nidos/nido2/hero.webp");
+    background-image:url("../assets/nidos/interior-living1.jpg");
     
     background-size:cover;
     
@@ -4070,11 +4070,24 @@ GRID
 
     display:flex;
 
-    gap:18px;
+    gap:14px;
 
     overflow-x:auto;
 
-    padding-bottom:14px;
+     padding:18px 18px 22px;
+
+    padding-right:40px;
+
+     margin:0 -6px;
+
+     background:#f8f5f1;
+
+    border:1px solid #ece7df;
+
+    border-radius:28px;
+
+     box-shadow: 0 12px 35px rgba(0,0,0,.04);
+
 
     scroll-snap-type:x mandatory;
 
@@ -4097,11 +4110,11 @@ CARD
 
    
 
-    width:84%;
+    width:80%;
 
-   min-width:84%;
+   min-width:80%;
 
-     max-width:84%;
+     max-width:80%;
 
     flex-shrink:0;
 
@@ -4115,12 +4128,26 @@ CARD
 
     border:1px solid #ece7df;
 
-    box-shadow:0 10px 35px rgba(0,0,0,.05);
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
 
      box-sizing:border-box; 
 
 }
 
+
+.remanso-mobile-cabin-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.remanso-mobile-cabin-card:active{
+
+    transform:scale(.985);
+
+}
 .remanso-mobile-cabin-image{
 
     height:190px;
@@ -4343,6 +4370,12 @@ overflow:hidden;
 IMÁGENES HERO DE NIDO 2, 3 Y 4 
 ========================= */
 
+
+.remanso-cabin-hero-nido1{
+
+    background-image:url("../assets/nidos/nido1/herocabin-nido1.jpg");
+
+}
 
 .remanso-cabin-hero-nido2{
 
