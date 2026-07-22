@@ -3874,7 +3874,9 @@ CABAÑAS - MOBILE
 HERO
 ========================================================== */
 
-.remanso-cabins-hero{
+.remanso-mobile-cabins-hero{
+
+     position:relative;
 
     min-height:72vh;
 
@@ -3888,19 +3890,40 @@ HERO
 
     text-align:center;
 
+    background-image:url("../assets/nidos/nido2/hero.webp");
+    
+    background-size:cover;
+    
+    background-position:center;
+
 }
 
-.remanso-cabins-hero-content{
+.remanso-mobile-cabins-hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+}
+
+.remanso-mobile-cabins-hero-content{
 
     width:100%;
 
-    max-width:360px;
+    max-width:340px;
 
     margin:auto;
 
+    position:relative;
+
+    z-index:2;
+
+
 }
 
-.remanso-cabins-label{
+.remanso-mobile-cabins-label{
 
     display:block;
 
@@ -3914,7 +3937,7 @@ HERO
 
 }
 
-.remanso-cabins-hero-description{
+.remanso-mobile-cabins-hero-description{
 
     max-width:300px;
 
@@ -3922,13 +3945,13 @@ HERO
 
     font-size:.90rem;
 
-    line-height:1.55;
+    line-height:1.45;
 
     color:rgba(255,255,255,.88);
 
 }
 
-.remanso-cabins-hero-buttons{
+.remanso-mobile-cabins-hero-buttons{
 
     display:flex;
 
@@ -3940,8 +3963,8 @@ HERO
 
 }
 
-.remanso-cabins-primary-button,
-.remanso-cabins-secondary-button{
+.remanso-mobile-cabins-primary-button,
+.remanso-mobile-cabins-secondary-button{
 
     width:100%;
 
@@ -3958,13 +3981,19 @@ HERO
     border-radius:16px;
 
 }
+.remanso-mobile-scroll-indicator{
 
-.remanso-scroll-indicator{
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
 
     bottom:25px;
 
-}
+    z-index:2;
 
+}
 
 /* ==========================================================
 CATÁLOGO
@@ -4066,7 +4095,13 @@ CARD
 
 .remanso-mobile-cabin-card{
 
-    min-width:84%;
+   
+
+    width:84%;
+
+   min-width:84%;
+
+     max-width:84%;
 
     flex-shrink:0;
 
@@ -4081,6 +4116,8 @@ CARD
     border:1px solid #ece7df;
 
     box-shadow:0 10px 35px rgba(0,0,0,.05);
+
+     box-sizing:border-box; 
 
 }
 
@@ -4140,6 +4177,8 @@ CONTENIDO
 
     padding:22px;
 
+    min-width:0;
+
 }
 
 .remanso-mobile-cabin-number{
@@ -4163,6 +4202,8 @@ CONTENIDO
     font-size:1.55rem;
 
     margin-bottom:18px;
+
+    overflow-wrap:anywhere;
 
 }
 
@@ -4216,6 +4257,8 @@ BOTÓN
     text-decoration:none;
 
     font-weight:600;
+
+     box-sizing:border-box;
 
 }
 
@@ -5570,22 +5613,6 @@ transform:scale(1.04);
 
 }
 
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-.remanso-cabin-experience{
-    grid-template-columns:1fr;
-    gap:50px;
-}
-.remanso-cabin-experience-title{
-    font-size:2.8rem;
-}
-.remanso-cabin-experience-image{
-    height:450px;
-}
-
-}
 
 
 
@@ -10823,11 +10850,5 @@ OCULTAMOS SECCIONES FORZANDOLAS -DEJAR ESTE IMPORTANT- NO PERTENECE A NINGUNA SE
     display:none !important;
 
 }
-
-}
-
-.remanso-mobile-only{
-
-    display:none !important;
 
 }
