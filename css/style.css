@@ -26,37 +26,6 @@ line-height:1.6;
 
 }
 
-/* Visible solo en Desktop */
-
-@media(max-width:768px){
-
-    .remanso-desktop-only{
-
-        display:none;
-
-    }
-
-}
-
-/* Visible solo en Mobile */
-
-.remanso-mobile-only{
-
-    display:none;
-
-}
-
-@media(max-width:768px){
-
-    .remanso-mobile-only{
-
-        display:block;
-
-    }
-
-}
-
-
 
 
 /* =========================
@@ -3425,7 +3394,7 @@ WHATSAPP FLOATING BUTTON
 CABAÑAS - HERO DESKTOP
 ========================= */
 
-.remanso-cabins-heroo{
+.remanso-cabins-hero{
 
     position:relative;
 
@@ -3445,7 +3414,7 @@ CABAÑAS - HERO DESKTOP
 
     overflow:hidden;
 }
-.remanso-cabins-heroo-overlay{
+.remanso-cabins-hero-overlay{
 
     position:absolute;
 
@@ -3458,7 +3427,7 @@ CABAÑAS - HERO DESKTOP
     );
 
 }
-.remanso-cabins-heroo-content{
+.remanso-cabins-hero-content{
 
     position:relative;
     z-index:2;
@@ -3468,7 +3437,7 @@ CABAÑAS - HERO DESKTOP
     color:white;
 }
 
-.remanso-cabins-heroo-title{
+.remanso-cabins-hero-title{
 
     font-size:4.4rem;
 
@@ -3481,7 +3450,7 @@ CABAÑAS - HERO DESKTOP
     text-transform:none;
 
 }
-.remanso-cabins-heroo-description{
+.remanso-cabins-hero-description{
 
     max-width:560px;
 
@@ -3494,7 +3463,7 @@ CABAÑAS - HERO DESKTOP
     opacity:.92;
 
 }
-.remanso-cabins-heroo-buttons{
+.remanso-cabins-hero-buttons{
 
     margin-top:50px;
 
@@ -3862,6 +3831,8 @@ NOTA ACLARATORIA - DESKTOP
     margin:0;
 
 }
+
+
 
 /* ==========================================================
 CABAÑAS - MOBILE
@@ -4258,7 +4229,7 @@ CONTENIDO
 
 .remanso-mobile-cabin-highlight{
 
-    color:#666;
+    color: black;
 
     line-height:1.6;
 
@@ -10895,3 +10866,34 @@ OCULTAMOS SECCIONES FORZANDOLAS -DEJAR ESTE IMPORTANT- NO PERTENECE A NINGUNA SE
 }
 
 }
+
+/* Visible solo en Desktop */
+
+@media(max-width:768px){
+
+    .remanso-desktop-only{
+
+        display:none;
+
+    }
+
+}
+
+/* Visible solo en Mobile */
+
+.remanso-mobile-only{
+
+    display:none;
+
+}
+
+@media(max-width:768px){
+
+    .remanso-mobile-only{
+
+        display:block;
+
+    }
+
+}
+
