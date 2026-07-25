@@ -3910,6 +3910,8 @@ HERO
 
     opacity:.9;
 
+      color:#fff;
+
 }
 
 .remanso-cabins-hero-description{
@@ -3922,7 +3924,7 @@ HERO
 
     line-height:1.45;
 
-    color:rgba(255,255,255,.88);
+    color:rgba(255,255,255,.9);
 
 }
 
