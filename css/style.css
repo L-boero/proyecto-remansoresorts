@@ -3898,7 +3898,7 @@ HERO
 
 }
 
-.remanso-mobile-cabins-label{
+.remanso-cabins-label{
 
     display:block;
 
@@ -3912,7 +3912,7 @@ HERO
 
 }
 
-.remanso-mobile-cabins-hero-description{
+.remanso-cabins-hero-description{
 
     max-width:300px;
 
@@ -3926,7 +3926,7 @@ HERO
 
 }
 
-.remanso-mobile-cabins-hero-buttons{
+.remanso-cabins-hero-buttons{
 
     display:flex;
 
@@ -3936,8 +3936,8 @@ HERO
 
     width:100%;
 
-}.remanso-mobile-cabins-primary-button,
-.remanso-mobile-cabins-secondary-button{
+}.remanso-cabins-primary-button,
+.remanso-cabins-secondary-button{
 
     display:flex;
 
@@ -3957,7 +3957,7 @@ HERO
 
 }
 
-.remanso-mobile-cabins-primary-button{
+.remanso-cabins-primary-button{
 
     background:#fff;
 
@@ -3965,7 +3965,7 @@ HERO
 
 }
 
-.remanso-mobile-cabins-secondary-button{
+.remanso-cabins-secondary-button{
 
     background:rgba(0,0,0,.25);
 
