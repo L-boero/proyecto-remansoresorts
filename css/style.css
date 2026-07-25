@@ -3563,7 +3563,7 @@ CABAÑAS - CATÁLOGO - DESKTOP
 
     text-transform:uppercase;
 
-    font-size:.85rem;
+    font-size:.983rem;
     margin-bottom: 30px;
 }
 
@@ -3579,7 +3579,7 @@ CABAÑAS - CATÁLOGO - DESKTOP
 
 .remanso-cabins-catalog-title{
 
-    font-size:4rem;
+    font-size:3rem;
 
     line-height:1.15;
 
@@ -3604,6 +3604,7 @@ GRID DE CABAÑAS - DESKTOP
     grid-template-columns:repeat(2,1fr);
 
     gap:18px;
+    margin-top: 42px;
 }
 
 /* =========================
@@ -3787,15 +3788,17 @@ NOTA ACLARATORIA - DESKTOP
 
     display:block;
 
-    margin-bottom:18px;
+    margin-bottom:22px;
 
     color:#7a6855;
 
-    font-size:.8rem;
+    font-size:.9rem;
 
     letter-spacing:3px;
 
     font-weight:600;
+    
+    margin-top: 16px;
 
 }
 
@@ -3817,6 +3820,7 @@ NOTA ACLARATORIA - DESKTOP
     border-radius:24px;
 
     text-align:center;
+    margin-top: 16px;
 
 }
 
@@ -3932,12 +3936,8 @@ HERO
 
     width:100%;
 
-}
-
-.remanso-mobile-cabins-primary-button,
+}.remanso-mobile-cabins-primary-button,
 .remanso-mobile-cabins-secondary-button{
-
-    width:100%;
 
     display:flex;
 
@@ -3945,14 +3945,36 @@ HERO
 
     align-items:center;
 
-    padding:14px 20px;
+    width:100%;
 
-    font-size:.90rem;
+    padding:16px 22px;
 
-    border-radius:16px;
+    border-radius:999px;
+
+    text-decoration:none;
+
+    font-weight:600;
 
 }
-.remanso-mobile-scroll-indicator{
+
+.remanso-mobile-cabins-primary-button{
+
+    background:#fff;
+
+    color:#7a6855;
+
+}
+
+.remanso-mobile-cabins-secondary-button{
+
+    background:rgba(0,0,0,.25);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    color:#fff;
+
+}
+.remanso-scroll-indicator{
 
     position:absolute;
 
@@ -3963,6 +3985,12 @@ HERO
     bottom:25px;
 
     z-index:2;
+
+}
+
+.remanso-mobile-cabins-hero{
+
+    border:10px solid red !important;
 
 }
 
@@ -6262,7 +6290,7 @@ SECTION PRINCIPAL - EXPERIENCIA - HERO - DESKTOP
 
     padding:0 8%;
 
-    background-image:url("../assets/img/comunidad1.jpeg");
+    background-image:url("../assets/retiros/comunidad.jpeg");
 
     background-size:cover;
     background-position:center;
@@ -6272,17 +6300,25 @@ SECTION PRINCIPAL - EXPERIENCIA - HERO - DESKTOP
 }
 
 /* OVERLAY */
-
 .remanso-experiences-hero-overlay{
 
     position:absolute;
     inset:0;
 
     background:
-    linear-gradient(
-        rgba(0,0,0,.25),
-        rgba(0,0,0,.55)
-    );
+
+        radial-gradient(
+            circle at center,
+            rgba(0,0,0,.12) 0%,
+            rgba(0,0,0,.30) 45%,
+            rgba(0,0,0,.55) 100%
+        ),
+
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.18),
+            rgba(0,0,0,.48)
+        );
 
 }
 
@@ -6335,7 +6371,7 @@ SECTION PRINCIPAL - EXPERIENCIA - HERO - DESKTOP
 
 .remanso-experiences-title{
 
-    font-size:5.5rem;
+    font-size:4.8rem;
 
     line-height:1.05;
 
@@ -6394,7 +6430,7 @@ SECTION PRINCIPAL - EXPERIENCIA - HERO - DESKTOP
     align-items:center;
     justify-content:center;
 
-    padding:18px 38px;
+    padding:18px 34px;
 
     background:white;
 
@@ -7311,7 +7347,7 @@ HERO EXPERIENCIAS MOBILE
 
     text-align:center;
 
-    background-image:url("../assets/img/retiros-mobile.jpg");
+    background-image:url("../assets/retiros/comunidad.jpeg");
 
     background-size:cover;
 
