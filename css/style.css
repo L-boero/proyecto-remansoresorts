@@ -3128,53 +3128,65 @@ RESPONSIVE MOBILE
 /* =========================
 FOOTER
 ========================= */
+/* =========================
+FOOTER
+========================= */
 
 .remanso-footer{
 
-    padding:90px 8% 40px;
+    padding:100px 8% 45px;
 
-    background:#f6f2ed;
+    background:#2f4a36;
+
+    color:rgba(255,255,255,.90);
 
     margin-top:120px;
 
-    border-top:1px solid rgba(0,0,0,.06);
 }
+
+/* =========================
+CONTENIDO
+========================= */
 
 .remanso-footer-content{
 
     display:grid;
 
-    grid-template-columns:
-    1.5fr
-    1fr
-    1fr;
+    grid-template-columns:1.5fr 1fr 1fr;
 
-    gap:80px;
+    gap:90px;
 
     margin-bottom:60px;
+
 }
 
-/* BRAND */
+/* =========================
+BRAND
+========================= */
 
 .remanso-footer-brand h3{
 
-    font-size:1.8rem;
+    font-size:1.85rem;
 
     margin-bottom:18px;
 
-    color:#2b2b2b;
+    color:#ffffff;
+
 }
 
 .remanso-footer-brand p{
 
     max-width:340px;
 
-    line-height:1.8;
+    line-height:1.9;
 
-    color:#666;
+    color:rgba(255,255,255,.72);
+
 }
 
-/* LINKS */
+/* =========================
+LINKS
+========================= */
 
 .remanso-footer-links{
 
@@ -3182,24 +3194,31 @@ FOOTER
 
     flex-direction:column;
 
-    gap:16px;
+    gap:18px;
+
 }
 
 .remanso-footer-links a{
 
+    color:rgba(255,255,255,.72);
+
     text-decoration:none;
 
-    color:#555;
+    transition:.30s;
 
-    transition:.3s ease;
 }
 
 .remanso-footer-links a:hover{
 
-    color:#4b5f38;
+    color:#ffffff;
+
+    transform:translateX(4px);
+
 }
 
-/* CONTACT */
+/* =========================
+CONTACTO
+========================= */
 
 .remanso-footer-contact{
 
@@ -3207,64 +3226,67 @@ FOOTER
 
     flex-direction:column;
 
-    gap:16px;
+    gap:18px;
+
 }
 
 .remanso-footer-contact a{
 
+    color:rgba(255,255,255,.72);
+
     text-decoration:none;
 
-    color:#555;
+    transition:.30s;
 
-    transition:.3s ease;
 }
 
 .remanso-footer-contact a:hover{
 
-    color:#4b5f38;
+    color:#ffffff;
+
+    transform:translateX(4px);
+
 }
 
 .remanso-footer-contact p{
 
-    margin-top:12px;
+    margin-top:22px;
 
-    color:#777;
+    color:rgba(255,255,255,.92);
+
+    font-weight:500;
+
 }
 
-/* BOTTOM */
+/* =========================
+BOTTOM
+========================= */
 
 .remanso-footer-bottom{
 
     padding-top:35px;
 
-    border-top:1px solid rgba(0,0,0,.08);
+    border-top:1px solid rgba(255,255,255,.10);
 
     text-align:center;
 
-    color:#888;
+    color:rgba(255,255,255,.65);
 
-    font-size:.9rem;
+    font-size:.92rem;
+
 }
 
+.fotter-bottom-description{
+
+    color:rgba(255,255,255,.78);
+
+    font-style:italic;
+
+}
 /* RESPONSIVE FOOTER MOBILE*/
-
-@media(max-width:768px){
-
-    .remanso-footer-content{
-
-        grid-template-columns:1fr;
-
-        gap:50px;
-
-        text-align:center;
-    }
-
-    .remanso-footer-brand p{
-
-        margin:auto;
-    }
-}
-
+/* =========================
+RESPONSIVE
+========================= */
 
 @media(max-width:768px){
 
@@ -3274,7 +3296,19 @@ FOOTER
 
 }
 
-/* OCULTAR MENÚ */
+.remanso-footer-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:38px;
+
+    text-align:center;
+
+}
+
+/* ocultamos el menú */
 
 .remanso-footer-links{
 
@@ -3282,51 +3316,65 @@ FOOTER
 
 }
 
-/* CONTENIDO */
+/* descripción */
 
-.remanso-footer-content{
+.remanso-footer-brand p{
 
-    display:flex;
+    margin:auto;
 
-    flex-direction:column;
-
-    gap:35px;
-
-    text-align:center;
+    max-width:320px;
 
 }
 
-/* BOTONES */
+/* contacto */
 
 .remanso-footer-contact{
 
     align-items:center;
 
+    gap:16px;
+
 }
 
 .remanso-footer-contact a{
 
-    width:100%;
+    background:none;
 
-    max-width:320px;
+    width:auto;
 
-    padding:16px;
+    max-width:none;
 
-    border-radius:999px;
+    padding:0;
 
-    background:var(--remanso-green);
+    border-radius:0;
 
-    color:white;
+    color:rgba(255,255,255,.82);
+
+    font-weight:500;
 
     text-decoration:none;
 
-    font-weight:600;
+    transition:.30s;
+
+}
+
+.remanso-footer-contact a:hover{
+
+    color:#ffffff;
 
 }
 
 .remanso-footer-contact p{
 
-    margin-top:8px;
+    margin-top:14px;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+.remanso-footer-bottom{
+
+    margin-top:10px;
 
 }
 
@@ -7150,7 +7198,6 @@ EXPERIENCIAS - ORGANIZADORES
 /* =========================
 EXPERIENCIAS - CTA FINAL
 ========================= */
-
 .remanso-experience-cta{
 
     padding:160px 8%;
@@ -7158,8 +7205,8 @@ EXPERIENCIAS - CTA FINAL
     background:
     linear-gradient(
         135deg,
-        #8e7a65,
-        #7a6855
+        #2f4a36,
+        #1f3226
     );
 
     color:white;
@@ -7339,9 +7386,9 @@ HERO EXPERIENCIAS MOBILE
 
     position:relative;
 
-    min-height:68vh;
+    min-height:72vh;
 
-    padding:110px 24px 120px;
+    padding:100px 24px 90px;
 
     justify-content:center;
 
@@ -7396,8 +7443,18 @@ HERO EXPERIENCIAS MOBILE
     margin-bottom:42px;
 
 }
-.p{
-    color: white;
+.remanso-experiences-mobile-description{
+
+    max-width:320px;
+
+    margin:0 auto;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:1rem;
+
+    line-height:1.55;
+
 }
 
 .remanso-experiences-mobile-buttons{
@@ -7406,30 +7463,29 @@ HERO EXPERIENCIAS MOBILE
 
     flex-direction:column;
 
-    gap:16px;
+    gap:10px;
+
+    margin-top: 30px;
 
     margin-bottom: 30px;
 
 }
-
 .remanso-experiences-mobile-primary,
 .remanso-experiences-mobile-secondary{
 
-    width:100%;
+    width:88%;
 
-    display:flex;
+    max-width:320px;
 
-    justify-content:center;
+    margin:0 auto;
 
-    align-items:center;
-
-    padding:18px;
+    padding:15px 24px;
 
     border-radius:999px;
 
-    text-decoration:none;
+    font-size:.98rem;
 
-    font-weight:500;
+    font-weight:600;
 
 }
 
@@ -7445,15 +7501,18 @@ HERO EXPERIENCIAS MOBILE
 
     color:white;
 
-    border:1px solid rgba(255,255,255,.35);
 
     backdrop-filter:blur(10px);
+
+    background:rgba(0,0,0,.18);
+
+    border:1px solid rgba(255,255,255,.28);
 
 }
 
 .remanso-scroll-indicator{
 
-    bottom:44px;
+    bottom:28px;
 
 }
 
@@ -7982,7 +8041,7 @@ AMANECER DE LA CONSCIENCIA - HERO
 
     padding:0 8%;
 
-    background-image:url("../assets/img/retirosholistic.jpeg");
+    background-image:url("../assets/retiros/hero\ copy.jpg");
 
     background-size:cover;
     background-position:center;
@@ -9216,19 +9275,19 @@ PREGUNTAS FRECUENTES
 AMANECER DE LA CONSCIENCIA
 CTA FINAL
 ========================= */
-
 .remanso-consciousness-cta{
 
     padding:160px 8%;
 
     background:
     linear-gradient(
-        135deg,
-        #8e7a65,
-        #7a6855
+        145deg,
+        #35543d 0%,
+        #2b4533 45%,
+        #1f3226 100%
     );
 
-    color:white;
+    color:#fff;
 
     text-align:center;
 
@@ -9242,7 +9301,7 @@ CTA FINAL
 
 .remanso-consciousness-cta-content{
 
-    max-width:900px;
+    max-width:7200px;
 
     margin:auto;
 
