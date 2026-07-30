@@ -3903,7 +3903,7 @@ HERO
 
     min-height:72vh;
 
-    padding:100px 24px 90px;
+    padding:110px 24px 95px;
 
     display:flex;
 
@@ -3927,9 +3927,22 @@ HERO
 
     inset:0;
 
-    background:rgba(0,0,0,.35);
+    background:rgba(0,0,0,.48);
 
 }
+
+.remanso-cabins-line{
+
+    width:48px;
+
+    height:1px;
+
+    margin:0 auto 24px;
+
+    background:rgba(255,255,255,.75);
+
+}
+
 
 .remanso-mobile-cabins-hero-content{
 
@@ -3945,34 +3958,36 @@ HERO
 
 
 }
-
 .remanso-cabins-label{
 
     display:block;
 
-    font-size:.60rem;
+    font-size:.95rem;
 
-    letter-spacing:3px;
+    letter-spacing:4px;
 
-    margin-bottom:14px;
+    text-transform:uppercase;
 
-    opacity:.9;
+    font-weight:500;
 
-      color:#fff;
+    color:rgba(255,255,255,.95);
+
+    margin-bottom:22px;
 
 }
-
 .remanso-cabins-hero-description{
 
-    max-width:300px;
+    max-width:310px;
 
-    margin:0 auto 28px;
+    margin:0 auto 42px;
 
-    font-size:.90rem;
+    font-size:.96rem;
 
-    line-height:1.45;
+    line-height:1.75;
 
-    color:rgba(255,255,255,.9);
+    color:rgba(255,255,255,.88);
+
+    font-weight:400;
 
 }
 
@@ -3982,9 +3997,10 @@ HERO
 
     flex-direction:column;
 
-    gap:12px;
+    gap:18px;
 
-    width:100%;
+    width:92%;
+    margin: 0 auto;
 
 }.remanso-cabins-primary-button,
 .remanso-cabins-secondary-button{
@@ -3997,7 +4013,7 @@ HERO
 
     width:100%;
 
-    padding:16px 22px;
+    padding:14px 22px;
 
     border-radius:999px;
 
@@ -4017,7 +4033,7 @@ HERO
 
 .remanso-cabins-secondary-button{
 
-    background:rgba(0,0,0,.25);
+    background:rgba(0,0,0,.18);
 
     border:1px solid rgba(255,255,255,.35);
 
@@ -4038,11 +4054,7 @@ HERO
 
 }
 
-.remanso-mobile-cabins-hero{
 
-    border:10px solid red !important;
-
-}
 
 /* ==========================================================
 CATÁLOGO
@@ -7463,9 +7475,9 @@ HERO EXPERIENCIAS MOBILE
 
     flex-direction:column;
 
-    gap:10px;
+    gap:16px;
 
-    margin-top: 30px;
+    margin-top: 36px;
 
     margin-bottom: 30px;
 
@@ -7479,11 +7491,11 @@ HERO EXPERIENCIAS MOBILE
 
     margin:0 auto;
 
-    padding:15px 24px;
+    padding:14px 24px;
 
     border-radius:999px;
 
-    font-size:.98rem;
+    font-size:.95rem;
 
     font-weight:600;
 
@@ -7519,6 +7531,15 @@ HERO EXPERIENCIAS MOBILE
 }
 
 
+.remanso-experiences-mobile-primary,
+.remanso-experiences-mobile-secondary,
+.remanso-experiences-mobile-primary:visited,
+.remanso-experiences-mobile-secondary:visited{
+
+    text-decoration:none;
+
+}
+
 
 
 
@@ -7540,7 +7561,7 @@ CONTENEDOR DE EXPERIENCIAS
 
     flex-direction:column;
 
-    gap:36px;
+    gap:56px;
 
     padding:36px 20px 0;
 
@@ -7614,7 +7635,7 @@ CONTENIDO
 
 .remanso-mobile-experience-content{
 
-    padding:34px 28px 34px;
+    padding:34px 28px 42px;
 
 }
 
@@ -7722,7 +7743,19 @@ DESCRIPCIÓN
 
     font-size:1rem;
 
-    margin-bottom:34px;
+    margin-bottom:40px;
+
+}
+
+.remanso-experiences-mobile-description{
+
+    margin:0 auto 0;
+
+}
+
+.remanso-experiences-mobile-buttons{
+
+    margin-top:38px;
 
 }
 
@@ -9301,7 +9334,7 @@ CTA FINAL
 
 .remanso-consciousness-cta-content{
 
-    max-width:7200px;
+    max-width:0px;
 
     margin:auto;
 
