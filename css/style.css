@@ -7585,25 +7585,56 @@ CONTENEDOR DE EXPERIENCIAS
 /* ==========================================
 TARJETA
 ========================================== */
-
 .remanso-mobile-experience-card{
 
-    background:#fff;
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #fdfcfb 55%,
+        #faf8f5 100%
+    );
 
     border-radius:32px;
 
     overflow:hidden;
 
+    border:1px solid rgba(0,0,0,.035);
+
     box-shadow:
-    0 18px 55px rgba(0,0,0,.08);
+        0 18px 45px rgba(0,0,0,.045),
+        inset 0 1px rgba(255,255,255,.75);
+
+    display:block;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    cursor:pointer;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 
 }
+
+.remanso-mobile-experience-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 28px 60px rgba(0,0,0,.08);
+
+}
+
 
 
 
 /* ==========================================
 IMAGEN
 ========================================== */
+
 
 .remanso-mobile-experience-image{
 
@@ -7612,6 +7643,9 @@ IMAGEN
     aspect-ratio:16/9;
 
     overflow:hidden;
+
+    box-shadow:
+    0 8px 22px rgba(0,0,0,.035);
 
 }
 
@@ -7647,7 +7681,7 @@ CONTENIDO
 
 .remanso-mobile-experience-content{
 
-    padding:34px 28px 42px;
+   padding:38px 30px 44px;
 
 }
 
@@ -7666,7 +7700,7 @@ NÚMERO
 
     color: var(--remanso-green);
 
-    opacity: .18;
+    opacity: .14;
 
     line-height:1;
 
@@ -7709,6 +7743,8 @@ PILLS
     gap:12px;
 
     margin-bottom:26px;
+    
+
 
 }
 
@@ -7724,9 +7760,10 @@ PILLS
 
     border-radius:999px;
 
-    background:#f8f5f1;
+   background:
+rgba(248,245,241,.75);
 
-    border:1px solid #ece7df;
+   border: 1px solid rgba(122,104,85,.08);
 
     font-size:.88rem;
 
@@ -7749,7 +7786,7 @@ DESCRIPCIÓN
 
 .remanso-mobile-experience-description{
 
-    color:#666;
+  color:#5f5f5f;
 
     line-height:1.85;
 
@@ -7788,7 +7825,7 @@ CTA
 
     font-size:1rem;
 
-    font-weight:600;
+    font-weight:500;
 
     color:var(--remanso-green);
 
@@ -7840,16 +7877,21 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
     margin:80px 20px 110px;
 
 }
-
 .remanso-mobile-host-card{
 
-    background:#f8f5f1;
+    background:linear-gradient(
+        135deg,
+        #2f4a36,
+        #1f3226
+    );
 
-    border:1px solid #ece7df;
+    border:1px solid rgba(255,255,255,.08);
 
     border-radius:32px;
 
-    padding:42px 28px;
+    padding:46px 28px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
 
 }
 
@@ -7857,9 +7899,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
 
 
-
 /* ICONO */
-
 .remanso-mobile-host-icon{
 
     width:70px;
@@ -7878,37 +7918,25 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     margin-bottom:24px;
 
-    background:var(--remanso-green);
+    background:rgba(255,255,255,.12);
 
-    color:white;
+    color:#fff;
 
     font-size:1.6rem;
+
+    backdrop-filter:blur(6px);
 
 }
 
 
 
 
-
 /* LABEL */
-
 .remanso-mobile-host-label{
 
-    display:block;
+    color:rgba(255,255,255,.70);
 
-    text-align:center;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
-    font-size:.72rem;
-
-    font-weight:700;
-
-    color:#7a6855;
-
-    margin-bottom:18px;
+    letter-spacing:4px;
 
 }
 
@@ -7917,18 +7945,15 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
 
 /* TITULO */
-
 .remanso-mobile-host-title{
 
-    text-align:center;
+    color:#fff;
 
     font-size:2rem;
 
-    line-height:1.15;
+    line-height:1.12;
 
     letter-spacing:-1px;
-
-    margin-bottom:24px;
 
 }
 
@@ -7940,33 +7965,16 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
 .remanso-mobile-host-description{
 
-    text-align:center;
-
-    color:#666;
+    color:rgba(255,255,255,.82);
 
     line-height:1.9;
 
-    margin-bottom:34px;
-
 }
-
 
 
 
 
 /* BENEFICIOS */
-
-.remanso-mobile-host-benefits{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:16px;
-
-    margin-bottom:40px;
-
-}
 
 .remanso-mobile-host-benefit{
 
@@ -7978,27 +7986,26 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     padding:18px;
 
-    background:white;
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.08);
 
     border-radius:18px;
 
-}
+    backdrop-filter:blur(10px);
 
+}
 .remanso-mobile-host-benefit i{
 
-    color:var(--remanso-green);
+    color:#d9e7d6;
 
     font-size:1rem;
-
-    width:22px;
-
-    text-align:center;
 
 }
 
 .remanso-mobile-host-benefit span{
 
-    color:#555;
+    color:#fff;
 
 }
 
@@ -8007,7 +8014,6 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
 
 /* CTA */
-
 .remanso-mobile-host-button{
 
     width:100%;
@@ -8022,15 +8028,15 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     border-radius:999px;
 
-    background:var(--remanso-green);
+    background:#fff;
 
-    color:white;
+    color:#2f4a36;
 
     text-decoration:none;
 
     font-weight:600;
 
-    transition:.30s ease;
+    transition:.30s;
 
 }
 
@@ -8039,17 +8045,11 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
     transform:scale(.98);
 
 }
-
-@media(hover:hover){
-
 .remanso-mobile-host-button:hover{
 
-    transform:translateY(-2px);
+    background:#f3f3f3;
 
 }
-
-}
-
 }
 
 
