@@ -3913,7 +3913,7 @@ HERO
 
     text-align:center;
 
-    background-image:url("../assets/nidos/nido2/hero.jpg");
+    background-image:url("../assets/nidos/nido4/hero4.jpg");
     
     background-size:cover;
     
@@ -4192,6 +4192,54 @@ CARD
 
 }
 
+.remanso-mobile-cabin-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    cursor:pointer;
+
+}
+
+@media(hover:hover){
+
+.remanso-mobile-cabin-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 22px 55px rgba(0,0,0,.08);
+
+}
+
+.remanso-mobile-cabin-card:hover
+.remanso-mobile-cabin-image img{
+
+    transform:scale(1.04);
+
+}
+
+.remanso-mobile-cabin-card:hover
+.remanso-mobile-cabin-button{
+
+    background:#f1ece5;
+
+}
+
+}
+
+.remanso-mobile-cabin-card:focus-visible{
+
+    outline:2px solid var(--remanso-green);
+
+    outline-offset:6px;
+
+}
 
 /* ==========================================================
 ANIMACIONES
@@ -4869,42 +4917,45 @@ HERO MOBILE
 /* =========================
 SLIDER DE IMÁGENES
 ========================= */
+.remanso-gallery-indicator{
 
-.remanso-cabin-mobile-slider{
+    position:absolute;
+    left:50%;
+    bottom:40px;
+
+    transform:translateX(-50%);
 
     display:flex;
+    gap:8px;
 
-    width:100%;
+    z-index:999999;
 
-    height:70vh;
+    background:red;
 
-    overflow-x:auto;
+    padding:10px;
+}
 
-    scroll-snap-type:x mandatory;
+.remanso-gallery-indicator span{
 
-    -webkit-overflow-scrolling:touch;
+    width:8px;
 
-    scroll-behavior:smooth;
+    height:8px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+    transition:.3s;
 
 }
 
-.remanso-cabin-mobile-slider::-webkit-scrollbar{
+.remanso-gallery-indicator span.active{
 
-    display:none;
+    width:22px;
 
-}
+    border-radius:999px;
 
-.remanso-cabin-mobile-slider img{
-
-    width:100%;
-
-    height:100%;
-
-    flex-shrink:0;
-
-    object-fit:cover;
-
-    scroll-snap-align:center;
+    background:#fff;
 
 }
 
