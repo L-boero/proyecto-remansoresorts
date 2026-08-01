@@ -4921,7 +4921,7 @@ SLIDER DE IMÁGENES
 ========================= */
 .remanso-cabin-mobile-slider{
 
-    display:flex;
+      display:flex !important;
 
     width:100%;
 
