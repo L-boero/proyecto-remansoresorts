@@ -4500,7 +4500,7 @@ overflow:hidden;
 }
 
 /* =========================
-IMÁGENES HERO DE NIDO 2, 3 Y 4 
+IMÁGENES HERO DESKTOP DE NIDO 2, 3 Y 4 
 ========================= */
 
 
@@ -4919,6 +4919,23 @@ HERO MOBILE
 /* =========================
 SLIDER DE IMÁGENES
 ========================= */
+
+.remanso-cabin-mobile-slider img{
+
+    width:100%;
+
+    height:78vh;
+
+    object-fit:cover;
+
+    flex-shrink:0;
+
+    display:block;
+
+}
+
+
+
 .remanso-gallery-indicator{
 
     position:absolute;
@@ -4938,6 +4955,8 @@ SLIDER DE IMÁGENES
     z-index:20;
 
 }
+
+
 .remanso-gallery-indicator span{
 
     width:8px;
@@ -5091,6 +5110,9 @@ INDICADOR DE IMÁGENES
 }
 
 }
+
+
+
 
 /* =========================
 NIDO 1 - INFO MOBILE
