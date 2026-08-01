@@ -4919,22 +4919,41 @@ HERO MOBILE
 /* =========================
 SLIDER DE IMÁGENES
 ========================= */
+.remanso-cabin-mobile-slider{
 
-.remanso-cabin-mobile-slider img{
+    display:flex;
 
     width:100%;
 
     height:78vh;
 
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    scroll-snap-type:x mandatory;
+
+    scroll-behavior:smooth;
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+.remanso-cabin-mobile-slider img{
+
+    flex:0 0 100%;
+
+    width:100%;
+
+    height:100%;
+
     object-fit:cover;
 
-    flex-shrink:0;
+    scroll-snap-align:center;
 
     display:block;
 
 }
-
-
 
 .remanso-gallery-indicator{
 
