@@ -1175,6 +1175,7 @@ CABAÑAS RESPONSIVE MOBILE
     letter-spacing:4px;
 
     margin-bottom:18px;
+    color: var(--remanso-green);
 
 }
 
@@ -1292,28 +1293,29 @@ INDICADOR
     margin-bottom:35px;
 
 }
-
-.remanso-cabins-gallery-indicator span{
+.remanso-gallery-indicator span{
 
     width:8px;
-
     height:8px;
 
     border-radius:50%;
 
-    background:#d6d6d6;
+    background:rgba(255,255,255,.45);
 
-    transition:.3s;
+    transition:
+        width .30s ease,
+        background .30s ease,
+        transform .30s ease;
 
 }
 
-.remanso-cabins-gallery-indicator span.active{
+.remanso-gallery-indicator span.active{
 
     width:24px;
 
-    border-radius:999px;
+    background:#fff;
 
-    background:var(--remanso-green);
+    transform:scale(1.05);
 
 }
 
@@ -4920,45 +4922,47 @@ SLIDER DE IMÁGENES
 .remanso-gallery-indicator{
 
     position:absolute;
-    left:50%;
-    bottom:40px;
 
-    transform:translateX(-50%);
+    left:50%;
+
+    bottom:36px;
+
+    transform:
+        translateX(-50%)
+        translateY(-80px);
 
     display:flex;
+
     gap:8px;
 
-    z-index:999999;
+    z-index:20;
 
-    background:red;
-
-    padding:10px;
 }
-
 .remanso-gallery-indicator span{
 
     width:8px;
-
     height:8px;
 
     border-radius:50%;
 
     background:rgba(255,255,255,.45);
 
-    transition:.3s;
+    transition:
+        width .30s ease,
+        background .30s ease,
+        transform .30s ease;
 
 }
 
 .remanso-gallery-indicator span.active{
 
-    width:22px;
-
-    border-radius:999px;
+    width:24px;
 
     background:#fff;
 
-}
+    transform:scale(1.05);
 
+}
 /* =========================
 OVERLAY
 ========================= */
@@ -5042,7 +5046,6 @@ BOTÓN BACK
 /* =========================
 INDICADOR DE IMÁGENES
 ========================= */
-
 .remanso-gallery-indicator{
 
     position:absolute;
@@ -5051,13 +5054,15 @@ INDICADOR DE IMÁGENES
 
     bottom:36px;
 
-    transform:translateX(-50%);
+    transform:
+        translateX(-50%)
+        translateY(-80px);
 
     display:flex;
 
     gap:8px;
 
-    z-index:10;
+    z-index:20;
 
 }
 
@@ -7727,6 +7732,26 @@ IMAGEN
 
 
 /* ==========================================
+CONTROLAMOS LAS IMG INDIVIDUALMENTE DESDE AQUI
+========================================== */
+.remanso-mobile-experience-card:nth-child(1)
+.remanso-mobile-experience-image img{
+
+    object-position:center 38%;
+
+}
+
+.remanso-mobile-experience-card:nth-child(2)
+.remanso-mobile-experience-image img{
+
+    object-position:center 45%;
+
+}
+
+
+
+
+/* ==========================================
 CONTENIDO
 ========================================== */
 
@@ -7940,7 +7965,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     border-radius:32px;
 
-    padding:46px 28px;
+   padding:56px 30px 64px;
 
     box-shadow:0 20px 45px rgba(0,0,0,.10);
 
@@ -7967,7 +7992,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     margin:auto;
 
-    margin-bottom:24px;
+    margin-bottom:34px;
 
     background:rgba(255,255,255,.12);
 
@@ -7989,6 +8014,10 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     letter-spacing:4px;
 
+    display:block;
+
+    margin-bottom:22px;
+
 }
 
 
@@ -8006,6 +8035,8 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     letter-spacing:-1px;
 
+    margin-bottom: 34px;
+
 }
 
 
@@ -8020,6 +8051,8 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     line-height:1.9;
 
+    margin-bottom: 42px;
+
 }
 
 
@@ -8033,7 +8066,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     align-items:center;
 
-    gap:14px;
+    gap:18px;
 
     padding:18px;
 
@@ -8075,7 +8108,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     align-items:center;
 
-    padding:18px;
+  padding:20px 22px;
 
     border-radius:999px;
 
@@ -8088,6 +8121,8 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
     font-weight:600;
 
     transition:.30s;
+
+    margin-bottom: 46px;
 
 }
 
