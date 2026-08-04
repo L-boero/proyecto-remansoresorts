@@ -1,3 +1,8 @@
+console.log("REMANSO MOBILE JS CARGADO");
+
+console.log(document.querySelectorAll(".remanso-cabin-mobile-slider"));
+
+
 document.querySelectorAll(".remanso-cabin-mobile-slider").forEach(slider => {
 
     const indicators = slider.parentElement.querySelectorAll(

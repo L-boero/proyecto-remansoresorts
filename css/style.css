@@ -4954,7 +4954,6 @@ SLIDER DE IMÁGENES
     display:block;
 
 }
-
 .remanso-gallery-indicator{
 
     position:absolute;
@@ -4965,13 +4964,13 @@ SLIDER DE IMÁGENES
 
     transform:
         translateX(-50%)
-        translateY(-80px);
+        translateY(-180px);
 
     display:flex;
 
     gap:8px;
 
-    z-index:20;
+    z-index:50;
 
 }
 
@@ -7699,8 +7698,9 @@ TARJETA
     border:1px solid rgba(0,0,0,.035);
 
     box-shadow:
-        0 18px 45px rgba(0,0,0,.045),
-        inset 0 1px rgba(255,255,255,.75);
+    0 14px 34px rgba(0,0,0,.045),
+    0 3px 10px rgba(0,0,0,.025),
+    inset 0 1px rgba(255,255,255,.75);
 
     display:block;
 
@@ -7714,18 +7714,24 @@ TARJETA
         transform .35s ease,
         box-shadow .35s ease;
 
-}
+         -webkit-tap-highlight-color:transparent;
 
+}
 .remanso-mobile-experience-card:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
     box-shadow:
-        0 28px 60px rgba(0,0,0,.08);
+        0 22px 48px rgba(0,0,0,.07),
+        0 6px 18px rgba(0,0,0,.04);
 
 }
 
+.remanso-mobile-experience-card:active{
 
+    transform:scale(.985);
+
+}
 
 
 /* ==========================================
@@ -7778,7 +7784,7 @@ CONTROLAMOS LAS IMG INDIVIDUALMENTE DESDE AQUI
 .remanso-mobile-experience-card:nth-child(1)
 .remanso-mobile-experience-image img{
 
-    object-position:center 38%;
+    object-position:center 28%;
 
 }
 
@@ -7886,6 +7892,9 @@ rgba(248,245,241,.75);
 
     color:#555;
 
+     box-shadow:
+        inset 0 1px rgba(255,255,255,.6);
+
 }
 
 .remanso-mobile-experience-tags i{
@@ -7909,7 +7918,7 @@ DESCRIPCIÓN
 
     font-size:1rem;
 
-    margin-bottom:40px;
+    margin-bottom:48px;
 
 }
 
@@ -7929,26 +7938,38 @@ DESCRIPCIÓN
 /* ==========================================
 CTA
 ========================================== */
-
 .remanso-mobile-experience-link{
 
     display:inline-flex;
 
     align-items:center;
 
-    gap:12px;
+    gap:10px;
+
+    padding:12px 18px;
+
+    border-radius:999px;
+
+    background:rgba(248,245,241,.85);
+
+    border:1px solid rgba(122,104,85,.08);
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.03);
 
     text-decoration:none;
 
-    font-size:1rem;
+    font-size:.96rem;
 
-    font-weight:500;
+    font-weight:600;
 
     color:var(--remanso-green);
 
     transition:
-    gap .25s ease,
-    color .25s ease;
+        transform .25s ease,
+        gap .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
 
 }
 
@@ -7962,7 +7983,12 @@ CTA
 
 .remanso-mobile-experience-link:hover{
 
-    gap:16px;
+    gap:14px;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,.05);
 
 }
 
@@ -7973,10 +7999,9 @@ CTA
 }
 
 }
-
 .remanso-mobile-experience-link:active{
 
-    transform:scale(.98);
+    transform:scale(.97);
 
 }
 
@@ -8006,7 +8031,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     border-radius:32px;
 
-   padding:56px 30px 64px;
+    padding:64px 34px 72px;
 
     box-shadow:0 20px 45px rgba(0,0,0,.10);
 
@@ -8076,7 +8101,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     letter-spacing:-1px;
 
-    margin-bottom: 34px;
+    margin-bottom: 38px;
 
 }
 
@@ -8092,7 +8117,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     line-height:1.9;
 
-    margin-bottom: 42px;
+    margin-bottom: 52px;
 
 }
 
@@ -8107,9 +8132,9 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     align-items:center;
 
-    gap:18px;
+    gap:22px;
 
-    padding:18px;
+   padding:22px 20px;
 
     background:rgba(255,255,255,.08);
 
@@ -8119,12 +8144,16 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     backdrop-filter:blur(10px);
 
+    margin-bottom: 54px;
+
 }
 .remanso-mobile-host-benefit i{
 
     color:#d9e7d6;
 
-    font-size:1rem;
+    font-size:1.05rem;
+
+    line-height: 1.45;
 
 }
 
@@ -8163,7 +8192,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     transition:.30s;
 
-    margin-bottom: 46px;
+    margin-top: 12px;
 
 }
 
