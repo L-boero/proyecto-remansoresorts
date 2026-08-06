@@ -279,7 +279,6 @@ color:#7a6855;
 
 
 }
-
 /* ==========================================
 BOTTOM NAVIGATION MOBILE
 ========================================== */
@@ -290,14 +289,14 @@ BOTTOM NAVIGATION MOBILE
 
     bottom:0;
 
-    left:0;
+    left:12px;
+    right:12px;
 
+    width:auto;
 
-    width:100%;
+    max-width:none;
 
-    max-width: none;
-
-    padding:15px 0px;
+    padding:15px 0;
 
     display:none;
 
@@ -305,17 +304,19 @@ BOTTOM NAVIGATION MOBILE
 
     align-items:center;
 
-    background:rgba(255,255,255,.97);
+    background:rgba(250,248,245,.84);
 
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
 
     border:none;
 
-   border-top:1px solid rgba(0,0,0,.06);
-    
-   box-shadow:
-   0 -6px 18px rgba(0,0,0,.05);
+    border-top:1px solid rgba(255,255,255,.55);
+
+    border-radius:22px 22px 0 0;
+
+    box-shadow:
+        0 -10px 30px rgba(0,0,0,.06);
 
     z-index:9999;
 
@@ -1168,13 +1169,14 @@ CABAÑAS RESPONSIVE MOBILE
 
 }
 
-.remanso-cabins-label{
+.remanso-cabins-mobile-label{
 
     font-size:.72rem;
 
     letter-spacing:4px;
 
     margin-bottom:18px;
+
     color: var(--remanso-green);
 
 }
@@ -1279,45 +1281,6 @@ GALERÍA MOBILE
 /* =========================
 INDICADOR
 ========================= */
-
-.remanso-cabins-gallery-indicator{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:8px;
-
-    margin-bottom:35px;
-
-}
-.remanso-gallery-indicator span{
-
-    width:8px;
-    height:8px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.45);
-
-    transition:
-        width .30s ease,
-        background .30s ease,
-        transform .30s ease;
-
-}
-
-.remanso-gallery-indicator span.active{
-
-    width:24px;
-
-    background:#fff;
-
-    transform:scale(1.05);
-
-}
 
 
 /* =========================
@@ -4042,6 +4005,7 @@ HERO
     color:#fff;
 
 }
+
 .remanso-scroll-indicator{
 
     position:absolute;
@@ -4322,6 +4286,8 @@ CONTENIDO
 
     flex:1;
 
+    padding:30px 28px;
+
 }
 .remanso-mobile-cabin-number{
 
@@ -4331,52 +4297,66 @@ CONTENIDO
 
     font-size:.72rem;
 
-    letter-spacing:3px;
+    letter-spacing:4px;
 
     font-weight:600;
 
-    opacity:.72;
+    opacity:.60;
 
     margin-bottom:12px;
 
 
 }.remanso-mobile-cabin-title{
 
-    font-size:1.75rem;
+    font-size:1.48rem;
 
     font-weight:600;
 
-    line-height:1.15;
+    line-height:1.18;
 
-    margin-bottom:22px;
+    margin-bottom:20px;
 
     color:#2c2c2c;
 
 }
 .remanso-mobile-cabin-meta{
 
+
     display:flex;
 
     flex-direction:column;
 
-    gap:12px;
+    gap:14px;
 
-    color:#74685d;
+    color:#5f5448;
 
-    margin-bottom:24px;
+    margin-bottom:26px;
 
-    font-size:.98rem;
+    font-size:.96rem;
 
     line-height:1.5;
 
 }
+
+.remanso-mobile-cabin-meta i{
+
+    color:var(--remanso-green);
+
+    width:22px;
+
+    text-align:center;
+
+}
+
 .remanso-mobile-cabin-highlight{
 
-    color:#2f2f2f;
+    color:#242424;
 
     font-size:1rem;
 
-    line-height:1.65;
+    line-height:1.72;
+
+    font-weight:500;
 
     margin-bottom:32px;
 
@@ -4396,13 +4376,17 @@ BOTÓN
 
     align-items:center;
 
-    padding:16px;
+    gap:10px;
 
-    border-radius:18px;
+    padding:12px 18px;
 
-    background:#f8f4ef;
+    margin-top:auto;
 
-    color:#7a6855;
+    border-radius:999px;
+
+    background:rgba(248,245,241,.85);
+
+    color:var(--remanso-green);
 
     text-decoration:none;
 
@@ -4410,18 +4394,43 @@ BOTÓN
 
     font-size:.98rem;
 
-    transition:.30s;
+    border:1px solid rgba(122,104,85,.08);
 
-    margin-top:auto;
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.03);
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease,
+        color .25s ease;
 
 }
+
+/* Hover (desktop) */
+
+@media(hover:hover){
 
 .remanso-mobile-cabin-button:hover{
 
-    background:#f3ede6;
+    background:#ffffff;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.06);
+
+    transform:translateY(-2px);
 
 }
 
+}
+
+/* Tap (mobile) */
+
+.remanso-mobile-cabin-button:active{
+
+    transform:scale(.98);
+
+}
 
 /* ==========================================================
 NOTA ACLARATORIA
@@ -4921,7 +4930,8 @@ SLIDER DE IMÁGENES
 ========================= */
 .remanso-cabin-mobile-slider{
 
-      display:flex !important;
+    display:flex !important;
+    flex-wrap: nowrap;
 
     width:100%;
 
@@ -4954,52 +4964,51 @@ SLIDER DE IMÁGENES
     display:block;
 
 }
-.remanso-gallery-indicator{
 
-    position:absolute;
 
-    left:50%;
+/* ==========================================
+CONTROL INDIVIDUAL DE CADA IMAGEN DEL HERO
+========================================== */
 
-    bottom:36px;
+/* Imagen 1 */
+.remanso-cabin-mobile-slider img:nth-child(1){
 
-    transform:
-        translateX(-50%)
-        translateY(-180px);
+    object-position: 40%;
 
-    display:flex;
+}
 
-    gap:8px;
+/* Imagen 2 */
+.remanso-cabin-mobile-slider img:nth-child(2){
 
-    z-index:50;
+    object-position:center 50%;
+
+}
+
+/* Imagen 3 */
+.remanso-cabin-mobile-slider img:nth-child(3){
+
+    object-position:center center;
+
+}
+
+/* Imagen 4 */
+.remanso-cabin-mobile-slider img:nth-child(4){
+
+    object-position:center center;
+
+}
+
+/* Imagen 5 */
+.remanso-cabin-mobile-slider img:nth-child(5){
+
+    object-position:center center;
 
 }
 
 
-.remanso-gallery-indicator span{
 
-    width:8px;
-    height:8px;
 
-    border-radius:50%;
 
-    background:rgba(255,255,255,.45);
-
-    transition:
-        width .30s ease,
-        background .30s ease,
-        transform .30s ease;
-
-}
-
-.remanso-gallery-indicator span.active{
-
-    width:24px;
-
-    background:#fff;
-
-    transform:scale(1.05);
-
-}
 /* =========================
 OVERLAY
 ========================= */
@@ -5083,23 +5092,21 @@ BOTÓN BACK
 /* =========================
 INDICADOR DE IMÁGENES
 ========================= */
+
+
 .remanso-gallery-indicator{
+
+    
 
     position:absolute;
 
+    top:-70px;
+
     left:50%;
 
-    bottom:36px;
+    transform:translateX(-50%);
 
-    transform:
-        translateX(-50%)
-        translateY(-80px);
 
-    display:flex;
-
-    gap:8px;
-
-    z-index:20;
 
 }
 
@@ -5113,15 +5120,9 @@ INDICADOR DE IMÁGENES
 
     background:rgba(255,255,255,.45);
 
-    transition:.3s ease;
-
 }
 
 .remanso-gallery-indicator span.active{
-
-    width:24px;
-
-    border-radius:30px;
 
     background:white;
 
@@ -5143,7 +5144,7 @@ NIDO 1 - INFO MOBILE
 
     z-index:20;
 
-    margin-top:-250px;
+    margin-top:-220px;
 
     padding:0 0 90px;
 
