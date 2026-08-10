@@ -3793,28 +3793,6 @@ font-weight:500;
 
 }
 
-/* =========================
-NOTA ACLARATORIA - DESKTOP
-========================= */
-
-.remanso-cabins-note-label{
-
-    display:block;
-
-    margin-bottom:22px;
-
-    color:#7a6855;
-
-    font-size:.9rem;
-
-    letter-spacing:3px;
-
-    font-weight:600;
-    
-    margin-top: 16px;
-
-}
-
 
 
 
@@ -3895,8 +3873,7 @@ HERO
     background:rgba(0,0,0,.48);
 
 }
-
-.remanso-cabins-line{
+.remanso-mobile-cabins-hero-line{
 
     width:48px;
 
@@ -3911,16 +3888,16 @@ HERO
 
 .remanso-mobile-cabins-hero-content{
 
+
     width:100%;
 
     max-width:340px;
-
-    margin:auto;
 
     position:relative;
 
     z-index:2;
 
+    transform:translateY(45px);
 
 }
 .remanso-cabins-label{
@@ -3940,21 +3917,7 @@ HERO
     margin-bottom:22px;
 
 }
-.remanso-cabins-hero-description{
 
-    max-width:310px;
-
-    margin:0 auto 42px;
-
-    font-size:.96rem;
-
-    line-height:1.75;
-
-    color:rgba(255,255,255,.88);
-
-    font-weight:400;
-
-}
 
 .remanso-cabins-hero-buttons{
 
@@ -4066,27 +4029,18 @@ CATÁLOGO
 
 }
 
-.remanso-mobile-cabins-title{
-
-    font-size:2.35rem;
-
-    line-height:1.15;
-
-    letter-spacing:-1px;
-
-    margin-bottom:18px;
-
-}
 
 .remanso-mobile-cabins-description{
 
-    font-size:1rem;
 
-    line-height:1.7;
+    font-size:.98rem;
+
+    line-height:1.65;
 
     color:#666;
 
 }
+
 
 
 /* ==========================================================
@@ -4361,6 +4315,30 @@ CONTENIDO
     margin-bottom:32px;
 
 }
+.remanso-mobile-cabin-booking-note{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin:-12px 0 26px;
+
+    font-size:.78rem;
+
+    line-height:1.4;
+
+    color:#7a6855;
+
+    opacity:.85;
+
+    white-space:nowrap;
+
+}
+.remanso-mobile-cabin-booking-note::before{
+    content:"•";
+}
 
 
 /* ==========================================================
@@ -4398,6 +4376,8 @@ BOTÓN
 
     box-shadow:
         0 3px 10px rgba(0,0,0,.03);
+
+    white-space:nowrap;
 
     transition:
         transform .25s ease,
