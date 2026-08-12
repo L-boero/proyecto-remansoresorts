@@ -4958,14 +4958,14 @@ CONTROL INDIVIDUAL DE CADA IMAGEN DEL HERO
 /* Imagen 1 */
 .remanso-cabin-mobile-slider img:nth-child(1){
 
-    object-position: 40%;
+    object-position:center 60%;
 
 }
 
 /* Imagen 2 */
 .remanso-cabin-mobile-slider img:nth-child(2){
 
-    object-position:center 50%;
+    object-position:center 10%;
 
 }
 
@@ -4979,7 +4979,7 @@ CONTROL INDIVIDUAL DE CADA IMAGEN DEL HERO
 /* Imagen 4 */
 .remanso-cabin-mobile-slider img:nth-child(4){
 
-    object-position:center center;
+    object-position:center 20%;
 
 }
 
@@ -5015,9 +5015,7 @@ OVERLAY
     z-index:2;
 
 }
-/* =========================
-BOTÓN BACK
-========================= */
+
 /* =========================
 BOTÓN BACK MOBILE
 ========================= */
@@ -5092,12 +5090,11 @@ BOTÓN BACK MOBILE
     background:#fff;
 
 }
+/* ==========================================================
+INDICADORES · GALERÍA NIDOS
+========================================================== */
 
-/* =========================
-INDICADOR DE IMÁGENES
-========================= */
-
-.remanso-gallery-indicator{
+.remanso-cabin-gallery-dots{
 
     position:absolute;
 
@@ -5107,34 +5104,55 @@ INDICADOR DE IMÁGENES
 
     transform:translateX(-50%);
 
-    z-index:25;
-
     display:flex;
 
-    gap:6px;
+    align-items:center;
+
+    gap:7px;
+
+    padding:7px 10px;
+
+    border-radius:999px;
+
+    background:rgba(0,0,0,.18);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+
+    z-index:25;
 
 }
-.remanso-gallery-indicator span{
 
-    width:8px;
 
-    height:8px;
+/* PUNTOS */
+
+.remanso-cabin-gallery-dots span{
+
+    width:7px;
+
+    height:7px;
 
     border-radius:50%;
 
     background:rgba(255,255,255,.45);
 
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        opacity .3s ease;
+
 }
 
-.remanso-gallery-indicator span.active{
+
+/* ACTIVO */
+
+.remanso-cabin-gallery-dots span.active{
 
     background:#fff;
 
-}
+    transform:scale(1.25);
 
-.remanso-gallery-indicator span.active{
-
-    background:white;
+    opacity:1;
 
 }
 
@@ -9805,8 +9823,11 @@ BOTÓN BACK
 /* ==========================================
 INDICADOR
 ========================================== */
+/* ==========================================================
+INDICADORES · GALERÍA RETIROS
+========================================================== */
 
-.remanso-gallery-indicator{
+.remanso-retreat-gallery-dots{
 
     position:absolute;
 
@@ -9818,27 +9839,53 @@ INDICADOR
 
     display:flex;
 
-    gap:8px;
+    align-items:center;
+
+    gap:7px;
+
+    padding:7px 10px;
+
+    border-radius:999px;
+
+    background:rgba(0,0,0,.18);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
 
     z-index:10;
 
 }
 
-.remanso-gallery-indicator span{
 
-    width:8px;
+/* PUNTOS */
 
-    height:8px;
+.remanso-retreat-gallery-dots span{
+
+    width:7px;
+
+    height:7px;
 
     border-radius:50%;
 
     background:rgba(255,255,255,.45);
 
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        opacity .3s ease;
+
 }
 
-.remanso-gallery-indicator span.active{
 
-    background:white;
+/* ACTIVO */
+
+.remanso-retreat-gallery-dots span.active{
+
+    background:#fff;
+
+    transform:scale(1.25);
+
+    opacity:1;
 
 }
 
