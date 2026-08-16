@@ -177,3 +177,37 @@ smartBackButtons.forEach(button => {
     });
 
 });
+
+
+
+
+// ==========================================================
+// PROGRESO SCROLL - CABAÑAS HOME
+// ==========================================================
+
+const cabinHomeGallery = document.querySelector(
+    ".remanso-cabins-gallery"
+);
+
+const cabinHomeProgress = document.querySelector(
+    ".remanso-cabins-scroll-progress span"
+);
+
+
+if (cabinHomeGallery && cabinHomeProgress) {
+
+    cabinHomeGallery.addEventListener("scroll", () => {
+
+        const maxScroll =
+            cabinHomeGallery.scrollWidth -
+            cabinHomeGallery.clientWidth;
+
+        const progress =
+            (cabinHomeGallery.scrollLeft / maxScroll) * 100;
+
+        cabinHomeProgress.style.width =
+            `${progress}%`;
+
+    });
+
+}

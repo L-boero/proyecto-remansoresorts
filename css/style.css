@@ -1281,8 +1281,40 @@ GALERÍA MOBILE
 /* =========================
 INDICADOR
 ========================= */
+/* ==========================================
+   HOME - PROGRESO SCROLL CABAÑAS
+========================================== */
+
+.remanso-cabins-scroll-progress {
+
+    width: 82px;
+    height: 4px;
+
+    margin: 18px auto 0;
+
+    background: rgba(75, 67, 59, 0.16);
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+}
 
 
+.remanso-cabins-scroll-progress span {
+
+    display: block;
+
+    width: 0%;
+    height: 100%;
+
+    background: #4b5f2f;
+
+    border-radius: 999px;
+
+    transition: width 0.08s linear;
+
+}
 /* =========================
 CHECKLIST
 ========================= */
