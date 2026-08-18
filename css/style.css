@@ -1278,6 +1278,9 @@ GALERÍA MOBILE
 }
 
 
+
+
+
 /* =========================
 INDICADOR
 ========================= */
@@ -1315,6 +1318,12 @@ INDICADOR
     transition: width 0.08s linear;
 
 }
+
+
+
+
+
+
 /* =========================
 CHECKLIST
 ========================= */
@@ -1353,10 +1362,12 @@ CHECKLIST
 
 
 
+
 /* =========================
    HOME - BLOQUE 3
    EXPERIENCIAS / RETIROS
 ========================= */
+
 .remanso-retreats-section{
     padding:140px 8%;
     background:transparent;
@@ -1548,6 +1559,7 @@ color: var(--remanso-green);
     box-shadow:
     0 18px 40px rgba(122,104,85,.22);
 }
+
 /* =========================
 HOME
 RETIROS MOBILE RESPONSIVE
@@ -1691,6 +1703,47 @@ IMAGEN
 }
 
 
+
+/* ==========================================
+   CONTROL INDIVIDUAL DE IMÁGENES
+   RETIROS - HOME MOBILE
+========================================== */
+
+/* RETIRO 1 — Amanecer de la Consciencia */
+.remanso-retreats-card:nth-child(1) .remanso-retreats-image img{
+
+    object-position:center 80%;
+
+}
+
+
+/* RETIRO 2 — Pausa para mujeres */
+.remanso-retreats-card:nth-child(2) .remanso-retreats-image img{
+
+    object-position:center center;
+
+}
+
+
+/* RETIRO 3 — Encuentros grupales */
+.remanso-retreats-card:nth-child(3) .remanso-retreats-image img{
+
+    object-position:center 60%;
+
+}
+
+
+/* RETIRO 4 — Experiencias empresariales */
+.remanso-retreats-card:nth-child(4) .remanso-retreats-image img{
+
+    object-position:center 60%;
+
+}
+
+
+
+
+
 /* =========================
 INFORMACIÓN DE LA CARD
 ========================= */
@@ -1727,17 +1780,21 @@ INFORMACIÓN DE LA CARD
 /* =========================
    INDICADOR - RETIROS HOME
 ========================= */
+/* =========================
+   INDICADOR - RETIROS HOME
+========================= */
 
 .remanso-retreats-gallery-dots {
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
     gap: 8px;
 
     margin-top: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 
 }
 
@@ -1775,6 +1832,8 @@ INFORMACIÓN DE LA CARD
     justify-content:center;
 
     padding:18px;
+
+    margin-top: 30px;
 
 }
 
@@ -5004,46 +5063,34 @@ SLIDER DE IMÁGENES
     display:block;
 
 }
-
 /* ==========================================
 CONTROL INDIVIDUAL DE CADA IMAGEN DEL HERO
 ========================================== */
 
 /* Imagen 1 */
-.remanso-cabin-mobile-slider img:nth-child(1){
-
-    object-position:center 60%;
-
+.remanso-cabin-mobile-slider img:nth-of-type(1){
+    object-position:40% center;
 }
 
 /* Imagen 2 */
-.remanso-cabin-mobile-slider img:nth-child(2){
-
-    object-position:center 10%;
-
+.remanso-cabin-mobile-slider img:nth-of-type(2){
+    object-position:50% center;
 }
 
 /* Imagen 3 */
-.remanso-cabin-mobile-slider img:nth-child(3){
-
-    object-position:center center;
-
+.remanso-cabin-mobile-slider img:nth-of-type(3){
+    object-position:65% center;
 }
 
 /* Imagen 4 */
-.remanso-cabin-mobile-slider img:nth-child(4){
-
-    object-position:center 20%;
-
+.remanso-cabin-mobile-slider img:nth-of-type(4){
+    object-position:50% center;
 }
 
 /* Imagen 5 */
-.remanso-cabin-mobile-slider img:nth-child(5){
-
-    object-position:center center;
-
+.remanso-cabin-mobile-slider img:nth-of-type(5){
+    object-position:18% center;
 }
-
 
 
 
@@ -5227,7 +5274,7 @@ NIDO 1 - INFO MOBILE
 
     z-index:20;
 
-    margin-top:-220px;
+    margin-top:-200px;
 
     padding:0 0 90px;
 
@@ -7856,24 +7903,44 @@ IMAGEN
 
 }
 
-
 /* ==========================================
-CONTROLAMOS LAS IMG INDIVIDUALMENTE DESDE AQUI
+   CONTROL INDIVIDUAL DE CADA IMAGEN
 ========================================== */
+
+/* EXPERIENCIA 1 */
 .remanso-mobile-experience-card:nth-child(1)
 .remanso-mobile-experience-image img{
 
-    object-position:center 28%;
+    object-position:center 70%;
 
 }
 
+
+/* EXPERIENCIA 2 */
 .remanso-mobile-experience-card:nth-child(2)
 .remanso-mobile-experience-image img{
 
-    object-position:center 45%;
+    object-position:center 50%;
 
 }
 
+
+/* EXPERIENCIA 3 */
+.remanso-mobile-experience-card:nth-child(3)
+.remanso-mobile-experience-image img{
+
+    object-position:center 75%;
+
+}
+
+
+/* EXPERIENCIA 4 */
+.remanso-mobile-experience-card:nth-child(4)
+.remanso-mobile-experience-image img{
+
+    object-position:center 70%;
+
+}
 
 
 
@@ -8204,7 +8271,6 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
 
 /* BENEFICIOS */
-
 .remanso-mobile-host-benefit{
 
     display:flex;
@@ -8213,7 +8279,7 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     gap:22px;
 
-   padding:22px 20px;
+    padding:22px 20px;
 
     background:rgba(255,255,255,.08);
 
@@ -8223,7 +8289,13 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     backdrop-filter:blur(10px);
 
-    margin-bottom: 54px;
+    margin-bottom:18px;
+
+}
+
+.remanso-mobile-host-benefit:last-of-type{
+
+    margin-bottom:0;
 
 }
 .remanso-mobile-host-benefit i{
@@ -8247,9 +8319,16 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
 
 /* CTA */
+/* =========================
+   CTA - ORGANIZAR TU RETIRO
+========================= */
+/* =========================
+   CTA - ORGANIZADORES
+========================= */
+
 .remanso-mobile-host-button{
 
-    width:100%;
+    width:85%;
 
     display:flex;
 
@@ -8257,7 +8336,9 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     align-items:center;
 
-  padding:20px 22px;
+    padding:19px 22px;
+
+    margin:34px auto 0;
 
     border-radius:999px;
 
@@ -8271,18 +8352,11 @@ EXPERIENCIA- CIERRE- CREÁ TU EXPERIENCIA- MOBILE
 
     transition:.30s;
 
-    margin-top: 12px;
-
 }
 
 .remanso-mobile-host-button:active{
 
     transform:scale(.98);
-
-}
-.remanso-mobile-host-button:hover{
-
-    background:#f3f3f3;
 
 }
 }
@@ -9090,6 +9164,7 @@ ORGANIZADORES
 
     width:100%;
     height:100%;
+
 
     object-fit:cover;
 
@@ -10272,10 +10347,18 @@ IMAGEN
 
     object-fit:cover;
 
+    object-position: center 85%;
+
     display:block;
 
 }
+.remanso-retreat-pausa
+.remanso-retreat-mobile-host-image{
 
+    height:320px;
+    object-position: 1%;
+
+}
 
 /* ==========================================
 CONTENIDO
