@@ -211,3 +211,89 @@ if (cabinHomeGallery && cabinHomeProgress) {
     });
 
 }
+
+
+
+/* =========================================================
+   HOME - BLOQUE 5
+   TESTIMONIOS MOBILE
+   INDICADOR DE RESEÑAS
+   ========================================================= */
+
+
+// =========================================================
+// 1. ELEMENTOS DEL BLOQUE
+// =========================================================
+
+const testimonialsContainer = document.querySelector(
+    '.remanso-testimonials-mobile'
+);
+
+const testimonialCards = document.querySelectorAll(
+    '.remanso-testimonials-mobile .remanso-testimonial-card'
+);
+
+const testimonialIndicators = document.querySelectorAll(
+    '.remanso-testimonials-indicator span'
+);
+
+
+// =========================================================
+// 2. VERIFICAR QUE LOS ELEMENTOS EXISTAN
+// =========================================================
+
+if (
+    testimonialsContainer &&
+    testimonialCards.length &&
+    testimonialIndicators.length
+) {
+
+
+    // =====================================================
+    // 3. DETECTAR EL SCROLL DE LAS TARJETAS
+    // =====================================================
+
+    testimonialsContainer.addEventListener('scroll', () => {
+
+
+        // =================================================
+        // 4. OBTENER LA POSICIÓN ACTUAL DEL SCROLL
+        // =================================================
+
+        const scrollPosition = testimonialsContainer.scrollLeft;
+
+
+        // =================================================
+        // 5. CALCULAR EL ANCHO DE CADA TARJETA
+        // =================================================
+
+        const cardWidth = testimonialCards[0].offsetWidth;
+
+        const gap = 16;
+
+
+        // =================================================
+        // 6. CALCULAR QUÉ TARJETA ESTÁ ACTIVA
+        // =================================================
+
+        const currentIndex = Math.round(
+            scrollPosition / (cardWidth + gap)
+        );
+
+
+        // =================================================
+        // 7. ACTUALIZAR LOS INDICADORES
+        // =================================================
+
+        testimonialIndicators.forEach((indicator, index) => {
+
+            indicator.classList.toggle(
+                'active',
+                index === currentIndex
+            );
+
+        });
+
+    });
+
+}

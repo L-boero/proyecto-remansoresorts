@@ -2305,213 +2305,333 @@ HOME - BLOQUE 5 - TESTIMONIOS
     transform:translateX(4px);
 
 }
-
 /* =========================
 HOME - BLOQUE 5
-TESTIMONIOS MOBILE RESPONSIVE
+TESTIMONIOS MOBILE
 ========================= */
 
 @media(max-width:768px){
 
-.remanso-testimonials-section{
+    .remanso-testimonials-section{
 
-    padding:90px 24px;
+        padding:90px 24px;
 
-    border-radius:0;
+        border-radius:0;
+
+    }
+
+
+    /* HEADER */
+
+    .remanso-testimonials-header{
+
+        margin-bottom:40px;
+
+    }
+
+
+    .remanso-testimonials-label{
+
+        font-size:.72rem;
+
+        letter-spacing:4px;
+
+    }
+
+
+    .remanso-testimonials-line{
+
+        width:55px;
+
+        margin-bottom:24px;
+
+    }
+
+
+    .remanso-testimonials-title{
+
+        font-size:2.4rem;
+
+        line-height:1.15;
+
+        letter-spacing:-1px;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .remanso-testimonials-description{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+    }
+
+
+    /* =========================
+    GOOGLE RATING
+    ========================= */
+
+    .remanso-ratings{
+
+        margin-bottom:35px;
+
+    }
+
+
+    .remanso-rating{
+
+        background:white;
+
+        padding:24px;
+
+        border-radius:20px;
+
+        text-align:center;
+
+        box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:5px;
+
+    }
+
+
+    .rating-number{
+
+        font-size:2.4rem;
+
+        font-weight:600;
+
+        color:var(--remanso-green);
+
+    }
+
+
+    .rating-stars{
+
+        color:#f4b400;
+
+        font-size:1.1rem;
+
+        letter-spacing:2px;
+
+    }
+
+
+    .rating-platform{
+
+        color:#777;
+
+        font-size:.85rem;
+
+        margin-top:4px;
+
+    }
+
+
+    /* =========================
+    TESTIMONIOS
+    ========================= */
+
+    .remanso-testimonials-grid{
+
+        display:none;
+
+    }
+
+
+    .remanso-testimonials-mobile{
+
+        display:flex;
+
+        gap:16px;
+
+        overflow-x:auto;
+
+        scroll-snap-type:x mandatory;
+
+        scroll-behavior:smooth;
+
+        padding-bottom:8px;
+
+        margin-bottom:20px;
+
+        scrollbar-width:none;
+
+    }
+
+
+    .remanso-testimonials-mobile::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+
+    .remanso-testimonial-card{
+
+        flex:0 0 88%;
+
+        scroll-snap-align:start;
+
+        background:white;
+
+        padding:26px;
+
+        border-radius:22px;
+
+        box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    }
+
+
+    /* ESTRELLAS */
+
+    .remanso-testimonial-rating{
+
+        display:inline-flex;
+
+        align-items:center;
+
+        gap:8px;
+
+        padding:8px 13px;
+
+        border-radius:999px;
+
+        background:#f5f5f5;
+
+        color:var(--remanso-green);
+
+        font-size:.85rem;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .remanso-testimonial-rating span:first-child{
+
+        color:#f4b400;
+
+        letter-spacing:1px;
+
+    }
+
+
+    /* TEXTO */
+
+    .remanso-testimonial-card p{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+        color:#333;
+
+        margin-bottom:25px;
+
+    }
+
+
+    /* AUTOR */
+
+    .remanso-testimonial-author{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:5px;
+
+    }
+
+
+    .remanso-testimonial-author strong{
+
+        font-size:.95rem;
+
+    }
+
+
+    .remanso-testimonial-author span{
+
+        color:#777;
+
+        font-size:.82rem;
+
+    }
+
+
+    /* =========================
+    INDICADOR
+    ========================= */
+
+    .remanso-testimonials-indicator{
+
+        display:flex;
+
+        justify-content:center;
+
+        gap:8px;
+
+        margin-bottom:35px;
+
+    }
+
+
+    .remanso-testimonials-indicator span{
+
+        width:8px;
+
+        height:8px;
+
+        border-radius:50%;
+
+        background:#d6d6d6;
+
+    }
+
+
+    .remanso-testimonials-indicator span.active{
+
+        width:24px;
+
+        border-radius:30px;
+
+        background:var(--remanso-green);
+
+    }
+
+
+    /* =========================
+    CTA
+    ========================= */
+
+    .remanso-testimonials-cta{
+
+        margin-top:0;
+
+    }
+
+
+    .remanso-testimonials-button{
+
+        width:100%;
+
+        padding:18px;
+
+    }
 
 }
-.remanso-testimonials-header{
-
-    margin-bottom:50px;
-
-}
-
-.remanso-testimonials-label{
-
-    font-size:.72rem;
-
-    letter-spacing:4px;
-
-}
-
-.remanso-testimonials-line{
-
-    width:55px;
-
-    margin-bottom:24px;
-
-}
-
-.remanso-testimonials-title{
-
-    font-size:2.4rem;
-
-    line-height:1.15;
-
-    letter-spacing:-1px;
-
-    margin-bottom:20px;
-
-}
-
-.remanso-testimonials-description{
-
-    font-size:1rem;
-
-    line-height:1.7;
-
-}
-.remanso-ratings{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
-
-    margin-bottom:40px;
-
-}
-.remanso-rating{
-
-    background:white;
-
-    padding:20px;
-
-    border-radius:18px;
-
-    text-align:center;
-
-    box-shadow:
-
-    0 10px 25px rgba(0,0,0,.05);
-
-}
-.rating-number{
-
-    font-size:2rem;
-
-}
-.remanso-testimonials-grid{
-
-    display:none;
-
-}
-.remanso-testimonials-mobile{
-
-    margin-bottom:25px;
-
-}
-.remanso-testimonial-card{
-
-    padding:30px;
-
-    border-radius:22px;
-
-}
-.remanso-testimonial-rating{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:6px;
-
-    padding:8px 14px;
-
-    border-radius:999px;
-
-    background:#f4f4f4;
-
-    color:var(--remanso-green);
-
-    font-size:.9rem;
-
-    margin-bottom:20px;
-
-}
-.remanso-testimonial-card p{
-
-    font-size:1rem;
-
-    line-height:1.8;
-
-}
-.remanso-testimonial-author{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:6px;
-
-    margin-top:25px;
-
-}
-.remanso-testimonial-author span{
-
-    color:#777;
-
-    font-size:.9rem;
-
-}
-.remanso-testimonials-indicator{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:8px;
-
-}
-.remanso-testimonials-indicator span{
-
-    width:8px;
-
-    height:8px;
-
-    border-radius:50%;
-
-    background:#d6d6d6;
-
-}
-.remanso-testimonials-indicator span.active{
-
-    width:24px;
-
-    border-radius:30px;
-
-    background:var(--remanso-green);
-
-}
-
-.remanso-testimonials-cta{
-
-    margin-top:35px;
-
-}
-
-.remanso-testimonials-button{
-
-    width:100%;
-
-    padding:18px;
-
-}
-
-
-
-.remanso-testimonials-button{
-
-    width:100%;
-
-    padding:18px;
-
-}
-
-
-}
-
 
 /* =========================
 HOME - BLOQUE 6 - UBICACIÓN
@@ -10352,12 +10472,11 @@ IMAGEN
     display:block;
 
 }
-.remanso-retreat-pausa
-.remanso-retreat-mobile-host-image{
-
-    height:320px;
-    object-position: 1%;
-
+.remanso-retreat-mobile-host-image.remanso-retreat-pausa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 35%;
 }
 
 /* ==========================================
