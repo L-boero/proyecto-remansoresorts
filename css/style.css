@@ -1360,485 +1360,669 @@ CHECKLIST
 
 
 
-
-
-
-/* =========================
+/* =========================================================
    HOME - BLOQUE 3
-   EXPERIENCIAS / RETIROS
-========================= */
+   RETIROS / EXPERIENCIAS - DESKTOP
+   ========================================================= */
 
-.remanso-retreats-section{
-    padding:140px 8%;
-    background:transparent;
+@media (min-width: 769px){
+
+    /* =========================
+       SECCIÓN
+    ========================= */
+
+    .remanso-retreats-section{
+
+        padding:140px 8%;
+
+        background:transparent;
+
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .remanso-retreats-header{
+
+        max-width:900px;
+
+        margin:0 auto 80px auto;
+
+        text-align:center;
+
+    }
+
+
+    .remanso-retreats-label{
+
+        display:block;
+
+        margin-bottom:22px;
+
+        letter-spacing:5px;
+
+        font-size:.85rem;
+
+        text-transform:uppercase;
+
+        color:var(--remanso-green);
+
+        font-weight:500;
+
+    }
+
+
+    .remanso-retreats-line{
+
+        width:90px;
+
+        height:2px;
+
+        background:var(--remanso-green);
+
+        margin:0 auto 38px auto;
+
+        opacity:.8;
+
+    }
+
+
+    .remanso-retreats-title{
+
+        font-size:4rem;
+
+        line-height:1.15;
+
+        letter-spacing:-2px;
+
+        font-weight:600;
+
+        color:var(--remanso-green);
+
+        margin-bottom:28px;
+
+    }
+
+
+    .remanso-retreats-description{
+
+        max-width:720px;
+
+        margin:0 auto;
+
+        font-size:1.15rem;
+
+        line-height:1.9;
+
+        color:#666;
+
+    }
+
+
+    /* =========================
+       GALERÍA DESKTOP
+    ========================= */
+
+    .remanso-retreats-gallery{
+
+        max-width:1200px;
+
+        margin:0 auto 60px auto;
+
+        display:grid;
+
+        grid-template-columns:repeat(2, 1fr);
+
+        gap:30px;
+
+    }
+
+
+    /* =========================
+       CARD
+    ========================= */
+
+    .remanso-retreats-card{
+
+        display:block;
+
+        text-decoration:none;
+
+        color:inherit;
+
+        background:white;
+
+        border-radius:26px;
+
+        overflow:hidden;
+
+        box-shadow:
+        0 15px 45px rgba(0,0,0,.06);
+
+        transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+    }
+
+
+    .remanso-retreats-card:hover{
+
+        transform:translateY(-6px);
+
+        box-shadow:
+        0 25px 60px rgba(0,0,0,.10);
+
+    }
+
+
+    /* =========================
+       IMAGEN
+    ========================= */
+
+    .remanso-retreats-image{
+
+        width:100%;
+
+        height:360px;
+
+        overflow:hidden;
+
+    }
+
+
+    .remanso-retreats-image img{
+
+        width:100%;
+
+        height:100%;
+
+        display:block;
+
+        object-fit:cover;
+
+        transition:transform .7s ease;
+
+    }
+
+
+    .remanso-retreats-card:hover
+    .remanso-retreats-image img{
+
+        transform:scale(1.04);
+
+    }
+
+
+    /* =========================
+       INFORMACIÓN
+    ========================= */
+
+    .remanso-retreats-card-info{
+
+        padding:26px 30px 30px 30px;
+
+    }
+
+
+    .remanso-retreats-card-info h3{
+
+        margin:0 0 8px 0;
+
+        font-size:1.35rem;
+
+        line-height:1.3;
+
+        color:var(--remanso-green);
+
+        font-weight:600;
+
+    }
+
+
+    .remanso-retreats-card-info span{
+
+        display:block;
+
+        font-size:.9rem;
+
+        color:#777;
+
+        line-height:1.5;
+
+    }
+
+
+    /* =========================
+       INDICADORES MOBILE
+       OCULTOS EN DESKTOP
+    ========================= */
+
+    .remanso-retreats-gallery-dots{
+
+        display:none;
+
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .remanso-retreats-cta{
+
+        display:flex;
+
+        justify-content:center;
+
+        margin-top:10px;
+
+    }
+
+
+    .remanso-retreats-cta a{
+
+        display:inline-flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        padding:17px 38px;
+
+        background:#7a6855;
+
+        color:white;
+
+        text-decoration:none;
+
+        border-radius:999px;
+
+        font-weight:500;
+
+        transition:
+        transform .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+
+    }
+
+
+    .remanso-retreats-cta a:hover{
+
+        transform:translateY(-3px);
+
+        background:#695947;
+
+        box-shadow:
+        0 15px 35px rgba(122,104,85,.20);
+
+    }
+
 }
 
-
-
-
-
-
-/* HEADER */
-
-.remanso-retreats-header{
-    max-width:900px;
-
-    margin:0 auto 90px auto;
-
-    text-align:center;
-}
-
-.remanso-retreats-label{
-    display:block;
-
-    margin-bottom:24px;
-
-    letter-spacing:5px;
-
-    font-size:.85rem;
-
-    text-transform:uppercase;
-
-   color: var(--remanso-green);
-
-    font-weight:500;
-}
-
-.remanso-retreats-line{
-    width:90px;
-    height:2px;
-
-    background: var(--remanso-green);
-
-    margin:0 auto 40px auto;
-
-    opacity:.8;
-}
-
-.remanso-retreats-title{
-    font-size:4rem;
-
-    line-height:1.15;
-
-    letter-spacing:-2px;
-
-    font-weight:600;
-color: var(--remanso-green);
-
-    margin-bottom:30px;
-}
-
-.remanso-retreats-description{
-    max-width:720px;
-
-    margin:0 auto;
-
-    font-size:1.15rem;
-
-    line-height:1.9;
-
-    color:#666;
-}
-
-/* IMAGEN PRINCIPAL */
-
-.remanso-retreats-image{
-    max-width:1200px;
-
-    height:600px;
-
-    margin:0 auto 50px auto;
-
-    border-radius:32px;
-
-    overflow:hidden;
-
-    box-shadow:
-    0 30px 80px rgba(0,0,0,.08);
-}
-
-.remanso-retreats-image img{
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    display:block;
-
-    transition:transform .8s ease;
-   
-}
-
-.remanso-retreats-image:hover img{
-    transform:scale(1.03);
-}
-
-/* FEATURES */
-
-.remanso-retreats-features{
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-    margin-bottom:45px;
-}
-
-.retreat-feature{
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:14px 24px;
-
-    background:white;
-
-    border-radius:999px;
-
-    border:1px solid rgba(122,104,85,.15);
-
-    color:#4a4a4a;
-
-    font-size:.95rem;
-
-    font-weight:500;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.04);
-
-    transition:.3s ease;
-}
-
-.retreat-feature:hover{
-    transform:translateY(-2px);
-
-    box-shadow:
-    0 15px 30px rgba(0,0,0,.08);
-}
-
-/* CTA */
-
-.remanso-retreats-cta{
-    display:flex;
-
-    justify-content:center;
-}
-
-.remanso-retreats-cta a{
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    padding:18px 42px;
-
-    background:#7a6855;
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:999px;
-
-    font-weight:500;
-
-    transition:all .35s ease;
-}
-
-.remanso-retreats-cta a:hover{
-    transform:translateY(-4px);
-
-    background:#695947;
-
-    box-shadow:
-    0 18px 40px rgba(122,104,85,.22);
-}
 
 /* =========================
-HOME
-RETIROS MOBILE RESPONSIVE
+   HOME
+   RETIROS MOBILE RESPONSIVE
 ========================= */
 
 @media(max-width:768px){
 
-.remanso-retreats-section{
+    /* =========================
+       SECCIÓN
+    ========================= */
 
-    padding:90px 24px;
+    .remanso-retreats-section{
+
+        padding:90px 24px;
+
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .remanso-retreats-header{
+
+        margin-bottom:50px;
+
+        text-align:center;
+
+    }
+
+
+    .remanso-retreats-label{
+
+        display:block;
+
+        font-size:.72rem;
+
+        letter-spacing:4px;
+
+        margin-bottom:18px;
+
+        color:var(--remanso-green);
+
+        text-align:center;
+
+    }
+
+
+    .remanso-retreats-line{
+
+        width:55px;
+
+        height:2px;
+
+        margin:0 auto 24px auto;
+
+        background:var(--remanso-green);
+
+    }
+
+
+    .remanso-retreats-title{
+
+        font-size:2rem;
+
+        line-height:1.2;
+
+        letter-spacing:-.5px;
+
+        margin:0 auto 20px auto;
+
+        color:var(--remanso-green);
+
+        text-align:center;
+
+        font-weight:600;
+
+        max-width:360px;
+
+    }
+
+
+    .remanso-retreats-description{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+        text-align:center;
+
+        max-width:360px;
+
+        margin:0 auto;
+
+        color:#666;
+
+    }
+
+
+    /* =========================
+       GALERÍA DE RETIROS MOBILE
+    ========================= */
+
+    .remanso-retreats-gallery{
+
+        display:flex;
+
+        overflow-x:auto;
+
+        gap:16px;
+
+        margin:50px -24px 25px;
+
+        padding:0 24px;
+
+        scroll-snap-type:x mandatory;
+
+        scroll-behavior:smooth;
+
+        -webkit-overflow-scrolling:touch;
+
+        scrollbar-width:none;
+
+    }
+
+
+    .remanso-retreats-gallery::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+
+    /* =========================
+       CARD
+    ========================= */
+
+    .remanso-retreats-card{
+
+        flex:0 0 88%;
+
+        display:block;
+
+        text-decoration:none;
+
+        color:inherit;
+
+        scroll-snap-align:center;
+
+    }
+
+
+    /* =========================
+       IMAGEN
+    ========================= */
+
+    .remanso-retreats-image{
+
+        width:100%;
+
+        height:280px;
+
+        border-radius:22px;
+
+        overflow:hidden;
+
+        margin:0;
+
+    }
+
+
+    .remanso-retreats-image img{
+
+        width:100%;
+
+        height:100%;
+
+        object-fit:cover;
+
+        display:block;
+
+    }
+
+
+    /* =========================
+       CONTROL INDIVIDUAL
+       DE IMÁGENES
+    ========================= */
+
+    /* RETIRO 1 */
+
+    .remanso-retreats-card:nth-child(1)
+    .remanso-retreats-image img{
+
+        object-position:center 80%;
+
+    }
+
+
+    /* RETIRO 2 */
+
+    .remanso-retreats-card:nth-child(2)
+    .remanso-retreats-image img{
+
+        object-position:center center;
+
+    }
+
+
+    /* RETIRO 3 */
+
+    .remanso-retreats-card:nth-child(3)
+    .remanso-retreats-image img{
+
+        object-position:center 60%;
+
+    }
+
+
+    /* RETIRO 4 */
+
+    .remanso-retreats-card:nth-child(4)
+    .remanso-retreats-image img{
+
+        object-position:center 60%;
+
+    }
+
+
+    /* =========================
+       INFORMACIÓN DE LA CARD
+    ========================= */
+
+    .remanso-retreats-card-info{
+
+        padding:16px 4px 0;
+
+    }
+
+
+    .remanso-retreats-card-info h3{
+
+        margin:0 0 5px;
+
+        font-size:1.15rem;
+
+        font-weight:600;
+
+        color:#2f2f2f;
+
+        line-height:1.3;
+
+    }
+
+
+    .remanso-retreats-card-info span{
+
+        display:block;
+
+        font-size:.9rem;
+
+        color:#777;
+
+    }
+
+
+    /* =========================
+       INDICADOR
+    ========================= */
+
+    .remanso-retreats-gallery-dots{
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:8px;
+
+        margin-top:14px;
+
+        margin-bottom:32px;
+
+    }
+
+
+    .remanso-retreats-gallery-dots span{
+
+        width:8px;
+
+        height:8px;
+
+        border-radius:50%;
+
+        background:rgba(75,67,59,.25);
+
+        transition:all .25s ease;
+
+    }
+
+
+    .remanso-retreats-gallery-dots span.active{
+
+        width:24px;
+
+        border-radius:999px;
+
+        background:var(--remanso-green);
+
+    }
+
+
+    /* =========================
+       CTA MOBILE
+    ========================= */
+
+    .remanso-retreats-cta{
+
+        display:flex;
+
+        width:100%;
+
+        justify-content:center;
+
+        margin-top:0;
+
+    }
+
+
+    .remanso-retreats-cta a{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        width:100%;
+
+        padding:18px 24px;
+
+        background:var(--remanso-green);
+
+        color:white;
+
+        text-decoration:none;
+
+        border-radius:999px;
+
+        font-size:1rem;
+
+        font-weight:600;
+
+        transition:all .3s ease;
+
+    }
 
 }
-
-/* HEADER */
-
-.remanso-retreats-header{
-
-    margin-bottom:50px;
-
-}
-
-.remanso-retreats-label{
-
-    font-size:.72rem;
-
-    letter-spacing:4px;
-
-    margin-bottom:18px;
-
-}
-
-.remanso-retreats-line{
-
-    width:55px;
-
-    margin-bottom:24px;
-
-}
-
-.remanso-retreats-title{
-
-    font-size:2.4rem;
-
-    line-height:1.15;
-
-    letter-spacing:-1px;
-
-    margin-bottom:20px;
-
-}
-
-.remanso-retreats-description{
-
-    font-size:1rem;
-
-    line-height:1.7;
-
-}
-
-
-/* =========================
-GALERÍA DE RETIROS MOBILE
-========================= */
-
-.remanso-retreats-gallery{
-
-    display:flex;
-
-    overflow-x:auto;
-
-    gap:16px;
-
-    margin:50px -24px 25px;
-
-    padding:0 24px;
-
-    scroll-snap-type:x mandatory;
-
-    scroll-behavior:smooth;
-
-    -webkit-overflow-scrolling:touch;
-
-    scrollbar-width:none;
-
-}
-
-.remanso-retreats-gallery::-webkit-scrollbar{
-
-    display:none;
-
-}
-
-
-/* =========================
-CARD
-========================= */
-
-.remanso-retreats-card{
-
-    flex:0 0 88%;
-
-    display:block;
-
-    text-decoration:none;
-
-    color:inherit;
-
-    scroll-snap-align:center;
-
-}
-
-
-/* =========================
-IMAGEN
-========================= */
-
-.remanso-retreats-image{
-
-    width:100%;
-
-    height:280px;
-
-    border-radius:22px;
-
-    overflow:hidden;
-
-    margin:0;
-
-}
-
-.remanso-retreats-image img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    display:block;
-
-}
-
-
-
-/* ==========================================
-   CONTROL INDIVIDUAL DE IMÁGENES
-   RETIROS - HOME MOBILE
-========================================== */
-
-/* RETIRO 1 — Amanecer de la Consciencia */
-.remanso-retreats-card:nth-child(1) .remanso-retreats-image img{
-
-    object-position:center 80%;
-
-}
-
-
-/* RETIRO 2 — Pausa para mujeres */
-.remanso-retreats-card:nth-child(2) .remanso-retreats-image img{
-
-    object-position:center center;
-
-}
-
-
-/* RETIRO 3 — Encuentros grupales */
-.remanso-retreats-card:nth-child(3) .remanso-retreats-image img{
-
-    object-position:center 60%;
-
-}
-
-
-/* RETIRO 4 — Experiencias empresariales */
-.remanso-retreats-card:nth-child(4) .remanso-retreats-image img{
-
-    object-position:center 60%;
-
-}
-
-
-
-
-
-/* =========================
-INFORMACIÓN DE LA CARD
-========================= */
-
-.remanso-retreats-card-info{
-
-    padding:16px 4px 0;
-
-}
-
-.remanso-retreats-card-info h3{
-
-    margin:0 0 5px;
-
-    font-size:1.15rem;
-
-    font-weight:600;
-
-    color:#2f2f2f;
-
-    line-height:1.3;
-
-}
-
-.remanso-retreats-card-info span{
-
-    display:block;
-
-    font-size:.9rem;
-
-    color:#777;
-
-}
-/* =========================
-   INDICADOR - RETIROS HOME
-========================= */
-/* =========================
-   INDICADOR - RETIROS HOME
-========================= */
-
-.remanso-retreats-gallery-dots {
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: 8px;
-
-    margin-top: 14px;
-    margin-bottom: 32px;
-
-}
-
-.remanso-retreats-gallery-dots span {
-
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-
-    background: rgba(75, 67, 59, 0.25);
-
-    transition: all 0.25s ease;
-
-}
-
-.remanso-retreats-gallery-dots span.active {
-
-    width: 24px;
-
-    border-radius: 999px;
-
-    background: #4b433b;
-
-}
-
-
-
-/* CTA */
-
-.remanso-retreats-cta a{
-
-    width:100%;
-
-    justify-content:center;
-
-    padding:18px;
-
-    margin-top: 30px;
-
-}
-
-}
-
 
 
 
@@ -2054,263 +2238,426 @@ MOBILE
 }
 
 
-/* =========================
-HOME - BLOQUE 5 - TESTIMONIOS
-========================= */
+/* =========================================================
+   HOME - BLOQUE 5
+   TESTIMONIOS / RESEÑAS - DESKTOP
+   ========================================================= */
 
-.remanso-testimonials-section{
-    padding:140px 8%;
+@media (min-width:769px){
 
-    background:#f8f5f1;
+    /* =========================
+       SECCIÓN
+    ========================= */
 
-    border-radius:40px;
+    .remanso-testimonials-section{
 
-    max-width:1400px;
+        padding:130px 8% 110px;
 
-    margin:0 auto;
+        background:#f8f5f1;
+
+        max-width:1400px;
+
+        margin:0 auto;
+
+        border-radius:40px;
+
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .remanso-testimonials-header{
+
+        max-width:900px;
+
+        margin:0 auto 75px;
+
+        text-align:center;
+
+    }
+
+
+    .remanso-testimonials-label{
+
+        display:block;
+
+        margin-bottom:22px;
+
+        letter-spacing:5px;
+
+        font-size:.85rem;
+
+        text-transform:uppercase;
+
+        color:var(--remanso-green);
+
+        font-weight:500;
+
+    }
+
+
+    .remanso-testimonials-line{
+
+        width:90px;
+
+        height:2px;
+
+        background:var(--remanso-green);
+
+        margin:0 auto 38px;
+
+        opacity:.8;
+
+    }
+
+
+    .remanso-testimonials-title{
+
+        margin:0 0 25px;
+
+        font-size:4rem;
+
+        line-height:1.15;
+
+        letter-spacing:-2px;
+
+        font-weight:600;
+
+        color:#232323;
+
+    }
+
+
+    .remanso-testimonials-description{
+
+        max-width:720px;
+
+        margin:0 auto;
+
+        font-size:1.1rem;
+
+        line-height:1.8;
+
+        color:#666;
+
+    }
+
+
+    /* =========================
+       MÉTRICA GOOGLE
+    ========================= */
+
+    .remanso-ratings{
+
+        display:flex;
+
+        justify-content:center;
+
+        margin:0 auto 75px;
+
+    }
+
+
+    .remanso-rating{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+
+    .rating-number{
+
+        display:block;
+
+        margin-bottom:8px;
+
+        font-size:4rem;
+
+        line-height:1;
+
+        font-weight:600;
+
+        color:var(--remanso-green);
+
+    }
+
+
+    .rating-stars{
+
+        display:block;
+
+        margin-bottom:8px;
+
+        font-size:1.35rem;
+
+        letter-spacing:2px;
+
+        color:#f2ad00;
+
+    }
+
+
+    .rating-platform{
+
+        display:block;
+
+        font-size:.85rem;
+
+        letter-spacing:1.5px;
+
+        text-transform:uppercase;
+
+        color:#666;
+
+    }
+
+
+    /* =========================
+       TESTIMONIOS
+       ========================= */
+
+    .remanso-testimonials-mobile{
+
+        max-width:1120px;
+
+        margin:0 auto;
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:2px;
+
+    }
+
+
+    /* =========================
+       CARD
+    ========================= */
+
+    .remanso-testimonial-card{
+
+        position:relative;
+
+        padding:42px 48px;
+
+        border-radius:28px;
+
+        background:
+        radial-gradient(
+            circle at top left,
+            rgba(70,100,58,.08),
+            transparent 45%
+        ),
+        white;
+
+        box-shadow:
+        0 15px 40px rgba(0,0,0,.04);
+
+        transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    }
+
+
+    .remanso-testimonial-card:hover{
+
+        transform:translateY(-4px);
+
+        box-shadow:
+        0 22px 50px rgba(0,0,0,.08);
+
+    }
+
+
+    /* =========================
+       VALORACIÓN
+    ========================= */
+
+    .remanso-testimonial-rating{
+
+        display:flex;
+
+        align-items:center;
+
+        gap:8px;
+
+        margin-bottom:18px;
+
+        color:var(--remanso-green);
+
+        font-size:.95rem;
+
+        font-weight:500;
+
+    }
+
+
+    .remanso-testimonial-rating span:first-child{
+
+        letter-spacing:1px;
+
+        font-size:1.1rem;
+
+    }
+
+
+    /* =========================
+       TEXTO
+    ========================= */
+
+    .remanso-testimonial-card p{
+
+        margin:0 0 26px;
+
+        max-width:1000px;
+
+        font-size:1.15rem;
+
+        line-height:1.7;
+
+        color:var(--remanso-green);
+
+    }
+
+
+    /* =========================
+       AUTOR
+    ========================= */
+
+    .remanso-testimonial-author{
+
+        display:flex;
+
+        align-items:center;
+
+        gap:8px;
+
+    }
+
+
+    .remanso-testimonial-author strong{
+
+        font-size:.95rem;
+
+        color:#2f2f2f;
+
+    }
+
+
+    .remanso-testimonial-author span{
+
+        font-size:.9rem;
+
+        color:#666;
+
+    }
+
+
+    /* =========================
+       INDICADOR
+       OCULTO EN DESKTOP
+    ========================= */
+
+    .remanso-testimonials-indicator{
+
+        display:none;
+
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .remanso-testimonials-cta{
+
+        display:flex;
+
+        justify-content:center;
+
+        margin-top:42px;
+
+    }
+
+
+    .remanso-testimonials-button{
+
+        display:inline-flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:12px;
+
+        padding:18px 42px;
+
+        background:var(--remanso-green);
+
+        color:#fff;
+
+        text-decoration:none;
+
+        border-radius:999px;
+
+        font-size:1rem;
+
+        font-weight:500;
+
+        transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+    }
+
+
+    .remanso-testimonials-button:hover{
+
+        transform:translateY(-4px);
+
+        box-shadow:
+        0 18px 40px rgba(70,91,45,.22);
+
+    }
+
+
+    .remanso-testimonials-button span{
+
+        transition:.35s ease;
+
+    }
+
+
+    .remanso-testimonials-button:hover span{
+
+        transform:translateX(4px);
+
+    }
+
 }
 
-/* HEADER */
-
-.remanso-testimonials-header{
-    text-align:center;
-
-    max-width:900px;
-
-    margin:0 auto 90px;
-}
-
-.remanso-testimonials-label{
-    display:block;
-
-    letter-spacing:5px;
-
-    font-size:.85rem;
-
-    text-transform:uppercase;
-
-    color:#7a6855;
-
-    margin-bottom:20px;
-}
-
-.remanso-testimonials-line{
-    width:90px;
-    height:2px;
-
-    background:#7a6855;
-
-    margin:0 auto 40px;
-}
-
-.remanso-testimonials-title{
-    font-size:4rem;
-
-    line-height:1.15;
-
-    letter-spacing:-2px;
-
-    color:#232323;
-
-    margin-bottom:25px;
-}
-
-.remanso-testimonials-description{
-    max-width:700px;
-
-    margin:0 auto;
-
-    color:#666;
-
-    line-height:1.9;
-
-    font-size:1.05rem;
-}
-
-/* MÉTRICAS */
-
-.remanso-ratings{
-    display:flex;
-
-    justify-content:center;
-
-    gap:120px;
-
-    margin-bottom:90px;
-}
-
-.remanso-rating{
-    text-align:center;
-}
-
-.rating-number{
-    display:block;
-
-    font-size:4rem;
-
-    font-weight:600;
-
-    color:#46643a;
-}
-
-.rating-platform{
-    color:#666;
-
-    letter-spacing:1px;
-
-    text-transform:uppercase;
-
-    font-size:.85rem;
-}
-
-/* TESTIMONIOS */
-
-.remanso-testimonials-grid{
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
-}
-
-.remanso-testimonial-card{
-    background:white;
-
-    padding:45px;
-
-    border-radius:28px;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.04);
-
-      transition:
-    transform .35s ease,
-    box-shadow .35s ease;
-}
-/* EFECTO HOVER EN CARD DE TESTIMONIOS */
-
-.remanso-testimonial-card:hover{
-    transform:translateY(-6px);
-
-    box-shadow: 0 25px 60px rgba(0,0,0,.08);
-}
-
-
-.remanso-testimonial-card p{
-    font-size:1.1rem;
-
-    line-height:1.9;
-
-  color: var(--remanso-green);
-
-    margin-bottom:25px;
-}
-
-.remanso-testimonial-card span{
-   color: var(--remanso-green);
-
-    font-weight:500;
-}
-
-
-.remanso-testimonial-card{
-    position:relative;
-
-    background:
-    radial-gradient(
-        circle at top left,
-        rgba(70,100,58,.08),
-        transparent 50%
-    ),
-    white;
-}
-
-/* DEGRADADO EN CARDS*/
-
-.remanso-testimonial-card{
-    position:relative;
-
-    background:
-    radial-gradient(
-        circle at top left,
-        rgba(70,100,58,.08),
-        transparent 45%
-    ),
-    white;
-
-    padding:45px;
-
-    border-radius:28px;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.04);
-
-    transition:
-    transform .35s ease,
-    box-shadow .35s ease;
-}
-
-.remanso-testimonials-cta{
-
-    display:flex;
-
-    justify-content:center;
-
-    margin-top:40px;
-
-}
-
-.remanso-testimonials-button{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:12px;
-
-    padding:18px 42px;
-
-    background:var(--remanso-green);
-
-    color:#fff;
-
-    text-decoration:none;
-
-    border-radius:999px;
-
-    font-weight:500;
-
-    transition:.35s ease;
-
-}
-
-.remanso-testimonials-button:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 18px 40px rgba(70,91,45,.22);
-
-}
-
-.remanso-testimonials-button span{
-
-    transition:.35s ease;
-
-}
-
-.remanso-testimonials-button:hover span{
-
-    transform:translateX(4px);
-
-}
-/* =========================
-HOME - BLOQUE 5
-TESTIMONIOS MOBILE
-========================= */
-
-@media(max-width:768px){
+/* =========================================================
+   HOME - BLOQUE 5
+   TESTIMONIOS / RESEÑAS - MOBILE
+   ========================================================= */
+
+@media (max-width:768px){
+
+    /* =========================
+       SECCIÓN
+    ========================= */
 
     .remanso-testimonials-section{
 
@@ -2321,20 +2668,30 @@ TESTIMONIOS MOBILE
     }
 
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     .remanso-testimonials-header{
 
-        margin-bottom:40px;
+        margin:0 0 40px 0;
+
+        text-align:left;
 
     }
 
 
     .remanso-testimonials-label{
 
+        display:block;
+
         font-size:.72rem;
 
         letter-spacing:4px;
+
+        margin-bottom:18px;
+
+        color:var(--remanso-green);
 
     }
 
@@ -2343,12 +2700,18 @@ TESTIMONIOS MOBILE
 
         width:55px;
 
-        margin-bottom:24px;
+        height:2px;
+
+        margin:0 0 24px 0;
+
+        background:var(--remanso-green);
 
     }
 
 
     .remanso-testimonials-title{
+
+        margin:0 0 20px 0;
 
         font-size:2.4rem;
 
@@ -2356,32 +2719,46 @@ TESTIMONIOS MOBILE
 
         letter-spacing:-1px;
 
-        margin-bottom:20px;
+        text-align:left;
+
+        color:#232323;
 
     }
 
 
     .remanso-testimonials-description{
 
+        margin:0;
+
         font-size:1rem;
 
         line-height:1.7;
+
+        text-align:left;
+
+        color:#666;
 
     }
 
 
     /* =========================
-    GOOGLE RATING
+       GOOGLE RATING
     ========================= */
 
     .remanso-ratings{
 
-        margin-bottom:35px;
+        display:flex;
+
+        justify-content:center;
+
+        margin:0 0 35px 0;
 
     }
 
 
     .remanso-rating{
+
+        width:100%;
 
         background:white;
 
@@ -2391,7 +2768,8 @@ TESTIMONIOS MOBILE
 
         text-align:center;
 
-        box-shadow:0 10px 25px rgba(0,0,0,.05);
+        box-shadow:
+        0 10px 25px rgba(0,0,0,.05);
 
         display:flex;
 
@@ -2406,7 +2784,11 @@ TESTIMONIOS MOBILE
 
     .rating-number{
 
+        display:block;
+
         font-size:2.4rem;
+
+        line-height:1;
 
         font-weight:600;
 
@@ -2416,6 +2798,8 @@ TESTIMONIOS MOBILE
 
 
     .rating-stars{
+
+        display:block;
 
         color:#f4b400;
 
@@ -2428,6 +2812,8 @@ TESTIMONIOS MOBILE
 
     .rating-platform{
 
+        display:block;
+
         color:#777;
 
         font-size:.85rem;
@@ -2438,7 +2824,7 @@ TESTIMONIOS MOBILE
 
 
     /* =========================
-    TESTIMONIOS
+       TESTIMONIOS
     ========================= */
 
     .remanso-testimonials-grid{
@@ -2460,11 +2846,13 @@ TESTIMONIOS MOBILE
 
         scroll-behavior:smooth;
 
-        padding-bottom:8px;
+        padding:0 0 8px 0;
 
-        margin-bottom:20px;
+        margin:0 0 20px 0;
 
         scrollbar-width:none;
+
+        -webkit-overflow-scrolling:touch;
 
     }
 
@@ -2475,6 +2863,10 @@ TESTIMONIOS MOBILE
 
     }
 
+
+    /* =========================
+       CARD
+    ========================= */
 
     .remanso-testimonial-card{
 
@@ -2488,12 +2880,15 @@ TESTIMONIOS MOBILE
 
         border-radius:22px;
 
-        box-shadow:0 10px 30px rgba(0,0,0,.06);
+        box-shadow:
+        0 10px 30px rgba(0,0,0,.06);
 
     }
 
 
-    /* ESTRELLAS */
+    /* =========================
+       ESTRELLAS
+    ========================= */
 
     .remanso-testimonial-rating{
 
@@ -2526,10 +2921,60 @@ TESTIMONIOS MOBILE
 
     }
 
+    /* =========================
+   HEADER - CENTRADO MOBILE
+========================= */
 
-    /* TEXTO */
+.remanso-testimonials-header{
+
+    margin:0 0 40px 0;
+
+    text-align:center;
+
+}
+
+
+.remanso-testimonials-label{
+
+    display:block;
+
+    text-align:center;
+
+}
+
+
+.remanso-testimonials-line{
+
+    margin:0 auto 24px auto;
+
+}
+
+
+.remanso-testimonials-title{
+
+    text-align:center;
+
+}
+
+
+.remanso-testimonials-description{
+
+    margin:0 auto;
+
+    text-align:center;
+
+    max-width:520px;
+
+}
+
+
+    /* =========================
+       TEXTO
+    ========================= */
 
     .remanso-testimonial-card p{
+
+        margin:0 0 25px 0;
 
         font-size:1rem;
 
@@ -2537,12 +2982,12 @@ TESTIMONIOS MOBILE
 
         color:#333;
 
-        margin-bottom:25px;
-
     }
 
 
-    /* AUTOR */
+    /* =========================
+       AUTOR
+    ========================= */
 
     .remanso-testimonial-author{
 
@@ -2552,12 +2997,16 @@ TESTIMONIOS MOBILE
 
         gap:5px;
 
+        margin-top:0;
+
     }
 
 
     .remanso-testimonial-author strong{
 
         font-size:.95rem;
+
+        color:#2f2f2f;
 
     }
 
@@ -2572,7 +3021,7 @@ TESTIMONIOS MOBILE
 
 
     /* =========================
-    INDICADOR
+       INDICADOR
     ========================= */
 
     .remanso-testimonials-indicator{
@@ -2581,9 +3030,11 @@ TESTIMONIOS MOBILE
 
         justify-content:center;
 
+        align-items:center;
+
         gap:8px;
 
-        margin-bottom:35px;
+        margin:0 0 35px 0;
 
     }
 
@@ -2613,21 +3064,73 @@ TESTIMONIOS MOBILE
 
 
     /* =========================
-    CTA
+       CTA
     ========================= */
 
     .remanso-testimonials-cta{
 
-        margin-top:0;
+        display:flex;
+
+        width:100%;
+
+        margin:0;
 
     }
 
 
     .remanso-testimonials-button{
 
+        display:inline-flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:12px;
+
         width:100%;
 
-        padding:18px;
+        padding:18px 24px;
+
+        background:var(--remanso-green);
+
+        color:#fff;
+
+        text-decoration:none;
+
+        border-radius:999px;
+
+        font-size:1rem;
+
+        font-weight:500;
+
+        transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    }
+
+
+    .remanso-testimonials-button:hover{
+
+        transform:translateY(-3px);
+
+        box-shadow:
+        0 15px 30px rgba(70,91,45,.18);
+
+    }
+
+
+    .remanso-testimonials-button span{
+
+        transition:.35s ease;
+
+    }
+
+
+    .remanso-testimonials-button:hover span{
+
+        transform:translateX(4px);
 
     }
 
